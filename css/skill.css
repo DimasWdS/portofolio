@@ -1,0 +1,122 @@
+.container-skills {
+  position: relative;
+  overflow: hidden;
+  height: 45rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* layer1 (bawah) */
+.container-skills div:first-child {
+  background-color: transparent;
+  position: relative;
+}
+.container-skills div:first-child section:first-child {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  right: 0;
+  margin-top: 15px;
+  margin-right: 5rem;
+}
+.container-skills div:first-child section span {
+  display: inline-block;
+  height: 2.5rem;
+  width: 10rem;
+  border: 3px solid black;
+  border-radius: 20px;
+  transform: rotate(-12deg);
+  opacity: 40%;
+}
+/* layer 2 (atas)*/
+.container-skills div:nth-child(2) {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+.container-skills div:nth-child(2) section {
+  display: flex;
+  width: 90%;
+}
+.container-skills div:nth-child(2) section section:first-child {
+  position: relative;
+}
+.container-skills div:nth-child(2) section section:first-child div {
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  top: -20rem;
+}
+.container-skills div:nth-child(2) section section:first-child div img {
+  max-width: 100%; /* gambar tidak akan lebih lebar dari container */
+  height: auto; /* menjaga aspek ratio gambar */
+  width: 100%; /* gambar akan mengisi penuh lebar container */
+  object-fit: cover;
+}
+.container-skills div:nth-child(2) section section:last-child {
+  display: block;
+}
+.container-skills div:nth-child(2) section section:last-child h1 {
+  font-size: 5em;
+}
+.container-skills div:nth-child(2) section section:last-child span {
+  margin-left: 3rem;
+  font-weight: 500;
+}
+
+/* Warna untuk layar dengan lebar antara 601px dan 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* gambar garuda */
+  .container-skills div:nth-child(2) section section:first-child div {
+    width: 28rem;
+    height: 28rem;
+    top: -9rem;
+  }
+  /* font samping garuda */
+  .container-skills div:nth-child(2) section section:last-child h1 {
+    font-size: 3em;
+  }
+  /* hiasan pil */
+  .container-skills div:first-child section:first-child {
+    margin-top: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+  }
+  .container-skills div:first-child section:first-child span {
+    display: inline-block;
+    height: 2rem;
+    width: 8rem;
+  }
+}
+/* Warna untuk layar dengan lebar <= 600px */
+@media (max-width: 600px) {
+  /* gambar garuda */
+  .container-skills div:nth-child(2) section section:first-child {
+    width: 0%;
+  }
+  .container-skills div:nth-child(2) section section:first-child div {
+    width: 20rem;
+    height: 10rem;
+    top: -13rem;
+  }
+  .container-skills div:nth-child(2) section section:last-child h1 {
+    font-size: 2.5em;
+  }
+  .container-skills div:nth-child(2) section section:last-child span {
+    margin-left: 1rem;
+  }
+
+  /* hiasan pil */
+  .container-skills div:first-child section:first-child {
+    margin-right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .container-skills div:first-child section:first-child span {
+    height: 2rem;
+    width: 5rem;
+  }
+}

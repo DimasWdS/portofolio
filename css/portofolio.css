@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.container-portofolio {
+  position: relative;
+  padding: 10px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container-portofolio header {
+  position: absolute;
+  font-size: 5em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+.container-portofolio .container-illustrator,
+.container-portofolio .container-web {
+  height: 25rem;
+  width: 100%;
+
+  font-weight: bold;
+  display: flex;
+  padding: 5px;
+  gap: 4px;
+}
+.container-illustrator div,
+.container-web div {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-illustrator div section,
+.container-web div section {
+  height: 80%;
+  width: 90%;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transition: all 300ms ease-in-out;
+}
+.container-web div section:hover,
+.container-illustrator div section:hover {
+  scale: 99%;
+  transition: all 300ms ease-in-out;
+}
+.container-web div section img,
+.container-illustrator div section img {
+  max-width: 100%; /* gambar tidak akan lebih lebar dari container */
+  height: auto; /* menjaga aspek ratio gambar */
+  width: 100%; /* gambar akan mengisi penuh lebar container */
+  object-fit: cover;
+  transition: all 300ms ease-in-out;
+}
+.container-illustrator div section img:hover,
+.container-web div section img:hover {
+  scale: 110%;
+  transition: all 300ms ease-in-out;
+}
+/* Warna untuk layar dengan lebar antara 601px dan 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+}
+/* Warna untuk layar dengan lebar <= 600px */
+@media (max-width: 600px) {
+  .container-portofolio .container-illustrator {
+    flex-direction: column-reverse;
+  }
+  .container-portofolio .container-web {
+    flex-direction: column;
+  }
+  .container-illustrator div,
+  .container-web div {
+    width: 100%;
+    height: 50%;
+  }
+  .container-portofolio header {
+    font-size: 3em;
+  }
+}
