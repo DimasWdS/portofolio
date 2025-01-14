@@ -1,0 +1,107 @@
+.container-tentang-saya {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+.container-tentang-saya .penjelasan-saya {
+  margin-top: 70px;
+  width: 90%;
+}
+.container-tentang-saya .penjelasan-saya,
+.container-pengalaman h2 {
+  color: var(--secondary-color);
+}
+.container-tentang-saya .penjelasan-saya div:nth-child(2) {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--font-color);
+}
+.container-tentang-saya .container-pengalaman {
+  width: 90%;
+}
+.container-tentang-saya
+  .container-pengalaman
+  section:nth-child(2)
+  div:first-child {
+  display: flex;
+  gap: 5px;
+}
+
+.container-tentang-saya .penjelasan-saya h1 {
+  font-size: 2em;
+}
+.container-tentang-saya .container-pengalaman h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+.container-tentang-saya .container-pengalaman {
+  margin-bottom: 70px;
+}
+
+/* card */
+.card {
+  display: flex;
+  width: 30rem;
+  gap: 5px;
+}
+.card div:first-child {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--third-color);
+}
+
+.card div:nth-child(2) section:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.card div:nth-child(2) section:first-child span:nth-child(2) {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.card div:nth-child(2) section:nth-child(2) {
+  font-size: small;
+  font-weight: 500;
+  color: var(--font-color);
+}
+.work-desc {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+.card div:nth-child(2) span:first-child {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+.card div:nth-child(2) span:nth-child(2) {
+  margin-bottom: 10px;
+}
+.card div:nth-child(3) button {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.card div:nth-child(3) button span:first-child {
+  display: inline-block;
+  max-width: 100%; /* gambar tidak akan lebih lebar dari container */
+  height: auto; /* menjaga aspek ratio gambar */
+  width: 100%; /* gambar akan mengisi penuh lebar container */
+  object-fit: cover;
+  transition: all 300ms ease-in-out;
+}
+/* card end */
+/*  */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+
+  .container-tentang-saya .penjelasan-saya div:nth-child(2) {
+    width: 90%;
+  }
+}

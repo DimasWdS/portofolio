@@ -10,17 +10,8 @@ window.onscroll = function () {
   } else {
     containerNav.classList.remove("nav-fortofolio");
   }
-
-  //   // Logika untuk beranda
-  //   const containerBeranda = document.getElementById("beranda");
-  //   const fixedberanda = containerBeranda.offsetTop;
-
-  //   if (window.pageYOffset > fixedberanda) {
-  //     containerBeranda.classList.add("beranda-scrool");
-  //   } else {
-  //     containerBeranda.classList.remove("beranda-scrool");
-  //   }
 };
+
 // haburger btn
 const hamBtn = document.getElementById("hamburger");
 const xBtn = document.getElementById("xbtn");
@@ -37,11 +28,21 @@ xBtn.addEventListener("click", function () {
   navMenu.classList.add("item-gone");
 });
 
-// const width = window.innerWidth;
-// const navMobile = document.getElementById("nav-menu");
+document.addEventListener("click", function (e) {
+  if (!hamBtn.contains(e.target) && !navMenu.contains(e.target)) {
+    navMenu.classList.add("item-gone");
+    xBtn.classList.add("move-right");
+    hamBtn.classList.remove("move-left");
+  }
+});
+//
+// pengalaman
+// tombol lihat pengalaman
+const sp = document.getElementById("desc-pengalaman");
+const ab = document.getElementById("icon"); //icon panh btn
+const kd = document.getElementById("konten-desc"); //konten deskripsi
 
-// if (width >= 600 && width <= 1024) {
-//   navMobile.classList.remove("item-gone");
-// } else {
-//   console.log("Layar besar (desktop)");
-// }
+sp.addEventListener("click", function () {
+  ab.classList.toggle("rotate180");
+  kd.classList.toggle("work-desc-active");
+});
