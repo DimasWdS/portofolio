@@ -7,7 +7,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 .container-portofolio header {
   position: absolute;
@@ -17,7 +17,22 @@
   transform: translate(-50%, -50%) rotate(-5deg);
   font-family: "Montserrat";
   font-weight: bold;
+  z-index: 20;
+  color: var(--primary-color);
 }
+.container-portofolio header:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--secondary-color); /* Equivalent to 'bg-pink-500' */
+  z-index: -1;
+  transform: scale(105%);
+  border-radius: 5px;
+  box-shadow: rgba(235, 90, 60, 0.4) 5px 5px, rgba(235, 90, 60, 0.3) 10px 10px,
+    rgba(235, 90, 60, 0.2) 15px 15px, rgba(235, 90, 60, 0.1) 20px 20px,
+    rgba(235, 90, 60, 0.05) 25px 25px;
+}
+
 .container-portofolio .container-illustrator,
 .container-portofolio .container-web {
   height: 25rem;
@@ -38,8 +53,8 @@
   align-items: center;
 }
 
-.container-illustrator div section,
-.container-web div section {
+.container-illustrator div:nth-child(2) section,
+.container-web div:nth-child(1) section {
   height: 80%;
   width: 90%;
   border-radius: 20px;
@@ -52,10 +67,41 @@
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   transition: all 300ms ease-in-out;
 }
-.container-web div section:hover,
-.container-illustrator div section:hover {
+/* container teks */
+.container-illustrator div:nth-child(1) section,
+.container-web div:nth-child(2) section {
+  height: 80%;
+  width: 90%;
+  font-size: medium;
+  font-weight: 600;
+}
+.container-illustrator div:nth-child(1) section p,
+.container-web div:nth-child(2) section p {
+  margin-top: 20px;
+}
+.container-web div:nth-child(1) section:hover,
+.container-illustrator div:nth-child(2) section:hover {
   scale: 99%;
   transition: all 300ms ease-in-out;
+}
+/* style btn */
+.container-illustrator div:nth-child(1) section a,
+.container-web div:nth-child(2) section a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--third-color);
+  margin-top: 4px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  color: var(--primary-color);
+}
+.container-illustrator div:nth-child(1) section a:hover,
+.container-web div:nth-child(2) section a:hover {
+  border-color: var(--third-color);
+  background-color: transparent;
+  color: var(--third-color);
 }
 .container-web div section img,
 .container-illustrator div section img {
@@ -72,9 +118,16 @@
 }
 /* Warna untuk layar dengan lebar antara 601px dan 1024px */
 @media (min-width: 601px) and (max-width: 1024px) {
+  .container-web div section img,
+  .container-illustrator div section img {
+    height: 100%;
+  }
 }
 /* Warna untuk layar dengan lebar <= 600px */
 @media (max-width: 600px) {
+  .container-portofolio {
+    gap: 50px;
+  }
   .container-portofolio .container-illustrator {
     flex-direction: column-reverse;
   }
@@ -87,6 +140,14 @@
     height: 50%;
   }
   .container-portofolio header {
-    font-size: 3em;
+    font-size: 2.8em;
+  }
+  .container-illustrator div:nth-child(1) section,
+  .container-web div:nth-child(2) section {
+    font-size: smaller;
+  }
+  .container-illustrator div:nth-child(1) section p,
+  .container-web div:nth-child(2) section p {
+    margin-top: 0;
   }
 }

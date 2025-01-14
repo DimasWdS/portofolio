@@ -6,6 +6,9 @@
   --secondary-color: #000957;
   --third-color: #eb5a3c;
 }
+body {
+  background-color: var(--primary-color);
+}
 .flex {
   display: flex;
 }
