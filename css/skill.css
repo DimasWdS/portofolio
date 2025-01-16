@@ -67,31 +67,7 @@
 }
 
 /* Warna untuk layar dengan lebar antara 601px dan 1024px */
-@media (min-width: 601px) and (max-width: 1024px) {
-  /* gambar garuda */
-  .container-skills div:nth-child(2) section section:first-child div {
-    width: 28rem;
-    height: 28rem;
-    top: -9rem;
-  }
-  /* font samping garuda */
-  .container-skills div:nth-child(2) section section:last-child h1 {
-    font-size: 3em;
-  }
-  /* hiasan pil */
-  .container-skills div:first-child section:first-child {
-    margin-top: 0;
-    top: 50%;
 
-    transform: translateY(-50%);
-  }
-  .container-skills div:first-child section:first-child span {
-    display: inline-block;
-    height: 2rem;
-    width: 8rem;
-  }
-}
-/* Warna untuk layar dengan lebar <= 600px */
 @media (max-width: 600px) {
   /* gambar garuda */
   .container-skills div:nth-child(2) section section:first-child {
@@ -119,4 +95,54 @@
     height: 2rem;
     width: 5rem;
   }
+}
+
+/* baru */
+/* layar hp */
+@media (max-width: 600px) {
+}
+
+/* Tablet Landscape (768px hingga 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* gambar garuda */
+  .container-skills div:nth-child(2) section section:first-child div {
+    width: 27rem;
+    height: 27rem;
+    top: -9rem;
+  }
+  /* font samping garuda */
+  .container-skills div:nth-child(2) section section:last-child h1 {
+    font-size: 3em;
+  }
+  /* hiasan pil */
+  .container-skills div:first-child section:first-child {
+    margin-top: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+  }
+  .container-skills div:first-child section:first-child span {
+    display: inline-block;
+    height: 2rem;
+    width: 8rem;
+  }
+}
+
+/* Small Desktop (992px hingga 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* gambar garuda */
+  .container-skills div:nth-child(2) section section:first-child div {
+    width: 35rem;
+    height: 35rem;
+    top: -10rem;
+    left: -5rem;
+  }
+}
+
+/* Large Desktop (1200px hingga 1599px) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+}
+
+/* Extra Large Desktop (1600px dan lebih besar) */
+@media (min-width: 1600px) {
 }
