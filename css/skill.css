@@ -1,6 +1,6 @@
 .container-skills {
   position: relative;
-  overflow: hidden;
+
   height: 45rem;
   width: 100%;
   justify-content: center;
@@ -54,6 +54,7 @@
   height: auto; /* menjaga aspek ratio gambar */
   width: 100%; /* gambar akan mengisi penuh lebar container */
   object-fit: cover;
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
 }
 .container-skills div:nth-child(2) section section:last-child {
   display: block;
@@ -139,10 +140,14 @@
   }
 }
 
-/* Large Desktop (1200px hingga 1599px) */
-@media (min-width: 1200px) and (max-width: 1599px) {
-}
-
 /* Extra Large Desktop (1600px dan lebih besar) */
-@media (min-width: 1600px) {
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .container-skills div:nth-child(2) section section:first-child div {
+    left: -10rem;
+  }
+  .container-skills {
+    /* background-color: blue; */
+    width: 85%;
+    margin: auto;
+  }
 }

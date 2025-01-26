@@ -10,187 +10,208 @@
     <link rel="stylesheet" href="css/skill.css" />
     <link rel="stylesheet" href="css/portofolio.css" />
     <link rel="stylesheet" href="css/classs-add-by-js.css" />
+    <link rel="stylesheet" href="css/alert.css" />
     <title>PORTOFOLIO</title>
   </head>
   <body>
-    <!-- nav -->
-    <nav id="nav">
-      <section class="container-nav">
-        <!-- nth chile 1 -->
-        <div class="item-gone" id="nav-menu">
-          <a href="#">Beranda</a>
-          <a href="#tentang-saya">Tentang Saya</a>
-          <a href="#skills">Skills</a>
-          <a href="#portofolio">Portofolio</a>
-        </div>
-        <!-- nth chile 2 -->
-        <div>
-          <button class="w-full" id="hamburger">
-            <img src="asset/icon/hamburger_icon.svg" alt="hamburger" />
-          </button>
-          <button class="w-full move-right" id="xbtn">
-            <img src="asset/icon/x.svg" alt="X" />
-          </button>
-        </div>
-        <!-- nth chile 3 -->
-        <div>
-          <img src="asset/mylogo/LOGO-IG-01.png" alt="logo" />
-        </div>
-      </section>
-    </nav>
     <!--  -->
-    <!-- slide satu -->
-    <!--  -->
-    <section id="beranda">
-      <section class="container-beranda flex">
-        <!-- layer 1 -->
-        <div class="w-full flex">
-          <section class="container-aboutme flex">
-            <!-- container foto + text -->
-            <div class="container-myfoto">
-              <img class="my-foto" src="asset/myfoto/1.png" alt="widy" />
-            </div>
-            <!-- container teks -->
-            <div class="flex">
-              <h1>HALLO👋,</h1>
-              <span>Saya Widy</span>
-            </div>
-            <button>Download CV</button>
-          </section>
-        </div>
-        <!-- layer 2 -->
-        <div class="w-full flex">
-          <section class="box-luar flex">
-            <section class="box-spin"></section>
-            <section class="box-dalam w-full"></section>
-          </section>
-        </div>
-      </section>
-    </section>
-    <!--  -->
-    <!-- Tentang saya -->
-    <!--  -->
-    <section id="tentang-saya">
-      <section class="container-tentang-saya">
-        <!-- nth chile 1 -->
-        <section class="penjelasan-saya">
-          <h1>Tentang saya</h1>
+    <main class="main-index">
+      <!--  -->
+      <!-- nav -->
+      <!--  -->
+      <nav id="nav">
+        <section class="container-nav">
+          <!-- nth chile 1 -->
+          <div class="item-gone" id="nav-menu">
+            <a href="#">Beranda</a>
+            <a href="#tentang-saya">Tentang Saya</a>
+            <a href="#skills">Skills</a>
+            <a href="#portofolio">Portofolio</a>
+          </div>
+          <!-- nth chile 2 -->
           <div>
-            Halo, Dimas Widy, Mempunyai ketertarikan dua bidang illustrator dan
-            Front End. Saya percaya pada kemampuan saya untuk menciptakan desain
-            iLLustrasi dan Coding yang bersih, modern, dan fungsional.
+            <button class="w-full" id="hamburger">
+              <img src="asset/icon/hamburger_icon.svg" alt="hamburger" />
+            </button>
+            <button class="w-full move-right" id="xbtn">
+              <img src="asset/icon/x.svg" alt="X" />
+            </button>
+          </div>
+          <!-- nth chile 3 -->
+          <div>
+            <img src="asset/mylogo/logosayasvg.svg" alt="logo" />
           </div>
         </section>
-        <!-- nth chile 2 -->
-        <section class="container-pengalaman">
-          <h2>Pengalaman</h2>
-          <!-- 1 -->
-          <section class="card">
-            <!-- tahun   -->
-            <div>2023</div>
+      </nav>
+      <!--  -->
+      <!-- slide satu -->
+      <!--  -->
+      <section id="beranda">
+        <section class="container-beranda flex">
+          <!-- layer 1 -->
+          <div class="w-full flex">
+            <section class="container-aboutme flex">
+              <!-- container foto + text -->
+              <div class="container-myfoto">
+                <img class="my-foto" src="asset/myfoto/1.png" alt="widy" />
+              </div>
+              <!-- container teks -->
+              <div class="flex">
+                <h1>HALLO👋,</h1>
+                <span>Saya Widy</span>
+              </div>
+              <button id="down-cv">Download CV</button>
+            </section>
+          </div>
+          <!-- layer 2 -->
+          <div class="w-full flex">
+            <section class="box-luar flex">
+              <section class="box-spin"></section>
+              <section class="box-dalam w-full"></section>
+            </section>
+          </div>
+        </section>
+      </section>
+      <!--  -->
+      <!-- Tentang saya -->
+      <!--  -->
+      <section id="tentang-saya">
+        <section class="container-tentang-saya">
+          <!-- nth chile 1 -->
+          <section class="penjelasan-saya">
+            <h1>Tentang saya</h1>
+            <div>
+              Halo, Dimas Widy, Mempunyai ketertarikan dua bidang illustrator
+              dan Front End. Saya percaya pada kemampuan saya untuk menciptakan
+              desain iLLustrasi dan Coding yang bersih, modern, dan fungsional.
+            </div>
+          </section>
+          <!-- nth chile 2 -->
+          <section class="container-pengalaman">
+            <h2>Pengalaman</h2>
+            <!-- 1 -->
+            <section class="card">
+              <!-- tahun   -->
+              <div>2023</div>
+              <div>
+                <section>
+                  <span>Teknisi Instalasi Wifi</span>
+                  <span>Madiun, Jawa Timur</span>
+                </section>
+                <section id="konten-desc" class="work-desc">
+                  <p>
+                    Di sini, saya menikmati mengeksplorasi teknologi jaringan
+                    terbaru di bawah bimbingan seorang mentor dan juga memiliki
+                    kemampuan untuk bekerja sebagai tim.
+                  </p>
+                </section>
+              </div>
+              <div>
+                <button id="desc-pengalaman">
+                  <span id="icon" class="w-full">
+                    <img src="asset/icon/panah_bawah.svg" alt="" />
+                  </span>
+                </button>
+              </div>
+            </section>
+            <!--  -->
+          </section>
+        </section>
+      </section>
+      <!--  -->
+      <!-- slide 2 -->
+      <!--  -->
+      <section id="skills">
+        <section class="container-skills flex">
+          <!-- layer 1 -->
+          <div class="w-full flex">
+            <section>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </section>
+          </div>
+          <!-- layer 2 -->
+          <div class="w-full flex">
+            <section>
+              <section>
+                <div><img src="asset/img/garudasvg.svg" alt="manok" /></div>
+              </section>
+              <section>
+                <h1>ILLUSTRATOR</h1>
+                <span>dan</span>
+                <h1>Front End</h1>
+              </section>
+            </section>
+          </div>
+        </section>
+      </section>
+      <!--  -->
+      <!-- portofolio -->
+      <!--  -->
+      <section id="portofolio">
+        <section class="container-portofolio">
+          <header>PORTOFOLIO</header>
+          <section class="container-illustrator">
             <div>
               <section>
-                <span>Teknisi Instalasi Wifi</span>
-                <span>Madiun, Jawa Timur</span>
-              </section>
-              <section id="konten-desc" class="work-desc">
                 <p>
-                  Di sini, saya menikmati mengeksplorasi teknologi jaringan
-                  terbaru di bawah bimbingan seorang mentor dan juga memiliki
-                  kemampuan untuk bekerja sebagai tim.
+                  Hallo Saya adalah mahasiswa yang tertari dengan gambar
+                  Illustrator sejak saya masuk kuliah 2023 penasaran dengan
+                  karya saya? yuk kepoin dengan dengan menekan tombo dibawah ini
                 </p>
+                <a href="portofolio.html">iLLustrasi saya</a>
               </section>
             </div>
             <div>
-              <button id="desc-pengalaman">
-                <span id="icon" class="w-full">
-                  <img src="asset/icon/panah_bawah.svg" alt="" />
-                </span>
-              </button>
+              <section>
+                <img src="asset/img/illustrator.jpg" alt="" />
+              </section>
             </div>
           </section>
-          <!--  -->
+          <section class="container-web">
+            <div>
+              <section>
+                <img src="asset/img/illustrator.jpg" alt="" />
+              </section>
+            </div>
+            <div>
+              <section>
+                <p>
+                  Hallo Saya adalah mahasiswa yang tertari dengan gambar
+                  Illustrator sejak saya masuk kuliah 2023 penasaran dengan
+                  karya saya? yuk kepoin dengan dengan menekan tombo dibawah ini
+                </p>
+                <a href="#" id="see-frontend">Portofolio Front End</a>
+              </section>
+            </div>
+          </section>
         </section>
       </section>
-    </section>
+    </main>
     <!--  -->
-    <!-- slide 2 -->
-    <!--  -->
-    <section id="skills">
-      <section class="container-skills flex">
-        <!-- layer 1 -->
-        <div class="w-full flex">
-          <section>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </section>
-        </div>
-        <!-- layer 2 -->
-        <div class="w-full flex">
-          <section>
-            <section>
-              <div><img src="asset/img/garuda web-01.png" alt="manok" /></div>
-            </section>
-            <section>
-              <h1>ILLUSTRATOR</h1>
-              <span>dan</span>
-              <h1>Front End</h1>
-            </section>
-          </section>
-        </div>
+    <section class="alert-cv">
+      <section>
+        <p>CV saat ini belum tersedia.</p>
+        <a href="#" id="cv-confrim">OK</a>
       </section>
     </section>
-    <!--  -->
-    <!-- portofolio -->
-    <!--  -->
-    <section id="portofolio">
-      <section class="container-portofolio">
-        <header>PORTOFOLIO</header>
-        <section class="container-illustrator">
-          <div>
-            <section>
-              <p>
-                Hallo Saya adalah mahasiswa yang tertari dengan gambar
-                Illustrator sejak saya masuk kuliah 2023 penasaran dengan karya
-                saya? yuk kepoin dengan dengan menekan tombo dibawah ini
-              </p>
-              <a href="#">iLLustrasi saya</a>
-            </section>
-          </div>
-          <div>
-            <section>
-              <img src="asset/img/illustrator.jpg" alt="" />
-            </section>
-          </div>
-        </section>
-        <section class="container-web">
-          <div>
-            <section>
-              <img src="asset/img/illustrator.jpg" alt="" />
-            </section>
-          </div>
-          <div>
-            <section>
-              <p>
-                Hallo Saya adalah mahasiswa yang tertari dengan gambar
-                Illustrator sejak saya masuk kuliah 2023 penasaran dengan karya
-                saya? yuk kepoin dengan dengan menekan tombo dibawah ini
-              </p>
-              <a href="#">Web saya</a>
-            </section>
-          </div>
-        </section>
+
+    <section class="alert-web">
+      <section>
+        <p>Portofolio Front End saat ini belum tersedia.</p>
+        <a href="#portofolio" id="frontend-confirm">OK</a>
       </section>
     </section>
     <!-- my scrip -->
+    <script src="javascrip/alert.js"></script>
     <script src="javascrip/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,80 @@
+/* style alert cv start */
+.alert-cv,
+.alert-web {
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.alert-cv section,
+.alert-web section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 10px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.alert-cv section a,
+.alert-web section a {
+  color: var(--primary-color);
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: var(--third-color);
+  border-radius: 50%;
+  box-shadow: rgba(235, 90, 60, 0.4) 0px 5px, rgba(235, 90, 60, 0.3) 0px 10px;
+}
+.alert-active {
+  display: flex;
+}
+/* style alert cv end*/
+/* style alert cv start */
+
+/*  */
+.main-index-fixed {
+  position: fixed;
+}
+
+/* break point */
+/* Default breakpoints seperti Tailwind CSS */
+
+/* Small devices (Mobile, `sm`) */
+@media (min-width: 375px) {
+  .alert-cv section,
+  .alert-web section {
+    width: 70%;
+  }
+}
+
+/* Medium devices (Tablet, `md`) */
+@media (min-width: 768px) {
+  .alert-cv section,
+  .alert-web section {
+    width: 50%;
+  }
+}
+
+/* Large devices (Laptop, `lg`) */
+@media (min-width: 1024px) {
+}
+
+/* Extra large devices (Desktop, `xl`) */
+@media (min-width: 1280px) {
+}
+
+/* 2XL devices (`2xl`) */
+@media (min-width: 1536px) {
+}

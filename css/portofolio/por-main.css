@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.kembali {
+  position: fixed;
+  z-index: 20;
+  bottom: 0;
+  right: 0;
+  margin: 0 2rem 2rem 0;
+  padding: 1rem 2rem;
+  background-color: var(--third-color);
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-family: "Poppins";
+  font-weight: 1000;
+  color: var(--secondary-color);
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.kembali:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-color: var(--third-color);
+}
+main .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-satu {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+.container-satu .container-teks,
+.container-satu .container-logo {
+  height: 5rem;
+  gap: 3rem;
+  overflow: hidden;
+}
+/* style atas */
+.container-teks {
+  display: flex;
+  overflow: hidden;
+  display: flex;
+  gap: 3rem;
+}
+.teks {
+  display: flex;
+  flex-shrink: 0;
+  gap: 3rem;
+  padding: 0.5rem;
+  animation: kanan-kiri 20s linear infinite;
+}
+/* style bawah */
+.logo-container {
+  overflow: hidden;
+  display: flex;
+  gap: 3rem;
+}
+
+.logo {
+  display: flex;
+  flex-shrink: 0;
+  gap: 3rem;
+  padding: 0.5rem;
+  animation: inifite-scroll 30s linear infinite;
+}
+
+/* style card end */
+.card {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  height: 4rem;
+  padding: 10px;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  flex-shrink: 0;
+}
+.card div {
+  height: 40px;
+  width: 40px;
+
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  overflow: hidden;
+}
+.card div img {
+  max-width: 100%;
+  max-width: 100%; /* gambar tidak akan lebih lebar dari container */
+  height: auto; /* menjaga aspek ratio gambar */
+  width: 100%; /* gambar akan mengisi penuh lebar container */
+  object-fit: cover;
+}
+.card span {
+  font-size: 1em;
+  font-weight: 1000;
+  font-family: "Poppins";
+  color: rgba(0, 0, 0, 0.685);
+}
+/*  */
+/*  */
+/*  */
+/* container dua */
+.container-dua {
+  position: absolute;
+  top: 60%;
+  height: 40rem;
+  width: 90%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  border: 2px solid rgba(0, 0, 0, 0.612);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: all 300ms linear;
+  border-radius: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.container-dua .container-grid {
+  background-color: aqua;
+}
+/*  */
+/*  */
+/* kefranes */
+@keyframes inifite-scroll {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes kanan-kiri {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/*  */
+/* layar hp */
+@media (max-width: 600px) {
+  .kembali {
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* Tablet Landscape (768px hingga 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Small Desktop (992px hingga 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Large Desktop (1200px hingga 1599px) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+}
+
+/* Extra Large Desktop (1600px dan lebih besar) */
+@media (min-width: 1600px) {
+}

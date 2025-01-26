@@ -105,3 +105,12 @@
     width: 90%;
   }
 }
+
+/* Extra Large Desktop (1600px dan lebih besar) */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .container-tentang-saya {
+    /* background-color: blue; */
+    width: 85%;
+    margin: auto;
+  }
+}

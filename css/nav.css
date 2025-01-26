@@ -1,8 +1,10 @@
 nav {
   position: relative;
 }
+
 .container-nav {
   position: absolute;
+  top: 0;
   z-index: 12;
   width: 100%;
   height: 70px;
@@ -15,6 +17,13 @@ nav {
   display: flex;
   gap: 10px;
 }
+.container-nav div:first-child a {
+  font-weight: 500;
+  font-size: medium;
+}
+.container-nav div:first-child a:hover {
+  color: var(--third-color);
+}
 .container-nav div:nth-child(2) {
   display: flex;
   justify-content: center;
@@ -26,6 +35,7 @@ nav {
   position: relative;
   overflow: hidden;
 }
+
 .container-nav div:nth-child(2) button:first-child {
   position: absolute;
   transition: all 300ms ease-in-out;
@@ -113,7 +123,7 @@ nav {
 }
 
 /* Large Desktop (1200px hingga 1599px) */
-@media (min-width: 1200px) and (max-width: 1599px) {
+@media (min-width: 1200px) {
   .container-nav div:nth-child(2) {
     display: none;
   }
@@ -127,8 +137,4 @@ nav {
   .container-nav div:nth-child(2) {
     display: none;
   }
-}
-
-/* Extra Large Desktop (1600px dan lebih besar) */
-@media (min-width: 1600px) {
 }

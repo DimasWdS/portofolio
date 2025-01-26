@@ -162,3 +162,11 @@ body {
     font-size: 0.7em;
   }
 }
+/* Extra Large Desktop (1600px dan lebih besar) */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .container-beranda {
+    /* background-color: blue; */
+    width: 85%;
+    margin: auto;
+  }
+}

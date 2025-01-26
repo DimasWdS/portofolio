@@ -151,3 +151,10 @@
     margin-top: 0;
   }
 }
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .container-portofolio {
+    /* background-color: blue; */
+    width: 85%;
+    margin: auto;
+  }
+}
