@@ -33,4 +33,8 @@
   transform: scaleY(1);
   transition: all 300ms linear;
 }
+.opacity-full {
+  opacity: inherit;
+  transition: all 0.2s;
+}
 /* portofolio.html */
