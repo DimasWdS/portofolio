@@ -262,6 +262,14 @@ main {
     margin-left: 1rem;
     margin-top: 40%;
   }
+  /* .container-2 .layer2-1 {
+    background-color: aqua;
+  }
+  .container-2 .layer2-1 div:nth-child(2) {
+    position: absolute;
+    background-color: aqua;
+    right: 0;
+  } */
   .layer-2 .container-teks {
     align-items: start;
   }
@@ -281,12 +289,13 @@ main {
   /* layer 1 start */
   .container-2 .layer2-1 {
     margin: auto;
-    width: 90%;
+    width: 100%;
     align-items: end;
     padding-bottom: 2rem;
   }
   .layer2-1 div:nth-child(1) {
     margin-bottom: 40%;
+    width: 85%;
   }
   .container-logo {
     display: none;
