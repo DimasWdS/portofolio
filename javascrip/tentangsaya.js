@@ -1,17 +1,11 @@
 // pengalaman
 // card1
-const pengalaman1 = document.querySelector(".show-exp-1");
-const btnIcon1 = document.querySelector(".btn-icon1");
-const descExp1 = document.querySelector(".desc-exp1");
-pengalaman1.addEventListener("click", function () {
-  btnIcon1.classList.toggle("show-exp-active");
-  descExp1.classList.toggle("desc-exp-active");
+const btnCard1 = document.querySelector(".show-exp-1");
+const expDesc1 = document.querySelector(".exp-desc1");
+const containerCard = document.querySelector(".card-pengalaman1");
+btnCard1.addEventListener("click", function () {
+  btnCard1.classList.toggle("btn-show-exp-active");
+  expDesc1.classList.toggle("exp-desc-active");
+  containerCard.classList.toggle("card-pengalaman-active");
 });
-// card2
-const pengalaman2 = document.querySelector(".show-exp-2");
-const btnIcon2 = document.querySelector(".btn-icon2");
-const descExp2 = document.querySelector(".desc-exp2");
-pengalaman2.addEventListener("click", function () {
-  btnIcon2.classList.toggle("show-exp-active");
-  descExp2.classList.toggle("desc-exp-active");
-});
+//
