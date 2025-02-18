@@ -36,13 +36,3 @@ document.addEventListener("click", function (e) {
   }
 });
 //
-// pengalaman
-// tombol lihat pengalaman
-const sp = document.getElementById("desc-pengalaman");
-const ab = document.getElementById("icon"); //icon panh btn
-const kd = document.getElementById("konten-desc"); //konten deskripsi
-
-sp.addEventListener("click", function () {
-  ab.classList.toggle("rotate180");
-  kd.classList.toggle("work-desc-active");
-});

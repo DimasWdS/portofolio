@@ -9,6 +9,7 @@ main {
   overflow: hidden;
   background-color: var(--primary-color);
 }
+/* btn back start */
 .btn-back {
   position: fixed;
   bottom: 0;
@@ -33,6 +34,7 @@ main {
   transition: all ease-in-out;
   transition-duration: 0.3s;
 }
+/* btn back end */
 /* layer 1 start */
 .layer-1 {
   height: 100dvh;
@@ -51,12 +53,13 @@ main {
   max-width: 100%;
   max-height: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
 }
 .layer-1 .container-img span {
   display: inline-block;
   position: absolute;
+  z-index: 1;
   height: 40rem;
   width: 40rem;
   border: 5px solid var(--third-color);
@@ -65,6 +68,7 @@ main {
   right: 0;
   transform: translate(40%, 40%);
   background-color: var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 /* layer 1 end */
 /* layer 2 start */
@@ -72,15 +76,28 @@ main {
   position: absolute;
   height: 100dvh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
   /* background-color: rgba(0, 0, 0, 0.5); */
   top: 0;
 }
+.layer-2 section {
+  height: 2rem;
+  width: 50%;
+  margin-left: 4.5rem;
+}
+.layer-2 section img {
+  max-width: 100%;
+  max-height: 100%;
+}
 .layer-2 .container-teks {
   width: 70%;
-  height: 100%;
   display: flex;
   align-items: center;
 }
+
 .container-teks .name {
   display: flex;
   flex-direction: column;
@@ -113,12 +130,113 @@ main {
 }
 
 /* layer 2 end */
-
+/*  */
 /* container 2 start*/
 .container-2 {
   height: 100vh;
   width: 100%;
+  position: relative;
 }
+/* layer1 start */
+.container-2 .layer2-1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* teks (my work) start */
+.layer2-1 div:nth-child(1) {
+  display: flex;
+  padding: 5%;
+  width: 30rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: radial-gradient(
+    circle,
+    var(--primary-color),
+    rgba(177, 192, 203, 0.8)
+  );
+  position: relative;
+  box-shadow: rgba(75, 80, 84, 0.8) 3px 3px 6px 0px inset,
+    rgba(91, 97, 102, 0.8) -3px -3px 6px 0px inset;
+  border-radius: 20px;
+  border: 0.5px solid var(--third-color);
+}
+.layer2-1 div:nth-child(1) span:nth-child(2) span {
+  font-size: 1em;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+}
+.layer2-1 div:nth-child(1) span:nth-child(2) span::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 105%;
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  border: 2px solid var(--third-color);
+  animation: spin 20s linear infinite;
+}
+.layer2-1 div:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid var(--third-color);
+  z-index: 1;
+}
+.layer2-1 div:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-top: 55px solid rgb(208, 208, 208);
+}
+/* teks (my work) end */
+.layer2-1 div:nth-child(1) span {
+  font-size: 4em;
+  font-family: "Lilita One", serif;
+  color: var(--secondary-color);
+}
+.layer2-1 div:nth-child(2) {
+  position: absolute;
+  margin-top: 3rem;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background-color: var(--third-color);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+.layer2-1 div:nth-child(2) span {
+  font-size: 3em;
+  font-family: "Lilita One", serif;
+  margin-right: 3rem;
+  margin-left: 1rem;
+  color: var(--primary-color);
+}
+/* layer 2 end */
+
+/* container 2 layer 2 start*/
+.layer2-2 {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 0;
+}
+/* container 2 layer 2 end*/
+
 /* container 2 end*/
 @media (max-width: 640px) {
   .btn-back {
@@ -137,17 +255,44 @@ main {
   }
   /* layer 1 end */
   /* layer 2 start */
+  .layer-2 {
+    justify-content: start;
+  }
+  .layer-2 section {
+    margin-left: 1rem;
+    margin-top: 40%;
+  }
   .layer-2 .container-teks {
     align-items: start;
   }
   .container-teks .name {
-    margin-top: 50%;
     margin-left: 1rem;
   }
   .container-teks .name span:nth-child(2) {
     font-size: 5rem;
   }
+  .container-teks .name span:nth-child(1),
+  .container-teks .name span:nth-child(3) {
+    font-size: 0.7em;
+  }
   /* layer 2 end */
+
+  /* container2 start */
+  /* layer 1 start */
+  .container-2 .layer2-1 {
+    margin: auto;
+    width: 90%;
+    align-items: end;
+    padding-bottom: 2rem;
+  }
+  .layer2-1 div:nth-child(1) {
+    margin-bottom: 40%;
+  }
+  .container-logo {
+    display: none;
+  }
+  /* layer 1 end */
+  /* container2 end */
 }
 
 /* keyframe start */
@@ -157,6 +302,14 @@ main {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
   }
 }
 /* keyframe end */
