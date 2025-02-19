@@ -159,11 +159,19 @@
     }
     
     .contaner-form-pesan{
-        margin-top: 6rem;
+        
         width: 100%;
         
         
         
     
     }
+    .contaner-icon-sosmed{
+        justify-content: end;
+        /* background-color: aqua; */
+        margin-top: 3rem;
+    }
+    /* .contaner-form-pesan{
+        background-color: brown;
+    } */
 }
