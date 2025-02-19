@@ -1,0 +1,209 @@
+@media (min-width: 1280px) {
+  .container-sosmed {
+    width: 90%;
+    margin: auto;
+  }
+}
+/*  */
+
+/*  */
+.container-sosmed {
+  width: 90%;
+  height: 38rem;
+  position: relative;
+  display: flex;
+  margin: auto;
+}
+.container-sosmed section:nth-child(1) {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.container-sosmed header:nth-child(1) h1 {
+  display: inline-block;
+  position: relative;
+  font-size: 3em;
+  color: var(--third-color);
+  font-family: "Delicious Handrawn", serif;
+  transform: rotate(-12deg);
+  transform-origin: center;
+  z-index: 1;
+}
+
+.container-sosmed header:nth-child(1) h1::before {
+  content: "Contact me !";
+  color: var(--secondary-color);
+  opacity: 10%;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.5rem;
+  width: 20rem;
+  z-index: -1;
+}
+.container-icon-sosmed {
+  position: relative;
+}
+.container-icon-sosmed .icon-sosmed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 5rem;
+  width: 20rem;
+  border: 0.1rem solid var(--third-color);
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  position: relative;
+  z-index: 4;
+}
+.container-icon-sosmed::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border-radius: 5px;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+.container-icon-sosmed .icon-sosmed .icon {
+  height: 3rem;
+  width: 3rem;
+  padding: 0.4rem;
+  border: 0.1rem solid var(--secondary-color);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.1s linear;
+}
+.container-icon-sosmed .icon-sosmed .icon:hover {
+  border-width: 0.2rem;
+  transition: all 0.1s linear;
+}
+.icon svg {
+  max-width: 100%;
+  fill: var(--secondary-color);
+}
+
+.container-sosmed .container-contack {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container-contack .container-form {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  margin-top: 10rem;
+  gap: 2.5rem;
+
+  height: max-content;
+}
+.container-form div {
+  position: relative;
+}
+.container-form div label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5cap;
+  position: absolute;
+  bottom: 100%;
+}
+.container-form div div:nth-child(2) input {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  height: 2.3rem;
+  text-decoration: none;
+  background: transparent;
+  outline: none;
+  border: none;
+  border: 0.1rem solid var(--third-color);
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  position: relative;
+}
+.container-form div div:nth-child(2)::before {
+  content: " ";
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+}
+.container-form div div:nth-child(2) textarea {
+  width: 100%;
+  height: 8rem;
+  position: relative;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border: 0.1rem solid var(--third-color);
+  border-radius: 10px;
+  outline: none;
+}
+.container-form .container-send button {
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--third-color);
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 1em;
+  letter-spacing: 1cap;
+  color: var(--primary-color);
+  position: relative;
+  z-index: 2;
+}
+.container-form .container-send {
+  position: relative;
+}
+
+.container-form .container-send::before {
+  content: " ";
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  z-index: -2;
+  border-radius: 45px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+/*  */
+@media (max-width: 1023px) {
+  .container-sosmed {
+    width: 100%;
+  }
+}
+
+/* (min-width: 0px) and */
+@media (max-width: 640px) {
+  .container-sosmed {
+    width: 100%;
+    height: 55rem;
+    flex-direction: column;
+  }
+  .container-sosmed section:nth-child(1) {
+    width: 100%;
+    height: 50%;
+  }
+
+  .container-sosmed .container-contack {
+    width: 100%;
+    height: 50%;
+  }
+  .container-contack .container-form {
+    margin-top: 0;
+  }
+}
