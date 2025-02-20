@@ -1,3 +1,13 @@
+@media (min-width:1280px){
+    
+    #contack{
+        margin: auto;
+    
+        width: 90%;
+        
+    }
+}
+
 .container-contack{
     height: 40rem;
     width: 100%;
@@ -28,7 +38,7 @@
     position: relative;
 }
 .contaner-icon-sosmed .header::before{
-    content: "FOLLOW ME !";
+    content: "Contack me !";
     position: absolute;
     height: 100%;
     width: 100%;
@@ -53,6 +63,10 @@
     border: 0.1rem solid var(--third-color);
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 .contaner-icon-sosmed section::before{
     content: "";
@@ -63,6 +77,31 @@
     width: 100%;
     border-radius: 5px;
     background-color: var(--secondary-color);
+}
+
+.icon{
+    display: inline-flex;
+    height: 3.5rem;
+    width: 3.5rem;
+    border: 1px solid var(--third-color);
+    border-radius: 50%;
+    padding: 0.6rem;
+    transition: all 0.2s linear;
+}
+.icon a {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.icon a svg{
+    fill: var(--third-color);
+}
+
+.icon:hover {
+    transition: all 0.2s ease-out;
+    padding: 0.3rem;
+    border: 1.5px solid var(--third-color);
+    
 }
 
 
@@ -76,7 +115,7 @@
     width: 90%;
 }
 
-.form section label div,.form section {
+.form section label div,.form section,.form section div {
     position: relative;
 
 }   
@@ -87,13 +126,12 @@
 .form section  div::before{
     content: "";
     position: absolute;
-    top: 0.8rem;
-    left: 0.8rem;
+    transform: translateX(0.8rem) translateY(0.8rem);
     border-radius: 5px;
     height: 100%;
     width: 100%;
     background-color: var(--secondary-color);
-    
+    transition: all 0.1s linear;
 }
 .form section  div input{
     width: 100%;
@@ -109,6 +147,13 @@
     position: relative;
     z-index: 1;
 }
+
+.form section div:focus-within::before{
+    transition: all 0.1s linear;
+    transform: translateX(0rem) translateY(0rem);
+    opacity: 0;
+}
+
 .form section  div textarea{
     position: relative;
     width: 100%;
@@ -140,6 +185,10 @@
     .contaner-icon-sosmed section div:first-child{
         width: 20rem;
     }
+      .copyright{
+        font-size: 0.8em;
+     }
+
 
 }
 
@@ -174,4 +223,7 @@
     /* .contaner-form-pesan{
         background-color: brown;
     } */
+     .copyright{
+        font-size: 0.7em;
+     }
 }

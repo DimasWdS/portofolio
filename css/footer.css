@@ -1,95 +1,62 @@
-.container-footer {
-  width: 100%;
+footer {
+  margin-top: 5rem;
+}
+
+footer section div:first-child {
+  display: flex;
+  background-color: var(--secondary-color);
+}
+
+.footer-logo img {
+  opacity: 40%;
   height: 20rem;
-  background-color: var(--secondary-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-}
-
-.copyright{
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
-
-.container-footer .logo{
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  
-}
-
-.container-footer .logo div:first-child {
   width: 20rem;
-  height: 20rem;
 }
 
-
-.container-footer .logo div:first-child img {
-  opacity: 0.5;
-  max-width: 100%;
-  
-}
-
-
-
-.container-footer .container-about-web {
-  width: 100%;
-  height: 90%;
+.footer-teks {
+  flex: 1;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
-
-.container-about-web div span{
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  font-size: 1em;
-  font-weight: 700;
-  color: var(--primary-color);
-}
-
-.container-about-web div  {
-  height: 100%;
+.box-teks {
   width: 10rem;
-  padding: 0.5rem;
+  height: 15rem;
+  color: var(--primary-color);
   border-left: 0.1rem solid var(--third-color);
+  padding: 0.5rem;
 }
 
-.container-about-web div p{
-  font-size: 0.8em;
-  color: var(--primary-color);
+.box-teks span {
+  display: inline-flex;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
 }
-.container-about-web div ul{
-font-size: 0.8em;
+
+.box-teks p {
+  font-size: 0.7em;
+}
+
+.box-teks ul li {
+  font-size: 0.7em;
+  text-decoration: none;
   list-style: none;
-
 }
-.container-about-web div ul li a{
+.box-teks ul li a {
+  text-decoration: none;
   color: var(--primary-color);
-  
-}
-@media(max-width:640px){
-  .container-footer{
-    flex-direction: column-reverse;
-    height: 50rem;
-  }
-  .container-footer .container-about-web{
-    flex-direction: column;
-  }
-  .container-about-web div  {
-    height: 10rem;
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border-left: none;
-    border-top: 0.1rem solid var(--third-color);
-  }
 }
 
+.copyright {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 200;
+  background-color: var(--secondary-color);
+}
