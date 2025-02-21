@@ -12,6 +12,7 @@ img {
   flex-direction: column;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .penjelasan-saya {
   margin-top: 70px;
