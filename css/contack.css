@@ -1,229 +1,215 @@
-@media (min-width:1280px){
-    
-    #contack{
-        margin: auto;
-    
-        width: 90%;
-        
-    }
+@media (min-width: 1280px) {
+  #contack {
+    margin: auto;
+
+    width: 90%;
+  }
 }
 
-.container-contack{
-    height: 40rem;
-    width: 100%;
-    display: flex;
+.container-contack {
+  height: 40rem;
+  width: 100%;
+  display: flex;
 }
 /* .contaner-icon-sosmed{
     background-color: blueviolet;
 } */
-.contaner-icon-sosmed,.contaner-form-pesan{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
- 
+.contaner-icon-sosmed,
+.contaner-form-pesan {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.contaner-icon-sosmed .header{
-    position: relative;
-    margin-bottom: 2rem;
+.contaner-icon-sosmed .header {
+  position: relative;
+  margin-bottom: 2rem;
 }
-.contaner-icon-sosmed .header h1{
-    display: inline-block;
-    transform: rotate(-12deg);
-    font-size: 3em;
-    color: var(--third-color);
-    font-family: "Delicious Handrawn", serif;
-    position: relative;
+.contaner-icon-sosmed .header h1 {
+  display: inline-block;
+  transform: rotate(-12deg);
+  font-size: 3em;
+  color: var(--third-color);
+  font-family: "Delicious Handrawn", serif;
+  position: relative;
 }
-.contaner-icon-sosmed .header::before{
-    content: "Contack me !";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    transform: rotate(-12deg);
-    font-size: 3em;
-    color: var(--third-color);
-    font-family: "Delicious Handrawn", serif;
-    color: var(--secondary-color);
-    top: 0.5rem;
-    left: 0.5rem;
-    opacity: 30%;
+.contaner-icon-sosmed .header::before {
+  content: "Contack me !";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: rotate(-12deg);
+  font-size: 3em;
+  color: var(--third-color);
+  font-family: "Delicious Handrawn", serif;
+  color: var(--secondary-color);
+  top: 0.5rem;
+  left: 0.5rem;
+  opacity: 30%;
+}
+.contaner-icon-sosmed section {
+  position: relative;
+}
+.contaner-icon-sosmed section div:first-child {
+  height: 5rem;
+  width: 30rem;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: 0.1rem solid var(--third-color);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.contaner-icon-sosmed section::before {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+}
 
-}
-.contaner-icon-sosmed section{
-    position: relative;
-}
-.contaner-icon-sosmed section div:first-child{
-    height: 5rem;
-    width: 30rem;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    border: 0.1rem solid var(--third-color);
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-.contaner-icon-sosmed section::before{
-    content: "";
-    position: absolute;
-    top: 0.7rem;
-    left: 0.7rem;
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    background-color: var(--secondary-color);
-}
-
-.icon{
-    display: inline-flex;
-    height: 3.5rem;
-    width: 3.5rem;
-    border: 1px solid var(--third-color);
-    border-radius: 50%;
-    padding: 0.6rem;
-    transition: all 0.2s linear;
+.icon {
+  display: inline-flex;
+  height: 3.5rem;
+  width: 3.5rem;
+  border: 1px solid var(--third-color);
+  border-radius: 50%;
+  padding: 0.6rem;
+  transition: all 0.2s linear;
 }
 .icon a {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
-.icon a svg{
-    fill: var(--third-color);
+.icon a svg {
+  fill: var(--third-color);
 }
 
 .icon:hover {
-    transition: all 0.2s ease-out;
-    padding: 0.3rem;
-    border: 1.5px solid var(--third-color);
-    
+  transition: all 0.2s ease-out;
+  padding: 0.3rem;
+  border: 1.5px solid var(--third-color);
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.contaner-form-pesan .form {
+  width: 90%;
+}
 
+.form section label div,
+.form section,
+.form section div {
+  position: relative;
+}
+.form section label {
+  position: absolute;
+  bottom: 100%;
+}
+.form section div::before {
+  content: "";
+  position: absolute;
+  transform: translateX(0.8rem) translateY(0.8rem);
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary-color);
+  transition: all 0.1s linear;
+}
+.form section div input {
+  width: 100%;
+  height: 3rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  border: 0.1rem solid var(--third-color);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 1;
+}
 
-.form{
-    display: flex;
+.form section div:focus-within::before {
+  transition: all 0.1s linear;
+  transform: translateX(0rem) translateY(0rem);
+  opacity: 0;
+}
+
+.form section div textarea {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  height: 10rem;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  border: 0.1rem solid var(--third-color);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.form section div button {
+  width: 100%;
+  background-color: var(--third-color);
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  position: relative;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+@media (max-width: 1023px) {
+  .contaner-icon-sosmed section div:first-child {
+    width: 20rem;
+  }
+  .copyright {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 640px) {
+  .container-contack {
     flex-direction: column;
-    gap: 3rem;
-}
-.contaner-form-pesan .form{
-    width: 90%;
-}
-
-.form section label div,.form section,.form section div {
-    position: relative;
-
-}   
-.form section label{
-    position: absolute;
-    bottom: 100%;
-}
-.form section  div::before{
-    content: "";
-    position: absolute;
-    transform: translateX(0.8rem) translateY(0.8rem);
-    border-radius: 5px;
-    height: 100%;
+    height: 60rem;
+  }
+  .contaner-icon-sosmed {
     width: 100%;
-    background-color: var(--secondary-color);
-    transition: all 0.1s linear;
-}
-.form section  div input{
+    height: 50%;
+  }
+  .contaner-icon-sosmed section div:first-child {
+    width: 20rem;
+  }
+
+  .contaner-form-pesan {
     width: 100%;
-    height: 3rem;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    background-color: var(--primary-color);
-    border: 0.1rem solid var(--third-color);
-    padding-left: 1rem;
-    padding-right: 1rem;
-    position: relative;
-    z-index: 1;
-}
-
-.form section div:focus-within::before{
-    transition: all 0.1s linear;
-    transform: translateX(0rem) translateY(0rem);
-    opacity: 0;
-}
-
-.form section  div textarea{
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    height: 10rem;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    background-color: var(--primary-color);
-    border: 0.1rem solid var(--third-color);
-    border-radius: 5px;
-    padding: 1rem;
-}
-
-.form section div button{
-    width: 100%;
-    background-color: var(--third-color);
-    font-size: 1.3em;
-    font-weight: 700;
-    color: var(--primary-color);
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-    position: relative;
-    z-index: 1;
-    border-radius: 4px;
-}
-
-@media(max-width:1023px){
-    .contaner-icon-sosmed section div:first-child{
-        width: 20rem;
-    }
-      .copyright{
-        font-size: 0.8em;
-     }
-
-
-}
-
-@media (max-width:640px){
-    .container-contack{
-        flex-direction: column;
-        height: 60rem;
-        
-    }
-    .contaner-icon-sosmed{
-        width: 100%;
-        height: 50%;
-    }
-    .contaner-icon-sosmed section div:first-child{
-        width: 20rem;
-    
-    }
-    
-    .contaner-form-pesan{
-        
-        width: 100%;
-        
-        
-        
-    
-    }
-    .contaner-icon-sosmed{
-        justify-content: end;
-        /* background-color: aqua; */
-        margin-top: 3rem;
-    }
-    /* .contaner-form-pesan{
+  }
+  .contaner-icon-sosmed {
+    justify-content: end;
+    /* background-color: aqua; */
+    margin-top: 3rem;
+  }
+  /* .contaner-form-pesan{
         background-color: brown;
     } */
-     .copyright{
-        font-size: 0.7em;
-     }
+  .copyright {
+    font-size: 0.7em;
+  }
 }

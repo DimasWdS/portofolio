@@ -1,7 +1,12 @@
 nav {
   position: relative;
+  /* transform: translateY(100%);
+  transition: all 0.2s linear; */
 }
-
+nav::after {
+  transition: all 0.2s linear;
+  transform: translateY(0);
+}
 .container-nav {
   position: absolute;
   top: 0;
@@ -25,6 +30,7 @@ nav {
   font-weight: 800;
   font-size: 0.9em;
   transition: all 0.1s linear;
+  color: var(--secondary-color);
 }
 .container-nav div:first-child a::before {
   content: " ";
