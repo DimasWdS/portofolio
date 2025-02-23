@@ -4,37 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio</title>
+    <link rel="stylesheet" href="css/portofolio/portofolio-galery.css" />
     <link rel="stylesheet" href="css/universal.css" />
     <link rel="stylesheet" href="css/portofolio/por-main.css" />
+    <!-- libary animasi start -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- libary animasi end -->
   </head>
   <body>
     <main>
       <div class="btn-back">
-        <a class="w-full" href="index.html#portofolio"></a>
+        <a class="w-full" href="index.html#portofolio"
+          ><img src="asset/icon/roket.svg" alt=""
+        /></a>
+      </div>
+      <div class="btn-back back-top back-top-gone">
+        <a class="w-full" href="#portofolio-galery"
+          ><img src="asset/icon/roket.svg" alt=""
+        /></a>
       </div>
       <!-- container 1 -->
       <section class="container-1">
         <!-- layer-1 -->
         <section class="layer-1">
           <!-- container-img -->
-          <section class="container-img">
+          <section
+            class="container-img animate__animated animate__slideInRight"
+          >
             <img src="asset/svg/PROFIL-ILLUSTRATOR.svg" alt="" />
             <span></span>
           </section>
         </section>
         <!-- layer2 -->
-        <section class="layer-2">
+        <section class="layer-2 flex">
           <section>
-            <img src="asset/svg/PORTOFOLIO-TEKS-01.svg" alt="" />
-          </section>
-          <!-- container teks -->
-          <div class="container-teks">
-            <div class="name">
-              <span>DIMAS 🚀</span>
-              <span>WIDY</span>
-              <span>SAPUTRA</span>
+            <div class="name animate__animated animate__fadeInLeft">
+              <img src="asset/svg/PORTOFOLIO-TEKS-01.svg" alt="" />
             </div>
-          </div>
+            <div class="name flex">
+              <span class="name animate__animated animate__fadeInLeft"
+                >Dimas 🚀
+              </span>
+              <span>WI<span>DY</span></span>
+              <span class="name animate__animated animate__fadeInLeft"
+                >Saputra</span
+              >
+            </div>
+          </section>
         </section>
       </section>
       <!-- container 2 -->
@@ -49,7 +69,96 @@
           <div><span>2025</span></div>
         </section>
         <!-- layer 2 -->
-        <section class="layer2-2"></section>
+        <section class="layer2-2">
+          <div class="circle">
+            <div>
+              <img src="asset/icon/Adobe_Illustrator_CC_icon.svg" alt="" />
+            </div>
+            <div>
+              <img src="asset/icon/infinite_design.webp" alt="" />
+            </div>
+            <div><img src="asset/icon/canva.png" alt="" /></div>
+            <div>
+              <img src="asset/icon/Adobe_Illustrator_CC_icon.svg" alt="" />
+            </div>
+            <div>
+              <img src="asset/icon/infinite_design.webp" alt="" />
+            </div>
+            <div><img src="asset/icon/canva.png" alt="" /></div>
+            <div>
+              <img src="asset/icon/Adobe_Illustrator_CC_icon.svg" alt="" />
+            </div>
+            <div>
+              <img src="asset/icon/infinite_design.webp" alt="" />
+            </div>
+            <div><img src="asset/icon/canva.png" alt="" /></div>
+            <div>
+              <img src="asset/icon/Adobe_Illustrator_CC_icon.svg" alt="" />
+            </div>
+            <div>
+              <img src="asset/icon/infinite_design.webp" alt="" />
+            </div>
+          </div>
+          <div class="circle-teks">
+            <span>Tools</span>
+            <span>i Use 🚀 </span>
+          </div>
+        </section>
+      </section>
+      <!--  -->
+      <section id="portofolio-galery">
+        <section class="portofolio-gallery">
+          <section class="card-baris">
+            <!-- card -->
+            <div class="card">
+              <div class="card-call">
+                <a href="index.html#contack"
+                  ><img src="asset/icon/call_made.svg" alt=""
+                /></a>
+              </div>
+              <div class="card-img">
+                <img src="asset/svg/LOGOSAYA2024-01.svg" alt="" />
+              </div>
+              <div class="card-desc">
+                <header>iLlustratsi Logo</header>
+                <p>
+                  Desain ini saya gunakan sebagai logo brand saya, yang terdiri
+                  dari huruf W dan D, singkatan dari kata "Widy".
+                </p>
+              </div>
+              <div class="card-icon">
+                <div>
+                  <img src="asset/icon/Adobe_Illustrator_CC_icon.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="card">
+              <div class="card-call">
+                <a href="index.html#contack"
+                  ><img src="asset/icon/call_made.svg" alt=""
+                /></a>
+              </div>
+              <div class="card-img">
+                <img src="asset/img/DESAIN-SKELETON-SKATEBOARD-01.svg" alt="" />
+              </div>
+              <div class="card-desc">
+                <header>iLlustratsi skeleton</header>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officiis a recusandae fugiat pariatur ad ab quia accusamus
+                  dolores quae hic et accusantium deserunt consequatur,
+                </p>
+              </div>
+              <div class="card-icon">
+                <div>
+                  <img src="asset/icon/Adobe_Illustrator_CC_icon.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <!--  -->
+          </section>
+        </section>
       </section>
     </main>
     <!-- my scrip -->
