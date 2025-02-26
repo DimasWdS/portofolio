@@ -1,0 +1,248 @@
+main {
+  background-color: var(--primary-color);
+}
+/* beranda start */
+
+#beranda {
+  position: relative;
+}
+.container-beranda {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container-kiri,
+.container-kanan {
+  width: 50%;
+  height: 20rem;
+  position: relative;
+  /* background-color: blueviolet; */
+}
+
+.container-nama {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 35rem;
+  height: 100%;
+  /* background-color: aqua; */
+  right: -1rem;
+  color: var(--font-color);
+}
+.container-nama span {
+  font-family: "Lilita One", serif;
+}
+.container-nama span:nth-child(1) {
+  font-weight: 500;
+}
+.container-nama span:nth-child(2) {
+  font-size: 2em;
+  font-weight: 500;
+}
+.container-nama span:nth-child(3) {
+  font-size: 5em;
+  font-weight: 700;
+}
+.container-nama p {
+  padding: 0.5rem;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.container-nama span:nth-child(5) {
+  display: inline-flex;
+  position: relative;
+  border: 0.1rem solid var(--secondary-color);
+  border-radius: 20px;
+  transform: rotate(14deg);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  height: 5rem;
+  width: 5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.container-nama span:nth-child(5)::after {
+  content: "";
+  border: 0.1rem solid var(--third-color);
+  border-radius: 20px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 1rem;
+  top: 1rem;
+}
+.container-code {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: -20%;
+  height: 30rem;
+  width: 100%;
+  max-width: 35rem;
+  border-radius: 0 10px 10px 10px;
+  background-color: rgb(0, 0, 0);
+}
+.container-code .fake-btn {
+  position: absolute;
+  height: 2rem;
+  width: 4rem;
+  background-color: black;
+  border-radius: 10px 10px 0 0;
+  bottom: 100%;
+  gap: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-code .fake-btn span {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.container-code .fake-btn span:first-child {
+  background-color: red;
+}
+.container-code .fake-btn span:nth-child(2) {
+  background-color: yellow;
+}
+.container-code .fake-btn span:nth-child(3) {
+  background-color: green;
+}
+.container-code .code-nav {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
+.container-code .code-nav button {
+  font-weight: 500;
+  font-size: 0.8em;
+  color: var(--font-color);
+}
+.container-code .code-nav a {
+  font-size: 0.8em;
+  padding: 2px 4px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1.5px solid transparent;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.container-code .code-nav a:hover {
+  background-color: transparent;
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.container-code .code-code {
+  position: relative;
+  overflow: hidden;
+  margin: 0.3rem;
+  border-radius: 15px 15px 5px 5px;
+  flex: 1;
+  border: 0.2rem solid rgba(255, 255, 255, 0.259);
+  background-color: rgb(33, 33, 33);
+}
+.konten-html {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+.no-html {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 2rem;
+  background-color: rgb(33, 33, 33);
+}
+.no-html span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+
+  width: 100%;
+}
+.no-html span {
+  font-weight: 400;
+  color: var(--font-color);
+}
+.konten-html div {
+  color: aliceblue;
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+/* beranda end */
+/* teknologi start */
+.teknologi {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  gap: 1rem;
+}
+.teknologi section {
+  width: 50%;
+  height: 100%;
+  gap: 1rem;
+}
+/* teknologi end */
+
+@media (max-width: 640px) {
+  .container-beranda {
+    flex-direction: column;
+    height: 60rem;
+    gap: 10rem;
+  }
+  .container-kiri,
+  .container-kanan {
+    width: 95%;
+    height: 20rem;
+  }
+  .container-nama {
+    left: 0;
+  }
+  .container-nama span:first-child {
+    margin-top: 5rem;
+  }
+  .container-nama span:nth-child(5) {
+    display: none;
+  }
+}
+
+@keyframes spin-coy {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes counter-spin-coy {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

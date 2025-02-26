@@ -172,7 +172,11 @@ main {
   align-items: center;
 }
 /* teks (my work) start */
-
+.slogan {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
 .layer2-1 div:nth-child(1) span:nth-child(2) span {
   font-size: 1em;
   display: inline-flex;

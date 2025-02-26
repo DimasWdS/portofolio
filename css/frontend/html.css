@@ -1,0 +1,10 @@
+.red {
+  color: red;
+}
+.yellow {
+  color: yellow;
+  margin-left: 0.5rem;
+}
+.green {
+  color: rgb(3, 197, 3);
+}

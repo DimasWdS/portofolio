@@ -22,7 +22,7 @@ img {
 .container-tentang-saya .penjelasan-saya div:nth-child(2) {
   font-size: 0.8em;
   font-weight: 600;
-  color: var(--font-color);
+  color: rgb(44, 44, 44);
 }
 .penjelasan-saya h2 {
   margin-top: 1rem;

@@ -50,14 +50,14 @@
   margin-top: 1rem;
 }
 .container-aboutme div:nth-child(2) h1 {
-  color: var(--font-color);
+  color: var(--third-color);
   font-weight: 900;
   font-size: 1.5em;
 }
 .container-aboutme div:nth-child(2) span {
   font-size: 1.1em;
   font-weight: 600;
-  color: var(--font-color);
+  color: var(--secondary-color);
 }
 .container-aboutme button {
   background-color: var(--secondary-color);

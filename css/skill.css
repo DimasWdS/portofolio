@@ -65,6 +65,7 @@
 }
 .container-skills div:nth-child(2) section section:last-child h1 {
   font-size: 5em;
+  color: var(--secondary-color);
 }
 .container-skills div:nth-child(2) section section:last-child span {
   margin-left: 3rem;

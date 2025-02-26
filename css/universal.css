@@ -19,9 +19,8 @@ html {
 }
 
 :root {
-  --font-color: #454545;
+  --font-color: #a6a6a6;
   --primary-color: #f2f9ff;
-
   --secondary-color: #000957;
   --third-color: #eb5a3c;
 }

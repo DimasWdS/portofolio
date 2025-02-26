@@ -19,7 +19,7 @@ const gallery = document.getElementById("portofolio-galery");
 const btnTop = document.querySelector(".back-top");
 window.addEventListener("scroll", () => {
   let scrollY = Math.round(window.scrollY); // Ambil posisi scroll saat ini
-  console.log("Scroll Position:", scrollY);
+  // console.log("Scroll Position:", scrollY);
   if (scrollY >= 1000) {
     btnTop.classList.remove("back-top-gone");
   } else {

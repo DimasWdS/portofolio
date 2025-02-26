@@ -12,16 +12,3 @@ cvConfirm.addEventListener("click", function () {
   cMain.classList.remove("main-index-fixed");
 });
 //
-// web alert
-const bsp = document.getElementById("see-frontend");
-const cAlertWeb = document.querySelector(".alert-web");
-const wConfirm = document.getElementById("frontend-confirm");
-bsp.addEventListener("click", function () {
-  cAlertWeb.classList.add("alert-active");
-  cMain.classList.add("main-index-fixed");
-});
-
-wConfirm.addEventListener("click", function () {
-  cAlertWeb.classList.remove("alert-active");
-  cMain.classList.remove("main-index-fixed");
-});
