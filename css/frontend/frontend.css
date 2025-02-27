@@ -20,7 +20,9 @@ main {
   position: relative;
   /* background-color: blueviolet; */
 }
-
+/* .container-kiri {
+  background-color: aqua;
+} */
 .container-nama {
   position: absolute;
   display: flex;
@@ -76,6 +78,31 @@ main {
   left: 1rem;
   top: 1rem;
 }
+.teknologi {
+  width: 90%;
+  max-width: 25rem;
+  display: flex;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.teknologi div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 5px;
+  padding: 0.3rem;
+  border: 0.1rem solid var(--font-color);
+  filter: grayscale(1);
+}
+.teknologi div:hover {
+  cursor: pointer;
+  filter: grayscale(0);
+  border-color: var(--third-color);
+}
+
 .container-code {
   position: absolute;
   display: flex;
@@ -194,19 +221,6 @@ main {
   height: 1.5rem;
 }
 /* beranda end */
-/* teknologi start */
-.teknologi {
-  width: 100%;
-  height: 15rem;
-  display: flex;
-  gap: 1rem;
-}
-.teknologi section {
-  width: 50%;
-  height: 100%;
-  gap: 1rem;
-}
-/* teknologi end */
 
 @media (max-width: 640px) {
   .container-beranda {
