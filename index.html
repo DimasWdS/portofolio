@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/classs-add-by-js.css" />
     <link rel="stylesheet" href="css/alert.css" />
+
     <title>PORTOFOLIO</title>
   </head>
   <body>
@@ -80,7 +81,7 @@
       <!--  -->
       <!-- Tentang saya -->
       <!--  -->
-      <section id="tentang-saya">
+      <section>
         <section class="container-tentang-saya">
           <!-- nth chile 1 -->
           <section class="penjelasan-saya">
@@ -138,37 +139,22 @@
       <!-- slide 2 -->
       <!--  -->
       <section id="skills">
-        <section class="container-skills flex">
-          <!-- layer 1 -->
-          <div class="w-full flex">
-            <section>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </section>
-          </div>
-          <!-- layer 2 -->
-          <div class="w-full flex">
-            <section>
-              <section data-aos="fade-right">
-                <div>
-                  <img src="asset/img/garudasvg.svg" alt="manok" />
-                </div>
-              </section>
-              <section data-aos="fade-left">
-                <h1>ILLUSTRATOR</h1>
-                <span>dan</span>
-                <h1>Front End</h1>
-              </section>
-            </section>
-          </div>
+        <section class="container-skills">
+          <section class="layer-gambar w-full">
+            <div class="garuda-container">
+              <img src="asset/img/garudasvg.svg" alt="garuda" />
+            </div>
+            <div class="github-activity">
+              <img
+                src="https://github-readme-activity-graph.vercel.app/graph?username=DimasWDs&theme=github"
+              />
+            </div>
+          </section>
+          <section class="layer-teks w-full">
+            <div>
+              <span>illustrator</span><span>and</span><span>Front End</span>
+            </div>
+          </section>
         </section>
       </section>
       <!--  -->
@@ -354,6 +340,7 @@
     <script src="javascrip/index.js"></script>
     <script src="javascrip/tentangsaya.js"></script>
     <script src="javascrip/alert.js"></script>
+    <script src="javascrip/skills.js"></script>
     <!-- my scrip end-->
     <!-- aos -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

@@ -1,158 +1,105 @@
+@media (min-width: 1280px) {
+  .container-skills {
+    width: 85% !important;
+    margin: auto;
+  }
+}
 #skills {
   overflow: hidden;
 }
-
 .container-skills {
   position: relative;
-
-  height: 45rem;
+  height: 55rem;
   width: 100%;
+}
+.layer-gambar {
+  position: relative;
+}
+.layer-gambar .garuda-container {
+  width: 80%;
+  max-width: 45rem;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* layer1 (bawah) */
-.container-skills div:first-child {
-  background-color: transparent;
-  position: relative;
-}
-.container-skills div:first-child section:first-child {
+.github-activity {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  right: 0;
-  margin-top: 15px;
-  margin-right: 5rem;
-}
-.container-skills div:first-child section span {
-  display: inline-block;
-  height: 2.5rem;
-  width: 10rem;
-  border: 3px solid black;
-  border-radius: 20px;
-  transform: rotate(-12deg);
-  opacity: 40%;
-}
-/* layer 2 (atas)*/
-.container-skills div:nth-child(2) {
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-}
-.container-skills div:nth-child(2) section {
-  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
   width: 90%;
+  max-width: 45rem;
+  height: 15rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.container-skills div:nth-child(2) section section:first-child {
-  position: relative;
-}
-.container-skills div:nth-child(2) section section:first-child div {
+
+.layer-teks {
   position: absolute;
-  width: 50rem;
-  height: 50rem;
-  top: -20rem;
+  top: 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
-.container-skills div:nth-child(2) section section:first-child div img {
-  max-width: 100%; /* gambar tidak akan lebih lebar dari container */
-  height: auto; /* menjaga aspek ratio gambar */
-  width: 100%; /* gambar akan mengisi penuh lebar container */
-  object-fit: cover;
-  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+.layer-teks div:first-child {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
+  flex-direction: column;
 }
-.container-skills div:nth-child(2) section section:last-child {
-  display: block;
+.layer-teks div:first-child::before {
+  content: "";
+  padding: 1rem;
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  border-radius: 1rem;
+  background-color: var(--third-color);
+  opacity: 0.9;
+  z-index: -1;
+  transform: skewX(20deg) skewY(20deg) scale(1.2);
 }
-.container-skills div:nth-child(2) section section:last-child h1 {
-  font-size: 5em;
-  color: var(--secondary-color);
+.layer-teks div:first-child span:first-child,
+.layer-teks div:first-child span:last-child {
+  font-size: 7em;
+  font-weight: 600;
+  color: var(--primary-color);
 }
-.container-skills div:nth-child(2) section section:last-child span {
-  margin-left: 3rem;
-  font-weight: 500;
+.layer-teks div:first-child span:nth-child(2) {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  font-weight: 900;
+  transform: translateY(-50%) scale(2) rotate(12deg);
 }
 
-/* Warna untuk layar dengan lebar antara 601px dan 1024px */
-
-@media (max-width: 600px) {
-  /* gambar garuda */
-  .container-skills div:nth-child(2) section section:first-child {
-    width: 0%;
-  }
-  .container-skills div:nth-child(2) section section:first-child div {
-    width: 20rem;
-    height: 10rem;
-    top: -13rem;
-  }
-  .container-skills div:nth-child(2) section section:last-child h1 {
-    font-size: 2.5em;
-  }
-  .container-skills div:nth-child(2) section section:last-child span {
-    margin-left: 1rem;
-  }
-
-  /* hiasan pil */
-  .container-skills div:first-child section:first-child {
-    margin-right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .container-skills div:first-child section:first-child span {
-    height: 2rem;
-    width: 5rem;
+@media (max-width: 1024px) {
+  .layer-teks div:first-child span:first-child,
+  .layer-teks div:first-child span:last-child {
+    font-size: 5em;
+    font-weight: 600;
   }
 }
 
-/* baru */
-/* layar hp */
-@media (max-width: 600px) {
-}
-
-/* Tablet Landscape (768px hingga 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  /* gambar garuda */
-  .container-skills div:nth-child(2) section section:first-child div {
-    width: 27rem;
-    height: 27rem;
-    top: -9rem;
-  }
-  /* font samping garuda */
-  .container-skills div:nth-child(2) section section:last-child h1 {
-    font-size: 3em;
-  }
-  /* hiasan pil */
-  .container-skills div:first-child section:first-child {
-    margin-top: 0;
-    top: 50%;
-
-    transform: translateY(-50%);
-  }
-  .container-skills div:first-child section:first-child span {
-    display: inline-block;
-    height: 2rem;
-    width: 8rem;
-  }
-}
-
-/* Small Desktop (992px hingga 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* gambar garuda */
-  .container-skills div:nth-child(2) section section:first-child div {
-    width: 35rem;
-    height: 35rem;
-    top: -10rem;
-    left: -5rem;
-  }
-}
-
-/* Extra Large Desktop (1600px dan lebih besar) */
-@media (min-width: 1200px) and (max-width: 1600px) {
-  .container-skills div:nth-child(2) section section:first-child div {
-    left: -10rem;
-  }
+@media (max-width: 640px) {
   .container-skills {
-    /* background-color: blue; */
-    width: 85%;
-    margin: auto;
+    overflow: hidden;
+  }
+  .layer-gambar .garuda-container {
+    margin-top: 2rem;
+  }
+  /* .layer-gambar .github-activity {
+    height: 11rem;
+  } */
+  .layer-gambar .garuda-container img {
+    transform: scale(1.5);
+  }
+  .layer-teks div:first-child span:first-child,
+  .layer-teks div:first-child span:last-child {
+    font-size: 4em;
+    font-weight: 600;
   }
 }
