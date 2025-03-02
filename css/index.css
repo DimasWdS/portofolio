@@ -91,11 +91,11 @@ body {
   padding: 0.2rem 4rem;
   border-radius: 10px;
   background-color: transparent;
-  border: 0.1rem solid var(--third-color);
+  border: 0.1rem solid var(--background);
   transition: all 0.3s linear;
 }
 .container-label button:hover {
-  background-color: var(--third-color);
+  background-color: var(--background);
   transition: all 0.3s linear;
   border: 0.1rem solid transparent;
   color: var(--white);

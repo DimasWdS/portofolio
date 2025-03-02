@@ -1,0 +1,120 @@
+@media (min-width: 1280px) {
+  .container-portofolio section:nth-child(2) {
+    width: 85% !important;
+    margin: auto;
+  }
+}
+
+.container-portofolio header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-portofolio header h1 {
+  font-size: 4em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1rem;
+  margin-top: 5rem;
+  border-radius: 20px;
+  color: azure;
+  font-family: "Lilita one", sans-serif;
+}
+.container-portofolio section:nth-child(2) {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.container-portofolio section:nth-child(2) .illustrator,
+.container-portofolio section:nth-child(2) .frontend {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  gap: 0.1rem;
+}
+.illustrator div:nth-child(1),
+.frontend div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.illustrator div:nth-child(2) {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.frontend div:nth-child(1) {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.box {
+  width: 50%;
+  height: 100%;
+}
+.box .headline-img {
+  height: 90%;
+  width: 80%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 0.2rem solid var(--third-color);
+  transition: all 0.2s ease-in;
+}
+.deskripsi {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+}
+.deskripsi p {
+  font-weight: 700;
+  font-size: 0.8em;
+}
+.deskripsi a {
+  width: max-content;
+  padding: 0.2rem 2rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-family: "Lilita one", sans-serif;
+  font-size: 1.1em;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+.box .headline-img:hover {
+  transition: all 0.2s ease-out;
+  height: 92%;
+  width: 85%;
+}
+.box .headline-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .container-portofolio header h1 {
+    font-size: 3em;
+  }
+  .container-portofolio section:nth-child(2) .illustrator {
+    flex-direction: column;
+  }
+  .container-portofolio section:nth-child(2) .frontend {
+    flex-direction: column-reverse;
+  }
+  .box {
+    width: 100%;
+    height: 50%;
+  }
+  .box .headline-img {
+    height: 100%;
+  }
+  .frontend div:nth-child(1),
+  .illustrator div:nth-child(2) {
+    justify-content: center;
+  }
+}

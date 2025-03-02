@@ -21,10 +21,7 @@ html {
 :root {
   --white: rgb(219, 215, 220);
   --background: #1a1a1d;
-  --font-color: #a6a6a6;
-  --primary-color: #f2f9ff;
-  --secondary-color: #000957;
-  --third-color: #1e3e62;
+  --third-color: #800000;
 }
 body {
   background-color: var(--primary-color);
