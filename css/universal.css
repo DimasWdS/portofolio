@@ -19,10 +19,12 @@ html {
 }
 
 :root {
+  --white: rgb(219, 215, 220);
+  --background: #1a1a1d;
   --font-color: #a6a6a6;
   --primary-color: #f2f9ff;
   --secondary-color: #000957;
-  --third-color: #eb5a3c;
+  --third-color: #1e3e62;
 }
 body {
   background-color: var(--primary-color);
@@ -45,11 +47,3 @@ a {
   text-decoration: none;
   color: black;
 }
-
-/* img {
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-  background-color: aliceblue;
-} */

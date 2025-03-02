@@ -30,7 +30,7 @@ nav::after {
   font-weight: 800;
   font-size: 0.9em;
   transition: all 0.1s linear;
-  color: var(--secondary-color);
+  color: rgb(219, 215, 220);
 }
 .container-nav div:first-child a::before {
   content: " ";
@@ -50,9 +50,7 @@ nav::after {
   transform: scale(1);
   transition: all 0.1s linear;
 }
-.container-nav div:first-child a:hover {
-  color: var(--primary-color);
-}
+
 .container-nav div:nth-child(2) {
   display: flex;
   justify-content: center;

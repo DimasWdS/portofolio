@@ -1,164 +1,126 @@
-/* beranda */
+@media (min-width: 1280px) {
+  .container-beranda {
+    width: 85% !important;
+    margin: auto;
+  }
+}
+
+body {
+  background-color: var(--background);
+}
+
 .container-beranda {
-  position: relative;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--primary-color);
+}
+.layer-1 {
+  position: relative;
+  margin-top: 5rem;
+  height: 75%;
+  width: 90%;
+  padding: 0.2rem;
+  background-color: var(--background);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
-/* layer 1 */
-
-.container-beranda div:first-child {
+.layer-1 div:nth-child(1) {
   position: absolute;
-  z-index: 2;
+  height: 90rem;
+  width: 5rem;
+  background-color: var(--white);
+  animation: spin 10s linear infinite;
+}
+.layer-1 .layer-1-isi {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 18px;
+  background-color: var(--background);
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.container-beranda div:first-child .container-aboutme {
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 65%;
-  width: 20rem;
+.container-img,
+.container-label {
+  position: relative;
 }
-/* foto */
-.container-beranda div:first-child .container-aboutme .container-myfoto {
-  position: static;
+.container-img {
+  z-index: 1;
   height: 15rem;
   width: 15rem;
-  border: 2.5px solid var(--secondary-color);
+  border: 0.2rem solid var(--white);
   border-radius: 50%;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.313);
-}
-.container-beranda
-  div:first-child
-  .container-aboutme
-  .container-myfoto
-  .my-foto {
-  max-width: 100%; /* gambar tidak akan lebih lebar dari container */
-  height: auto; /* menjaga aspek ratio gambar */
-  width: 100%; /* gambar akan mengisi penuh lebar container */
-  object-fit: cover;
-  border-radius: 50%;
-}
-/* foto end */
-/* container teks */
-.container-aboutme div:nth-child(2) {
-  margin-top: 1rem;
-}
-.container-aboutme div:nth-child(2) h1 {
-  color: var(--third-color);
-  font-weight: 900;
-  font-size: 1.5em;
-}
-.container-aboutme div:nth-child(2) span {
-  font-size: 1.1em;
-  font-weight: 600;
-  color: var(--secondary-color);
-}
-.container-aboutme button {
-  background-color: var(--secondary-color);
-  padding: 5px 10px;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-  border: 2px solid var(--primary-color);
-}
-.container-aboutme button:hover {
-  background-color: transparent;
-  color: var(--secondary-color);
-  border: 2px solid var(--secondary-color);
-}
-.container-aboutme button:active {
-  background-color: var(--third-color);
-}
-/* container teks end*/
-
-/* layer 2 */
-.container-beranda div:nth-child(2) {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-.container-beranda div:nth-child(2) .box-luar {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  height: 70%;
-  width: 65%;
-  padding: 5px;
-  background-color: var(--primary-color);
-  border-radius: 25px;
+  background-color: var(--background);
   overflow: hidden;
+  padding: 0.2rem;
 }
-.container-beranda div:nth-child(2) .box-luar .box-spin {
+.container-label {
+  height: 5rem;
+  width: 20rem;
+  background-color: var(--white);
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.container-label::after {
+  content: " ";
   position: absolute;
-  height: 500rem;
-  width: 5rem;
-  background-color: var(--secondary-color);
-  animation: spin 5s linear infinite;
+  left: -2rem;
+  height: 100%;
+  width: 3rem;
+  background-color: var(--white);
 }
-.container-beranda div:nth-child(2) .box-dalam {
-  position: relative;
-  z-index: 1;
-  background-color: var(--primary-color);
-  border-radius: 20px;
+.container-label section {
+  font-weight: 600;
+  font-size: 1.3em;
+}
+.container-label section span {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+.container-label button {
+  font-weight: 700;
+  padding: 0.2rem 4rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 0.1rem solid var(--third-color);
+  transition: all 0.3s linear;
+}
+.container-label button:hover {
+  background-color: var(--third-color);
+  transition: all 0.3s linear;
+  border: 0.1rem solid transparent;
+  color: var(--white);
+}
+@media (max-width: 640px) {
+  .layer-1 .layer-1-isi {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .container-label {
+    border-radius: 10px;
+  }
+  .container-label::after {
+    width: 5rem;
+    height: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+  }
 }
 @keyframes spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-/* responsif */
-/* Warna untuk layar dengan lebar antara 601px dan 1024px */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .container-beranda div:nth-child(2) .box-luar {
-    width: 60%;
-  }
-  .container-aboutme div:nth-child(2) h1 {
-    font-size: 1.5em;
-  }
-  .container-aboutme div:nth-child(2) span {
-    font-size: 1.1em;
-  }
-}
-/* Warna untuk layar dengan lebar <= 600px */
-@media (max-width: 600px) {
-  .container-beranda div:nth-child(2) .box-luar {
-    width: 80%;
-  }
-  /* .container-beranda div:first-child .container-aboutme{
-
-  } */
-
-  .container-beranda div:first-child .container-aboutme div:first-child {
-    height: 10rem;
-    width: 10rem;
-  }
-
-  .container-aboutme div:nth-child(2) h1 {
-    font-size: 1.1em;
-  }
-  .container-aboutme div:nth-child(2) span {
-    font-size: 0.8em;
-  }
-
-  .container-aboutme button {
-    font-size: 0.7em;
-  }
-}
-/* Extra Large Desktop (1600px dan lebih besar) */
-@media (min-width: 1200px) and (max-width: 1600px) {
-  .container-beranda {
-    /* background-color: blue; */
-    width: 85%;
-    margin: auto;
   }
 }

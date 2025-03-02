@@ -9,97 +9,51 @@
 }
 .container-skills {
   position: relative;
-  height: 55rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+.container-garuda {
+  width: 70%;
+}
+.container-teks {
+  position: absolute;
+  display: flex;
+  justify-content: end;
   width: 100%;
 }
-.layer-gambar {
-  position: relative;
-}
-.layer-gambar .garuda-container {
-  width: 80%;
-  max-width: 45rem;
+.container-teks div {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  margin-right: 5%;
+}
+.container-teks div span:nth-child(1),
+.container-teks div span:nth-child(3) {
+  font-size: 5em;
 }
 
 .github-activity {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
+  height: 10rem;
+  background-color: aqua;
   width: 90%;
-  max-width: 45rem;
-  height: 15rem;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.layer-teks {
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-.layer-teks div:first-child {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 5%;
-  flex-direction: column;
-}
-.layer-teks div:first-child::before {
-  content: "";
-  padding: 1rem;
-  position: absolute;
-  height: 90%;
-  width: 90%;
-  border-radius: 1rem;
-  background-color: var(--third-color);
-  opacity: 0.9;
-  z-index: -1;
-  transform: skewX(20deg) skewY(20deg) scale(1.2);
-}
-.layer-teks div:first-child span:first-child,
-.layer-teks div:first-child span:last-child {
-  font-size: 7em;
-  font-weight: 600;
-  color: var(--primary-color);
-}
-.layer-teks div:first-child span:nth-child(2) {
-  position: absolute;
-  left: 3rem;
-  top: 50%;
-  font-weight: 900;
-  transform: translateY(-50%) scale(2) rotate(12deg);
-}
-
-@media (max-width: 1024px) {
-  .layer-teks div:first-child span:first-child,
-  .layer-teks div:first-child span:last-child {
-    font-size: 5em;
-    font-weight: 600;
-  }
+  max-width: 50rem;
 }
 
 @media (max-width: 640px) {
   .container-skills {
-    overflow: hidden;
+    align-items: center;
   }
-  .layer-gambar .garuda-container {
-    margin-top: 2rem;
+  .container-garuda {
+    width: 100%;
   }
-  /* .layer-gambar .github-activity {
-    height: 11rem;
-  } */
-  .layer-gambar .garuda-container img {
-    transform: scale(1.5);
+  .container-teks {
+    position: static;
+    justify-content: center;
+    margin-right: 0;
   }
-  .layer-teks div:first-child span:first-child,
-  .layer-teks div:first-child span:last-child {
-    font-size: 4em;
-    font-weight: 600;
+  .container-teks div span:nth-child(1),
+  .container-teks div span:nth-child(3) {
+    font-size: 3em;
   }
 }

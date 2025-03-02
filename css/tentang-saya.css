@@ -22,7 +22,7 @@ img {
 .container-tentang-saya .penjelasan-saya div:nth-child(2) {
   font-size: 0.8em;
   font-weight: 600;
-  color: rgb(44, 44, 44);
+  color: var(--white);
 }
 .penjelasan-saya h2 {
   margin-top: 1rem;
@@ -32,8 +32,22 @@ img {
 }
 .penjelasan-saya h2,
 .penjelasan-saya h1 {
-  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  width: max-content;
+  position: relative;
+  color: var(--white);
   font-size: 1.8em;
+}
+
+.penjelasan-saya h1::before,
+.penjelasan-saya h2::before {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  background-color: var(--third-color);
+  height: 0.2rem;
+  width: 100%;
+  border-radius: 20px;
 }
 
 /* style tentang saya end */
@@ -43,97 +57,6 @@ img {
 /*  */
 /*  */
 /*  */
-.card-pengalaman {
-  position: relative;
-  width: 25rem;
-  display: flex;
-  border: 0.2rem solid transparent;
-  border-radius: 10px;
-  padding: 0.3rem;
-  transition: all 0.2s linear;
-}
-
-.card-pengalaman-active {
-  border-color: var(--secondary-color);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
-    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
-    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-}
-.card-pengalaman div:nth-child(1) {
-  font-size: 0.8em;
-  font-weight: 800;
-  color: var(--third-color);
-}
-
-.card-pengalaman div:nth-child(2) {
-  margin-left: 0.5rem;
-  display: flex;
-  flex-direction: column;
-}
-.card-pengalaman div:nth-child(2) span:nth-child(1) {
-  font-weight: 500;
-  font-size: 1.3em;
-  letter-spacing: 0.1cap;
-  font-family: "Lilita One", serif;
-}
-
-.card-pengalaman div:nth-child(2) span:nth-child(2) {
-  font-size: 0.7rem;
-  font-weight: 500;
-}
-
-.card-pengalaman div:nth-child(2) span:nth-child(2) a {
-  color: var(--third-color);
-}
-
-.card-pengalaman div:nth-child(2) span:nth-child(3) {
-  padding: 0.5rem;
-  font-size: 0.8em;
-  letter-spacing: 0.1cap;
-  font-weight: 400;
-}
-
-.card-pengalaman div:nth-child(3) {
-  position: absolute;
-  right: 0;
-  margin-right: 2rem;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 0.1rem solid var(--third-color);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
-    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
-    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-}
-.card-pengalaman div:nth-child(3) button {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s linear;
-}
-
-.btn-show-exp-active {
-  transform: rotate(180deg);
-  transition: all 0.2s linear;
-}
-
-.exp-desc {
-  display: flex; /* Pastikan tetap ada di DOM */
-  opacity: 0;
-  transform: scaleY(0);
-  height: 0; /* Awalnya tinggi nol */
-  transition: opacity 0.3s linear, transform 0.3s ease-in-out,
-    height 0.3s ease-in-out;
-  transform-origin: top;
-}
-
-.exp-desc-active {
-  opacity: 1;
-  transform: scaleY(1);
-  height: 7rem; /* Kembalikan ke tinggi aslinya */
-}
 
 /* style pengalaman end */
 
@@ -141,11 +64,10 @@ img {
 @media (max-width: 640px) {
   .penjelasan-saya h2,
   .penjelasan-saya h1 {
-    color: var(--secondary-color);
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
   .container-tentang-saya .penjelasan-saya div:nth-child(2) {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
   .container-pengalaman {
     display: flex;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="asset/svg/LOGOSAYA2024-01.svg" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/boundary.css" />
     <link rel="stylesheet" href="css/universal.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/classs-add-by-js.css" />
     <link rel="stylesheet" href="css/alert.css" />
-
+    <!-- aos start-->
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <!-- aos end-->
     <title>PORTOFOLIO</title>
   </head>
   <body>
@@ -50,41 +53,33 @@
         </section>
       </nav>
       <!--  -->
-      <!-- slide satu -->
+      <!-- beranda -->
       <!--  -->
       <section id="beranda">
-        <section class="container-beranda flex">
+        <section class="container-beranda">
           <!-- layer 1 -->
-          <div class="w-full flex">
-            <section class="container-aboutme flex">
-              <!-- container foto + text -->
-              <div class="container-myfoto">
-                <img class="my-foto" src="asset/myfoto/1.png" alt="widy" />
-              </div>
-              <!-- container teks -->
-              <div class="flex">
-                <h1>HALLO👋</h1>
-                <span>,im Widy</span>
-              </div>
-              <button id="down-cv">Download CV</button>
-            </section>
+          <div class="layer-1">
+            <div></div>
+            <div class="layer-1-isi">
+              <section class="container-img">
+                <img src="asset/myfoto/1.png" alt="my-foto" />
+              </section>
+              <section class="container-label">
+                <section>Hallo <span>,Im WIdy</span></section>
+                <button id="down-cv">CV</button>
+              </section>
+            </div>
           </div>
           <!-- layer 2 -->
-          <div class="w-full flex">
-            <section class="box-luar flex">
-              <section class="box-spin"></section>
-              <section class="box-dalam w-full"></section>
-            </section>
-          </div>
         </section>
       </section>
       <!--  -->
       <!-- Tentang saya -->
       <!--  -->
-      <section>
+      <section id="tentang-saya">
         <section class="container-tentang-saya">
           <!-- nth chile 1 -->
-          <section class="penjelasan-saya">
+          <section class="penjelasan-saya" data-aos="fade-in">
             <h1>Tentang saya</h1>
             <div>
               Halo, Dimas Widy, Mempunyai ketertarikan dua bidang illustrator
@@ -94,70 +89,33 @@
             <h2>Experience</h2>
           </section>
           <!-- nth chile 2 -->
-          <section class="container-pengalaman">
-            <!-- card1 start-->
-            <section
-              data-aos="fade-up"
-              class="card-pengalaman card-pengalaman1"
-            >
-              <!-- nthchile1 start -->
-              <div>
-                <span>2023</span>
-              </div>
-              <!-- nthchile1 end-->
-              <!-- nth chile 2 start -->
-              <div>
-                <span>Teknisi Instalasi wifi</span>
-                <span
-                  ><a href="https://menaksopal.net.id/" target="_blank"
-                    >MENAKSOPAL</a
-                  >
-                  <span>Madiun, Jawa Timur</span>
-                </span>
-                <span class="exp-desc1 exp-desc"
-                  >Di sini, saya menikmati mengeksplorasi teknologi jaringan
-                  terbaru di bawah bimbingan seorang mentor dan juga memiliki
-                  kemampuan untuk bekerja sebagai tim.</span
-                >
-              </div>
-              <!-- nth chile 2 end -->
-              <!-- nth chile 3 start -->
-              <div>
-                <button class="show-exp-1 btn-show-exp">
-                  <img src="asset/icon/panah_bawah.svg" alt="icon" />
-                </button>
-              </div>
-              <!-- nth chile 3 end -->
-            </section>
-            <!-- card1 end-->
-
-            <!-- card 2 -->
-          </section>
+          <section class="container-pengalaman"></section>
         </section>
       </section>
       <!--  -->
-      <!-- slide 2 -->
+      <!-- skills -->
+      <span class="boundary skill-top-boundary"> </span>
       <!--  -->
       <section id="skills">
         <section class="container-skills">
-          <section class="layer-gambar w-full">
-            <div class="garuda-container">
-              <img src="asset/img/garudasvg.svg" alt="garuda" />
-            </div>
-            <div class="github-activity">
-              <img
-                src="https://github-readme-activity-graph.vercel.app/graph?username=DimasWDs&theme=github"
-              />
-            </div>
-          </section>
-          <section class="layer-teks w-full">
+          <!-- img  -->
+          <div class="container-garuda">
+            <img loading="lazy" src="asset/svg/garudav2-01.svg" alt="garuda" />
+          </div>
+          <!-- teks -->
+          <div class="container-teks">
             <div>
-              <span>illustrator</span><span>and</span><span>Front End</span>
+              <span>iLLustrator</span>
+              <span>and</span>
+              <span>Front End</span>
             </div>
-          </section>
+          </div>
+          <!-- github activity -->
+          <div class="github-activity"></div>
         </section>
       </section>
       <!--  -->
+      <span class="boundary skill-bottom-boundary"> </span>
       <!-- portofolio -->
       <!--  -->
       <section id="portofolio">
@@ -341,9 +299,12 @@
     <script src="javascrip/tentangsaya.js"></script>
     <script src="javascrip/alert.js"></script>
     <script src="javascrip/skills.js"></script>
+    <script src="javascrip/main.js"></script>
     <!-- my scrip end-->
     <!-- aos -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="javascrip/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
