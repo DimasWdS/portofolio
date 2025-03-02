@@ -11,49 +11,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 45rem;
   width: 100%;
   justify-content: center;
-}
-.container-garuda {
-  width: 70%;
-}
-.container-teks {
-  position: absolute;
-  display: flex;
-  justify-content: end;
-  width: 100%;
-}
-.container-teks div {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5%;
-}
-.container-teks div span:nth-child(1),
-.container-teks div span:nth-child(3) {
-  font-size: 5em;
-}
-
-.github-activity {
-  height: 10rem;
   background-color: aqua;
-  width: 90%;
-  max-width: 50rem;
-}
-
-@media (max-width: 640px) {
-  .container-skills {
-    align-items: center;
-  }
-  .container-garuda {
-    width: 100%;
-  }
-  .container-teks {
-    position: static;
-    justify-content: center;
-    margin-right: 0;
-  }
-  .container-teks div span:nth-child(1),
-  .container-teks div span:nth-child(3) {
-    font-size: 3em;
-  }
 }
