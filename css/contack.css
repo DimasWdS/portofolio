@@ -1,7 +1,6 @@
 @media (min-width: 1280px) {
   #contack {
     margin: auto;
-
     width: 90%;
   }
 }
@@ -10,6 +9,7 @@
   height: 40rem;
   width: 100%;
   display: flex;
+  background-color: var(--white);
 }
 /* .contaner-icon-sosmed{
     background-color: blueviolet;

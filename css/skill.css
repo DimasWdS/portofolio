@@ -59,7 +59,12 @@
   font-size: 4em;
   font-weight: 700;
 }
-
+.github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
 @media (max-width: 1024px) {
   .container-kanan div {
     transform: scale(1.1);

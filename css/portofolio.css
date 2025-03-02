@@ -15,7 +15,7 @@
   font-size: 4em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 1rem;
-  margin-top: 5rem;
+  margin: 5rem 1rem;
   border-radius: 20px;
   color: azure;
   font-family: "Lilita one", sans-serif;
@@ -62,6 +62,7 @@
   overflow: hidden;
   border: 0.2rem solid var(--third-color);
   transition: all 0.2s ease-in;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .deskripsi {
   height: 90%;
@@ -87,8 +88,7 @@
 }
 .box .headline-img:hover {
   transition: all 0.2s ease-out;
-  height: 92%;
-  width: 85%;
+  transform: translateY(-1rem);
 }
 .box .headline-img img {
   height: 100%;
