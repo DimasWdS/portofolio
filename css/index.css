@@ -101,6 +101,13 @@ body {
   color: var(--white);
 }
 @media (max-width: 640px) {
+  .container-img {
+    width: 12rem;
+    height: 12rem;
+  }
+  .container-label {
+    width: 70%;
+  }
   .layer-1 .layer-1-isi {
     flex-direction: column;
     gap: 0.5rem;

@@ -19,6 +19,12 @@
     <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
     <script src="node_modules/aos/dist/aos.js"></script>
     <!-- aos end-->
+    <!-- github -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+    />
+    <!-- github -->
     <title>PORTOFOLIO</title>
   </head>
   <body>
@@ -97,52 +103,29 @@
       <span class="boundary skill-top-boundary"> </span>
       <!--  -->
       <section id="skills">
-        <section class="container-skills"></section>
+        <!-- <section class="skills-hiasan"></section> -->
+        <section class="container-skills">
+          <div class="container-kiri">
+            <div class="garuda">
+              <img src="asset/svg/garudav2-01.svg" alt="garuda" />
+            </div>
+            <div class="github"></div>
+          </div>
+          <div class="container-kanan">
+            <div>
+              <span>iLLustrator</span>
+              <span>and</span>
+              <span>Front End</span>
+            </div>
+          </div>
+        </section>
       </section>
       <!--  -->
       <span class="boundary skill-bottom-boundary"> </span>
       <!-- portofolio -->
       <!--  -->
       <section id="portofolio">
-        <section class="container-portofolio">
-          <header>PORTOFOLIO</header>
-          <section class="container-illustrator">
-            <div>
-              <section>
-                <p>
-                  Hallo Saya adalah mahasiswa yang tertari dengan gambar
-                  Illustrator sejak saya masuk kuliah 2023 penasaran dengan
-                  karya saya? yuk kepoin dengan dengan menekan tombo dibawah ini
-                </p>
-                <a data-aos="fade-up" href="portofolio.html">iLLustrasi saya</a>
-              </section>
-            </div>
-            <div>
-              <section data-aos="flip-left" data-aos-duration="1000">
-                <img src="asset/img/illustrator.jpg" alt="" />
-              </section>
-            </div>
-          </section>
-          <section class="container-web">
-            <div>
-              <section data-aos="flip-left" data-aos-duration="1000">
-                <img src="asset/img/illustrator.jpg" alt="" />
-              </section>
-            </div>
-            <div>
-              <section>
-                <p>
-                  Hallo Saya adalah mahasiswa yang tertari dengan gambar
-                  Illustrator sejak saya masuk kuliah 2023 penasaran dengan
-                  karya saya? yuk kepoin dengan dengan menekan tombo dibawah ini
-                </p>
-                <a data-aos="fade-up" href="frontend.html" id="see-frontend"
-                  >Portofolio Front End</a
-                >
-              </section>
-            </div>
-          </section>
-        </section>
+        <section class="container-portofolio"></section>
       </section>
       <!--  -->
       <!-- contack -->
@@ -272,12 +255,13 @@
       </footer>
     </main>
     <!--  -->
-    <section class="alert-cv">
-      <section>
-        <p>CV saat ini belum tersedia.</p>
-        <a href="#" id="cv-confrim">OK</a>
-      </section>
-    </section>
+
+    <!-- github -->
+    <!-- <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <script>
+      GitHubCalendar(".calendar", "DimasWDs", { responsive: true });
+    </script> -->
+    <!-- github -->
 
     <!-- my scrip start-->
     <script src="javascrip/index.js"></script>
@@ -291,5 +275,6 @@
     <script>
       AOS.init();
     </script>
+    <!-- aos -->
   </body>
 </html>

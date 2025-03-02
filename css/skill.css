@@ -5,14 +5,89 @@
   }
 }
 #skills {
-  overflow: hidden;
-}
-.container-skills {
   position: relative;
+}
+/* .skills-hiasan {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+} */
+.container-skills {
   display: flex;
-  flex-direction: column;
-  height: 45rem;
+  position: relative;
+  z-index: 2;
+  height: 55rem;
   width: 100%;
   justify-content: center;
-  background-color: aqua;
+}
+.container-kiri {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-kiri .garuda img {
+  transform: scale(1.4);
+}
+
+.container-kiri .github {
+  width: 100%;
+  height: 15rem;
+  border: 0.1rem solid var(--white);
+  border-radius: 20px;
+  margin: 0 0 4rem 2rem;
+}
+
+.container-kanan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+.container-kanan div {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  transform: scale(1.4);
+  color: var(--white);
+  margin-right: 5rem;
+}
+.container-kanan div span:nth-child(1),
+.container-kanan div span:nth-child(3) {
+  font-size: 4em;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .container-kanan div {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 640px) {
+  .container-skills {
+    flex-direction: column-reverse;
+  }
+  .container-kiri {
+    height: max-content;
+    width: 100%;
+  }
+  .garuda {
+    margin-bottom: 3rem;
+  }
+  .container-kiri .github {
+    width: 90%;
+    margin: auto;
+  }
+  .container-kanan {
+    height: 10rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .container-kanan div {
+    transform: scale(1);
+    margin-right: 0;
+  }
 }
