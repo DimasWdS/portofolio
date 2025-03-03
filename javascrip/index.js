@@ -1,38 +1,38 @@
 // nav
 // nav container
-window.onscroll = function () {
-  // Logika untuk navigasi
-  const containerNav = document.querySelector(".container-nav");
-  const fixednav = containerNav.offsetTop;
+// window.onscroll = function () {
+//   // Logika untuk navigasi
+//   const containerNav = document.querySelector(".container-nav");
+//   const fixednav = containerNav.offsetTop;
 
-  if (window.pageYOffset > fixednav) {
-    containerNav.classList.add("nav-fortofolio");
-  } else {
-    containerNav.classList.remove("nav-fortofolio");
-  }
-};
+//   if (window.pageYOffset > fixednav) {
+//     containerNav.classList.add("nav-fortofolio");
+//   } else {
+//     containerNav.classList.remove("nav-fortofolio");
+//   }
+// };
 
 // haburger btn
-const hamBtn = document.getElementById("hamburger");
-const xBtn = document.getElementById("xbtn");
-const navMenu = document.getElementById("nav-menu");
+// const hamBtn = document.getElementById("hamburger");
+// const xBtn = document.getElementById("xbtn");
+// const navMenu = document.getElementById("nav-menu");
 
-hamBtn.addEventListener("click", function () {
-  hamBtn.classList.add("move-left");
-  xBtn.classList.remove("move-right");
-  navMenu.classList.remove("item-gone");
-});
-xBtn.addEventListener("click", function () {
-  hamBtn.classList.remove("move-left");
-  xBtn.classList.add("move-right");
-  navMenu.classList.add("item-gone");
-});
+// hamBtn.addEventListener("click", function () {
+//   hamBtn.classList.add("move-left");
+//   xBtn.classList.remove("move-right");
+//   navMenu.classList.remove("item-gone");
+// });
+// xBtn.addEventListener("click", function () {
+//   hamBtn.classList.remove("move-left");
+//   xBtn.classList.add("move-right");
+//   navMenu.classList.add("item-gone");
+// });
 
-document.addEventListener("click", function (e) {
-  if (!hamBtn.contains(e.target) && !navMenu.contains(e.target)) {
-    navMenu.classList.add("item-gone");
-    xBtn.classList.add("move-right");
-    hamBtn.classList.remove("move-left");
-  }
-});
+// document.addEventListener("click", function (e) {
+//   if (!hamBtn.contains(e.target) && !navMenu.contains(e.target)) {
+//     navMenu.classList.add("item-gone");
+//     xBtn.classList.add("move-right");
+//     hamBtn.classList.remove("move-left");
+//   }
+// });
 //

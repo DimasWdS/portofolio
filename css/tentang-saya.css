@@ -51,7 +51,8 @@ img {
 }
 
 .card-pengalaman {
-  width: 20rem;
+  width: 90%;
+  max-width: 20rem;
 }
 .card-pengalaman summary {
   color: var(--white);

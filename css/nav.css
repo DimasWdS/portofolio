@@ -1,176 +1,53 @@
-nav {
-  position: relative;
-  /* transform: translateY(100%);
-  transition: all 0.2s linear; */
-}
-nav::after {
-  transition: all 0.2s linear;
-  transform: translateY(0);
-}
 .container-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
-  z-index: 12;
+  left: 0;
+  right: 0;
+  height: 1rem;
   width: 100%;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  z-index: 999;
 }
-
-.container-nav div:first-child {
-  display: flex;
-  gap: 1.5rem;
-}
-.container-nav div:first-child a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.container-logo {
   position: relative;
-  font-weight: 800;
-  font-size: 0.9em;
-  transition: all 0.1s linear;
-  color: rgb(219, 215, 220);
-}
-.container-nav div:first-child a::before {
-  content: " ";
-  z-index: -1;
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  background-color: var(--third-color);
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
-    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
-    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-  transform: scale(0);
-  transition: all 0.1s linear;
-}
-.container-nav div:first-child a:hover::before {
-  transform: scale(1);
-  transition: all 0.1s linear;
-}
-
-.container-nav div:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.694);
+  padding: 0.3rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
-  position: relative;
-  overflow: hidden;
 }
-
-.container-nav div:nth-child(2) button:first-child {
+.container-logo::before {
+  content: "";
   position: absolute;
-  transition: all 300ms ease-in-out;
+  height: 100%;
+  width: 100%;
+  left: -25%;
+  top: -25%;
+  transform: scale(2);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: -1;
+  background-color: var(--white);
 }
-.container-nav div:nth-child(2) button:last-child {
+
+.container-nav-btn {
   position: absolute;
-  transition: all 300ms ease-in-out;
-}
-.container-nav div:nth-child(3) {
-  width: 70px;
-  height: 70px;
-  position: relative;
-}
-.container-nav div:nth-child(3) img {
-  position: absolute;
-  transform: scale(1.3);
-  max-width: 100%; /* gambar tidak akan lebih lebar dari container */
-  height: auto; /* menjaga aspek ratio gambar */
-  width: 100%; /* gambar akan mengisi penuh lebar container */
-  object-fit: cover;
-}
-/* baru */
-/* layar hp */
-@media (max-width: 600px) {
-  .container-nav {
-    justify-content: end;
-  }
-  .container-nav div:nth-child(1) {
-    background: white;
-    position: absolute;
-    top: 100%;
-    width: 50%;
-    flex-direction: column;
-    margin-right: 10px;
-    margin-top: 10px;
-    padding: 5px;
-    border-radius: 10px;
-    transition: all 300ms ease-in-out;
-    transform-origin: top right;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  }
-  .container-nav div:first-child a {
-    position: relative;
-    z-index: 1;
-  }
-  .container-nav div:first-child a::before {
-    width: 100%;
-    z-index: inherit;
-    z-index: -1;
-  }
-  .container-nav div:nth-child(2) {
-    margin-right: 10px;
-  }
-  .container-nav div:nth-child(3) {
-    position: absolute;
-    left: 0;
-    margin-left: 1rem;
-  }
+  right: 0;
+  top: 0;
+  margin: 0.5rem 3rem 0 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
 }
 
-/* Tablet Landscape (768px hingga 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .container-nav div:nth-child(2) {
-    display: none;
-  }
-  /* memunculkan nav menu */
-  .container-nav .item-gone {
-    transform: scale(1);
-  }
-  .container-nav div:first-child {
-    font-size: 0.9em;
-  }
-  .container-nav div:nth-child(2) {
-    display: none;
-  }
-}
-
-/* Small Desktop (992px hingga 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .container-nav div:nth-child(2) {
-    display: none;
-  }
-  /* memunculkan nav menu */
-  .container-nav .item-gone {
-    transform: scale(1);
-  }
-  .container-nav div:first-child {
-    font-size: 0.9em;
-  }
-  .container-nav div:nth-child(2) {
-    display: none;
-  }
-}
-
-/* Large Desktop (1200px hingga 1599px) */
-@media (min-width: 1200px) {
-  .container-nav div:nth-child(2) {
-    display: none;
-  }
-  /* memunculkan nav menu */
-  .container-nav .item-gone {
-    transform: scale(1);
-  }
-  .container-nav div:first-child {
-    font-size: 0.9em;
-  }
-  .container-nav div:nth-child(2) {
-    display: none;
+@media (max-width: 640px) {
+  .container-nav-btn {
+    margin: 0.5rem 1rem 0 0;
   }
 }
