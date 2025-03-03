@@ -60,7 +60,7 @@
   width: 80%;
   border-radius: 20px;
   overflow: hidden;
-  border: 0.2rem solid var(--third-color);
+  border: 0.2rem dashed var(--third-color);
   transition: all 0.2s ease-in;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

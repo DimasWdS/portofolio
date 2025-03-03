@@ -15,3 +15,20 @@
 
 // // Amati bagian "contact"
 // observer.observe(contactSection);
+const navBtn = document.getElementById("nav-btn");
+const conNav = document.querySelector(".nav");
+const conBtn = document.querySelector(".container-nav-btn");
+console.log(navBtn);
+
+navBtn.addEventListener("click", function () {
+  conNav.classList.toggle("nav-active");
+  conBtn.classList.toggle("btn-active");
+  navBtn.classList.toggle("ham-active");
+});
+document.addEventListener("click", function (e) {
+  if (!navBtn.contains(e.target) && !conNav.contains(e.target)) {
+    conNav.classList.remove("nav-active");
+    conBtn.classList.remove("btn-active");
+    navBtn.classList.remove("ham-active");
+  }
+});
