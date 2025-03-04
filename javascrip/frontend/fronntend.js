@@ -26,3 +26,17 @@ function typeEffect() {
 }
 
 window.onload = typeEffect;
+
+const htmlBtn = document.getElementById("html-btn");
+const jsBtn = document.getElementById("js-btn");
+const conHtml = document.querySelector(".konten-html");
+const conJs = document.querySelector(".konten-javascrip");
+console.log(conJs);
+jsBtn.addEventListener("click", function () {
+  conHtml.classList.add("konten-html-go");
+  conJs.classList.remove("konten-javascrip-go");
+});
+htmlBtn.addEventListener("click", function () {
+  conHtml.classList.remove("konten-html-go");
+  conJs.classList.add("konten-javascrip-go");
+});

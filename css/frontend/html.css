@@ -1,10 +1,10 @@
 .red {
-  color: red;
+  color: rgb(230, 0, 0);
 }
 .yellow {
-  color: yellow;
+  color: rgb(230, 230, 0);
   margin-left: 0.5rem;
 }
 .green {
-  color: rgb(3, 197, 3);
+  color: rgb(0, 230, 0);
 }
