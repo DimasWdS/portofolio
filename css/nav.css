@@ -55,7 +55,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 0.2rem;
   height: 3rem;
   width: 3rem;
   background-color: var(--white);
@@ -63,27 +62,28 @@
 .container-nav-btn button span {
   display: inline-block;
   background-color: var(--background);
-  height: 0.2rem;
-  width: 17px;
+  height: 5px;
+  width: 22px;
   border-radius: 10px;
+  margin: 1px 0 1px 0;
   transition: all 0.1s linear;
 }
 .container-nav-btn button span:nth-child(2) {
-  width: 50%;
+  width: 80%;
   transition: all 0.1s linear;
 }
-.ham-active span:nth-child(1) {
-  transform-origin: right;
-  transform: rotate(-45deg);
+.ham-active > span:nth-child(1) {
+  transform-origin: top left;
+  transform: rotate(45deg);
   transition: all 0.1s linear;
 }
-.ham-active span:nth-child(2) {
+.ham-active > span:nth-child(2) {
   transform: scale(0);
   transition: all 0.1s linear;
 }
-.ham-active span:nth-child(3) {
-  transform-origin: right;
-  transform: rotate(45deg);
+.ham-active > span:nth-child(3) {
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
   transition: all 0.1s linear;
 }
 .btn-active {

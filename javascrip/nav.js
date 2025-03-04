@@ -47,9 +47,11 @@ navBtn.addEventListener("click", function () {
 
 document.addEventListener("click", function (e) {
   if (!navBtn.contains(e.target) && !conNav.contains(e.target)) {
-    conNav.classList.remove("nav-active");
-    conBtn.classList.remove("btn-active");
-    navBtn.classList.remove("ham-active");
-    setTimeout(() => conNav.classList.remove("menu-enter"), 500);
+    setTimeout(() => {
+      conNav.classList.remove("nav-active");
+      conBtn.classList.remove("btn-active");
+      navBtn.classList.remove("ham-active");
+    }, 200); // Hapus kelas utama setelah efek selesai
+    conNav.classList.remove("menu-enter");
   }
 });
