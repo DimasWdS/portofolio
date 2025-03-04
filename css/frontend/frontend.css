@@ -71,6 +71,7 @@ main {
   max-width: 35rem;
   border-radius: 0 10px 10px 10px;
   background-color: #3d3d3d;
+  overflow: hidden;
 }
 .container-code .fake-btn {
   position: absolute;
@@ -115,12 +116,23 @@ main {
   color: var(--white);
 }
 .container-code .code-nav a {
-  font-size: 0.8em;
-  padding: 2px 4px;
-  border-radius: 5px;
-  color: var(--white);
-}
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
+  width: 40px;
+  right: 0;
+  background-color: transparent;
+  font-size: 0.8em;
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+.container-code .code-nav a:hover {
+  background-color: red;
+}
 .container-code .code-code {
   position: relative;
   overflow: hidden;
@@ -176,23 +188,24 @@ main {
 
 @media (max-width: 640px) {
   .container-beranda {
+    width: 100%;
+    overflow: hidden;
     flex-direction: column;
-    height: 65rem;
-    gap: 15rem;
+    height: max-content;
+    height: 60rem;
   }
-  .container-kiri,
-  .container-kanan {
-    width: 95%;
-    height: 20rem;
+  .container-kiri {
+    width: 100%;
+    height: 30rem;
   }
   .container-nama {
-    left: 0;
+    margin: 3rem 0 0 2rem;
+    position: static;
+    width: 100%;
   }
-  .container-nama span:first-child {
-    margin-top: 5rem;
-  }
-  .container-nama span:nth-child(5) {
-    display: none;
+  .container-kanan {
+    width: 90%;
+    height: 20rem;
   }
 }
 
