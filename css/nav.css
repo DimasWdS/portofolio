@@ -102,6 +102,7 @@
   transition: all 0.3s linear;
   transform-origin: right;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
 }
 .nav-active {
   transition: all 0.3s linear;
@@ -121,7 +122,46 @@
   font-weight: 700;
   margin-left: 1rem;
 }
-
+.nav ul li:nth-child(1) {
+  transition: all 100ms linear;
+  transform: translateX(-100%);
+}
+.menu-enter ul li:nth-child(1) {
+  transition: all 100ms linear;
+  transform: translateX(0);
+}
+.nav ul li:nth-child(2) {
+  transition: all 200ms linear;
+  transform: translateX(-100%);
+}
+.menu-enter ul li:nth-child(2) {
+  transition: all 200ms linear;
+  transform: translateX(0);
+}
+.nav ul li:nth-child(3) {
+  transition: all 300ms linear;
+  transform: translateX(-100%);
+}
+.menu-enter ul li:nth-child(3) {
+  transition: all 300ms linear;
+  transform: translateX(0);
+}
+.nav ul li:nth-child(4) {
+  transition: all 400ms linear;
+  transform: translateX(-100%);
+}
+.menu-enter ul li:nth-child(4) {
+  transition: all 400ms linear;
+  transform: translateX(0);
+}
+.nav ul li:nth-child(5) {
+  transition: all 500ms linear;
+  transform: translateX(-100%);
+}
+.menu-enter ul li:nth-child(5) {
+  transition: all 500ms linear;
+  transform: translateX(0);
+}
 .nav ul li a {
   position: relative;
   padding: 0.2rem 0.5rem;
@@ -143,12 +183,14 @@
   background-color: var(--background);
   border-radius: 10px;
   transform: scale(0);
+  opacity: 0;
   transition: all 0.1s linear;
 }
 .nav ul li a:hover {
   color: var(--white);
 }
 .nav ul li a:hover::before {
+  opacity: 1;
   transform: scale(1);
 }
 
