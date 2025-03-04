@@ -74,6 +74,7 @@ main {
   position: relative;
 }
 .layer-1 .container-img {
+  z-index: 2;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -111,34 +112,21 @@ main {
   gap: 1rem;
   top: 0;
   align-items: center;
+  background-color: var(--background);
 }
-.layer-2 section:first-child {
-  flex-direction: column;
-  margin-left: 5rem;
+.layer-2 .header {
+  margin-left: 2rem;
+}
+.layer-2 .header h1 {
   color: var(--white);
-}
-
-.name {
-  flex-direction: column;
-  justify-content: center;
-}
-.name span {
   font-family: "Lilita one", sans-serif;
+  font-size: 4em;
 }
-.name span:nth-child(1) {
-  font-size: 30px;
-  letter-spacing: 0.2ch;
+.layer-2 .header h1:nth-child(2) {
+  margin-left: 4rem;
 }
-.name span:nth-child(2) {
-  font-size: 40px;
-  letter-spacing: 0.6ch;
-}
-.name span:nth-child(3) {
-  font-size: 50px;
-  letter-spacing: 0.7ch;
-}
-.name span:nth-child(4) {
-  font-size: 60px;
+.layer-2 .header h1:nth-child(3) {
+  margin-left: 7rem;
 }
 /* layer 2 end */
 /*  */
@@ -148,6 +136,7 @@ main {
   width: 100%;
   position: relative;
 }
+
 /* layer1 start */
 .container-2 .layer2-1 {
   position: relative;
@@ -356,12 +345,11 @@ main {
   .layer-2 {
     align-items: start;
   }
-  .layer-2 section:first-child {
+  .layer-2 .header {
     margin-top: 35%;
-    margin-left: 0.5rem;
   }
-  .name span:nth-child(2) {
-    font-size: 5em;
+  .layer-2 .header h1 {
+    font-size: 3em;
   }
 
   /* layer 2 end */

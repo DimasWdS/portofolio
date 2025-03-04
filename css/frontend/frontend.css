@@ -198,9 +198,10 @@ main {
     height: 30rem;
   }
   .container-nama {
-    margin: 3rem 0 0 2rem;
     position: static;
-    width: 100%;
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
   }
   .container-kanan {
     width: 90%;
