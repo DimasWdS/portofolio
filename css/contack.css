@@ -139,7 +139,16 @@
   font-size: 12px;
   color: var(--third-color);
 }
-
+.form button {
+  background-color: aqua;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: var(--background);
+  color: var(--white);
+  font-family: "Lilita one", sans-serif;
+  font-size: 1.2em;
+  width: max-content;
+}
 @media (max-width: 640px) {
   .container-contack header h1 {
     font-size: 3em;

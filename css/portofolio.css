@@ -72,10 +72,10 @@
   justify-content: center;
   color: var(--white);
 }
-.deskripsi p {
+/* .deskripsi p {
   font-weight: 700;
   font-size: 0.8em;
-}
+} */
 .deskripsi a {
   width: max-content;
   padding: 0.2rem 2rem;

@@ -1,3 +1,9 @@
+/* @media (min-width: 1280px) {
+  .container-pengalaman {
+    width: 90% !important;
+    margin: auto;
+  }
+} */
 img {
   max-width: 100%;
 }
@@ -19,11 +25,11 @@ img {
   width: 90%;
 }
 
-.container-tentang-saya .penjelasan-saya div:nth-child(2) {
+/* .container-tentang-saya .penjelasan-saya div:nth-child(2) {
   font-size: 0.8em;
   font-weight: 600;
   color: var(--white);
-}
+} */
 .penjelasan-saya h2 {
   margin-top: 1rem;
 }
@@ -49,7 +55,9 @@ img {
   width: 100%;
   border-radius: 20px;
 }
-
+.container-pengalaman {
+  width: 90%;
+}
 .card-pengalaman {
   width: 90%;
   max-width: 20rem;
@@ -57,6 +65,9 @@ img {
 .card-pengalaman summary {
   color: var(--white);
   cursor: pointer;
+  width: 90%;
+  max-width: 20rem;
+  width: max-content;
 }
 .card-pengalaman summary span:nth-child(1) {
   color: var(--third-color);
@@ -75,16 +86,8 @@ img {
   width: 100%;
   height: 2px;
   border-radius: 20px;
-  background-color: var(--third-color);
+  background-color: var(--white);
   top: 100%;
-}
-.card-pengalaman p {
-  color: var(--white);
-  text-wrap: balance;
-  margin: 0.1rem;
-  font-size: 0.9em;
-  font-weight: 700;
-  margin-top: 1rem;
 }
 
 /* breakpoint start */
