@@ -1,0 +1,15 @@
+.scale-0 {
+  transform: scale(0);
+}
+.scale-1 {
+  transform: scale(1);
+}
+
+.from-bottom {
+  transform: translateY(5rem);
+  transition: all 0.2s linear;
+}
+.counter-bottom {
+  transition: all 0.2s linear;
+  transform: translateY(0);
+}

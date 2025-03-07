@@ -1,403 +1,102 @@
 @media (min-width: 1280px) {
-  main {
-    width: 80%;
+  .illustrator-home {
+    width: 90% !important;
     margin: auto;
-    /* border-left: 0.1rem solid var(--third-color);
-    border-right: 0.1rem solid var(--third-color); */
-  }
-  .layer2-2::before {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 7rem;
-    z-index: 2;
-    background: linear-gradient(to right, var(--background), #feb47b00);
   }
 }
+
 body {
   background-color: var(--background);
 }
-main {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--background);
-}
-/* btn back start */
-.btn-back {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 5;
-  margin: 1rem 1rem;
-  height: 3.5rem;
-  width: 3.5rem;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-.btn-back a {
-  padding: 0.5rem;
-  display: inline-block;
-  border: 2px solid transparent;
-  border-radius: 50%;
-  background-color: var(--third-color);
-  transition: all ease-in-out;
-  transition-duration: 0.3s;
-}
-.btn-back a img {
-  transform: rotate(-90deg);
-  height: 100%;
+.illustrator-home {
   width: 100%;
-}
-.btn-back a:hover {
-  border-color: var(--background);
-  transition: all ease-in-out;
-  transition-duration: 0.3s;
-}
-
-.back-top {
-  margin-bottom: 5rem;
-  transition: all 0.2s linear;
-}
-.back-top a img {
-  transform: rotate(0);
-}
-.back-top-gone {
-  transition: all 0.2s linear;
-  transform: translateX(10rem);
-}
-
-/* btn back end */
-/* layer 1 start */
-.layer-1 {
   height: 100dvh;
-  width: 100%;
-  position: relative;
-}
-.layer-1 .container-img {
-  z-index: 2;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 1.5rem 1.5rem;
-  height: 25rem;
-  width: 25rem;
-}
-.layer-1 .container-img img {
-  max-width: 100%;
-  max-height: 100%;
-  position: relative;
-  z-index: 2;
-  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
-}
-.layer-1 .container-img span {
-  display: inline-block;
-  position: absolute;
-  z-index: 1;
-  height: 40rem;
-  width: 40rem;
-  border: 5px solid var(--white);
-  border-radius: 50%;
-  bottom: 0;
-  right: 0;
-  transform: translate(40%, 40%);
-  background-color: var(--background);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-/* layer 1 end */
-/* layer 2 start */
-.layer-2 {
-  position: absolute;
-  height: 100dvh;
-  width: 100%;
-  gap: 1rem;
-  top: 0;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  background-color: var(--background);
 }
-.layer-2 .header {
-  margin-left: 2rem;
+.illustrator-home .container-teks {
+  padding: 1rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  border-radius: 20px;
 }
-.layer-2 .header h1 {
-  color: var(--white);
+/* .illustrator-home .container-teks:hover {
+  background-color: var(--white);
+} */
+.atas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 80%;
+  max-width: 25rem;
+  margin-left: 20%;
+
+  overflow: hidden;
+  position: relative;
+}
+.main-teks {
   font-family: "Lilita one", sans-serif;
   font-size: 4em;
-}
-.layer-2 .header h1:nth-child(2) {
-  margin-left: 4rem;
-}
-.layer-2 .header h1:nth-child(3) {
-  margin-left: 7rem;
-}
-/* layer 2 end */
-/*  */
-/* container 2 start*/
-.container-2 {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-}
-
-/* layer1 start */
-.container-2 .layer2-1 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* teks (my work) start */
-.slogan {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-.layer2-1 div:nth-child(1) span:nth-child(2) span {
-  font-size: 1em;
-  display: inline-flex;
-  justify-content: center;
-  position: relative;
-}
-.layer2-1 div:nth-child(1) span:nth-child(2) span::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
-  scale: 1.2;
-  border: 0.1rem solid var(--third-color);
-  animation: spin linear 10s infinite;
-  backdrop-filter: blur(3px);
-}
-
-/* teks (my work) end */
-.layer2-1 div:nth-child(1) span {
-  font-size: 4em;
-  font-family: "Lilita One", serif;
   color: var(--white);
 }
-.layer2-1 div:nth-child(2) {
+/* .atas h1 {
+  transform: translateY(100%);
+} */
+/* .atas h1:nth-child(1) {
+  padding: 100%;
+} */
+/* .atas h1:nth-child(2) {
+  animation: ke-kanan 10s linear infinite;
+  animation-delay: 5s;
+} */
+.tengah {
+  margin-top: 4.5rem;
   position: absolute;
-  margin-top: 3rem;
-  z-index: 3;
-  top: 0;
+  margin-right: 20%;
   right: 0;
-  background-color: var(--third-color);
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 5rem;
-  display: flex;
-  align-items: center;
-  color: var(--white);
-}
-.layer2-1 div:nth-child(2) span {
-  font-size: 3em;
-  font-family: "Lilita One", serif;
-  margin-right: 3rem;
-  margin-left: 1rem;
-  color: var(--primary-color);
-}
-/* layer 2 end */
-
-/* container 2 layer 2 start*/
-.layer2-2 {
-  position: absolute;
-  display: flex;
-  align-items: center;
   width: 20rem;
-  height: 100%;
-  top: 0;
-}
-
-.circle {
-  position: absolute;
-  left: -50%;
-  height: 20rem;
-  width: 20rem;
-  border-radius: 50%;
-  animation: spin linear 60s infinite;
-}
-.spin-stop {
-  animation-play-state: paused;
-}
-
-.circle div {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4rem;
-  width: 4rem;
-  filter: blur(2px) drop-shadow(5px 5px 10px transparent);
-  border: 0.1rem solid transparent;
-  border-radius: 50%;
-  padding: 0.1rem;
   overflow: hidden;
-  transition: all 0.1s linear;
-  animation: counterSpin linear 60s infinite;
-}
-.circle div:hover {
-  transition: all 0.1s linear;
-  filter: blur(0px);
-  border: 0.1rem solid var(--white);
-}
-.circle div img {
-  max-width: 100%;
-  height: 100%;
-  scale: 1.2;
 }
 
-.circle div:first-child {
-  top: 15px;
-}
-
-.circle div:nth-child(2) {
-  left: 5rem;
-  top: -2rem;
-}
-.circle div:nth-child(3) {
-  left: 11rem;
-  top: -2rem;
-}
-.circle div:nth-child(4) {
-  left: 16rem;
-  top: 1rem;
-}
-.circle div:nth-child(5) {
-  left: 18rem;
-  top: 7rem;
-}
-.circle div:nth-child(6) {
-  left: 17.5em;
-  top: 13rem;
-}
-.circle div:nth-child(7) {
-  left: 12.5rem;
-  top: 17.5rem;
-}
-.circle div:nth-child(8) {
-  left: 6.5rem;
-  top: 18.5rem;
-}
-.circle div:nth-child(9) {
-  left: 1.5rem;
-  top: 16.5rem;
-}
-.circle div:nth-child(10) {
-  top: 12rem;
-  left: -2rem;
-}
-.circle div:nth-child(11) {
-  top: 6rem;
-  left: -2.5rem;
-}
-
-.circle-teks {
-  position: absolute;
-  z-index: 4;
-  width: 5rem; /* Setengah dari tinggi */
-  height: 10rem;
-  border-bottom-right-radius: 10rem;
-  border-top-right-radius: 10rem;
-  background-color: var(--third-color);
+.bawah {
+  overflow: hidden;
+  height: 5rem;
+  width: 20rem;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-}
-.circle-teks span {
-  margin-left: 0.5rem;
-  font-size: 1em;
-  font-weight: 600;
-  color: var(--white);
-}
-/* container 2 layer 2 end*/
-
-/* container 2 end*/
-
-@media (max-width: 1025px) {
-  .container-2 {
-    height: 40rem;
-  }
-  .circle {
-    left: -50%;
-  }
+  align-items: center;
+  margin-top: 4rem;
+  margin-left: 25%;
 }
 
-/*  */
 @media (max-width: 640px) {
-  .layer2-2 {
-    display: none;
+  .main-teks {
+    font-size: 3em;
   }
-  .btn-back {
-    height: 2.5rem;
-    width: 2.5rem;
-  }
-  /* layer 1 start */
-  .layer-1 .container-img {
-    margin: 0;
-    height: 20rem;
-    width: 20rem;
-  }
-  .layer-1 .container-img span {
-    height: 35rem;
-    width: 35rem;
-  }
-  /* layer 1 end */
-  /* layer 2 start */
-  .layer-2 {
-    align-items: start;
-  }
-  .layer-2 .header {
-    margin-top: 35%;
-    width: 90%;
-    margin-left: 2%;
-  }
-  .layer-2 .header h1 {
-    font-size: 2.5em;
-  }
-
-  /* layer 2 end */
-
-  /* container2 start */
-  /* layer 1 start */
-  .container-2 .layer2-1 {
-    margin: auto;
-    width: 100%;
-    align-items: end;
-    padding-bottom: 2rem;
-  }
-  .layer2-1 div:nth-child(1) {
-    margin-bottom: 40%;
-    width: 85%;
-  }
-  .container-logo {
-    display: none;
-  }
-  /* layer 1 end */
-  /* container2 end */
 }
 
-/* keyframe start */
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
+@keyframes ke-kiri {
+  0% {
+    transform: translateX(0);
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes counterSpin {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
+  50% {
+    transform: translateX(-100%);
   }
 }
-@keyframes scroll {
-  from {
-    transform: translateY(0);
+@keyframes ke-kanan {
+  0% {
+    transform: translateX(0);
   }
-  to {
-    transform: translateY(100%);
+  50% {
+    transform: translateX(100%);
   }
 }
-/* keyframe end */
