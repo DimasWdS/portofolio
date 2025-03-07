@@ -29,6 +29,7 @@
 
 const conTeks = document.querySelector(".container-teks");
 
+const hovMe = document.querySelector(".hover-me");
 const conTop = document.querySelector(".atas");
 const conMid = document.querySelector(".tengah");
 const conLow = document.querySelector(".bawah");
@@ -39,6 +40,7 @@ const teksLow = document.querySelector(".bawah h1");
 
 conTeks.addEventListener("mouseenter", function () {
   // console.log("tes");
+  hovMe.classList.add("scale-0");
   setTimeout(() => {
     conTop.classList.add("scale-1");
     conMid.classList.add("scale-1");
@@ -56,6 +58,9 @@ conTeks.addEventListener("mouseenter", function () {
 });
 conTeks.addEventListener("mouseleave", function () {
   // console.log("tes");
+  setTimeout(() => {
+    hovMe.classList.remove("scale-0");
+  }, 610);
   setTimeout(() => {
     conTop.classList.remove("scale-1");
     conMid.classList.remove("scale-1");
