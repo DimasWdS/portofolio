@@ -10,11 +10,18 @@ body {
 }
 nav {
   width: 100%;
-  justify-content: end;
+  justify-content: space-between;
   top: 0;
   position: fixed;
+  z-index: 999;
   background-color: var(--white);
   display: flex;
+  align-items: center;
+}
+.opsi-menu {
+  display: flex;
+  margin-left: 2rem;
+  gap: 0.5rem;
 }
 .x-button {
   display: grid;
@@ -42,10 +49,13 @@ nav {
   padding: 1rem 0 1rem 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 90%;
   margin: auto;
   position: relative;
   border-radius: 20px;
+  gap: 0.5rem;
 }
 .hover-me {
   left: 50%;
@@ -60,6 +70,11 @@ nav {
 /* .illustrator-home .container-teks:hover {
   background-color: var(--white);
 } */
+.main-teks {
+  font-family: "Lilita one", sans-serif;
+  font-size: 4em;
+  color: var(--white);
+}
 .atas {
   display: flex;
   justify-content: center;
@@ -67,48 +82,99 @@ nav {
   height: 5rem;
   width: 80%;
   max-width: 25rem;
-  margin-left: 20%;
-
   overflow: hidden;
   position: relative;
 }
-.main-teks {
-  font-family: "Lilita one", sans-serif;
-  font-size: 4em;
-  color: var(--white);
-}
-/* .atas h1 {
-  transform: translateY(100%);
-} */
-/* .atas h1:nth-child(1) {
-  padding: 100%;
-} */
-/* .atas h1:nth-child(2) {
-  animation: ke-kanan 10s linear infinite;
-  animation-delay: 5s;
-} */
-.tengah {
-  margin-top: 4.5rem;
+.atas::after {
+  content: "";
   position: absolute;
-  margin-right: 20%;
-  right: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(
+    to bottom,
+    var(--background),
+    rgba(255, 255, 255, 0)
+  );
+  top: 0;
+  z-index: 5;
+}
+.atas::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  height: 10px;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    var(--background),
+    rgba(255, 255, 255, 0)
+  );
+  bottom: 0;
+}
+.atas h1:nth-child(1) {
+  position: absolute;
+}
+.atas h1:nth-child(1) {
+  position: absolute;
+}
+/*  */
+.tengah {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 5rem;
-  width: 20rem;
+  width: 25rem;
+  position: relative;
   overflow: hidden;
+}
+.tengah::after,
+.bawah::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(
+    to bottom,
+    var(--background),
+    rgba(255, 255, 255, 0)
+  );
+  top: 0;
+  z-index: 5;
+}
+.tengah::before,
+.bawah::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(
+    to top,
+    var(--background),
+    rgba(255, 255, 255, 0)
+  );
+  bottom: 0;
+  z-index: 5;
+}
+.tengah h1:nth-child(1) {
+  position: absolute;
+}
+.tengah h1:nth-child(2) {
+  position: absolute;
+  transition: all 0.2s linear;
+  color: var(--third-color);
 }
 
 .bawah {
+  position: relative;
   overflow: hidden;
   height: 5rem;
   width: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
-  margin-left: 30%;
+}
+.bawah h1 {
+  position: absolute;
 }
 
 @media (max-width: 640px) {
