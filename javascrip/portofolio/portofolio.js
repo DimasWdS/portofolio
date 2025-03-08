@@ -114,7 +114,7 @@ setTimeout(() => {
       }
     }, 5000);
   });
-}, 800);
+}, 100);
 // teks low end
 
 // conTeks.addEventListener("mouseenter", function () {
