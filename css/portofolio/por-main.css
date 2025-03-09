@@ -77,7 +77,7 @@ nav {
 } */
 .main-teks {
   font-family: "Lilita one", sans-serif;
-  font-size: 4em;
+  font-size: 64px;
   color: var(--white);
 }
 .atas {
@@ -197,8 +197,11 @@ nav {
 }
 
 @media (max-width: 640px) {
+  .illustrator-home .container-teks {
+    gap: 0;
+  }
   .main-teks {
-    font-size: 3em;
+    font-size: 50px;
   }
 }
 
