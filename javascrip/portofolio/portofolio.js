@@ -22,11 +22,6 @@
 // const conMid = document.querySelector(".tengah");
 // const conLow = document.querySelector(".bawah");
 
-// teks atas
-// teks atas
-// Pilih elemen teks
-// Pilih elemen teks
-// Pilih elemen teks
 const teksAtas = document.querySelector(".atas h1:nth-child(1)");
 const teksAtas2 = document.querySelector(".atas h1:nth-child(2)");
 const teksMid = document.querySelector(".tengah h1:nth-child(1)");
@@ -55,27 +50,9 @@ function setupAnimation(element1, element2, class1, class2, interval = 5000) {
 document.addEventListener("DOMContentLoaded", () => {
   // Simpan semua interval dalam satu objek untuk manajemen yang lebih baik
   const intervals = {
-    atas: setupAnimation(
-      teksAtas,
-      teksAtas2,
-      "counter-bottom",
-      "from-bottom",
-      5000
-    ),
-    tengah: setupAnimation(
-      teksMid,
-      teksMid2,
-      "counter-bottom",
-      "from-bottom",
-      5000
-    ),
-    bawah: setupAnimation(
-      teksLow,
-      teksLow2,
-      "counter-bottom",
-      "from-bottom",
-      5000
-    ),
+    atas: setupAnimation(teksAtas, teksAtas2, "counter-bottom", "from-bottom"),
+    tengah: setupAnimation(teksMid, teksMid2, "counter-bottom", "from-bottom"),
+    bawah: setupAnimation(teksLow, teksLow2, "counter-bottom", "from-bottom"),
   };
 
   // Simpan referensi interval di window

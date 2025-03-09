@@ -36,9 +36,16 @@ nav {
 .x-button a {
   height: 100%;
   width: 100%;
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+.x-button a span {
+  font-weight: 700;
+  scale: 1.2;
+}
+
 .x-button:hover {
   background-color: red;
 }
@@ -85,7 +92,7 @@ nav {
   justify-content: center;
   align-items: center;
   height: 5rem;
-  width: 80%;
+  width: 90%;
   max-width: 25rem;
   overflow: hidden;
   position: relative;
@@ -197,11 +204,25 @@ nav {
 }
 
 @media (max-width: 640px) {
+  nav {
+    justify-content: end;
+  }
   .illustrator-home .container-teks {
     gap: 0;
   }
   .main-teks {
     font-size: 50px;
+  }
+  .petunjuk {
+    height: 3.5rem;
+    width: 2rem;
+  }
+  .petunjuk span {
+    height: 0.5rem;
+    width: 2.5px;
+  }
+  .opsi-menu {
+    display: none;
   }
 }
 
