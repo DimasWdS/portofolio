@@ -31,14 +31,27 @@
   position: relative;
   height: 20rem;
   width: 20rem;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   border: 0.1rem solid var(--third-color);
   overflow: hidden;
-  /* background-color: var(--white); */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
+.card:hover {
+  transform: translateY(-0.1rem);
+}
+.btn-call {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--white);
+  right: 0;
+  border-radius: 0 0 0 10px;
+}
+.btn-call a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
 .card .card-desc {
   position: absolute;
   height: 80%;
@@ -61,6 +74,19 @@
 }
 .card:hover .card-desc {
   transform: translateY(0);
+}
+.card .card-desc span {
+  display: inline-block;
+  padding: 1rem;
+  color: var(--white);
+}
+.card .card-desc span h4 {
+  margin-bottom: 0.5rem;
+}
+.card .card-desc span p {
+  font-size: 12px;
+
+  margin-bottom: 0.2rem;
 }
 
 @media (max-width: 640px) {

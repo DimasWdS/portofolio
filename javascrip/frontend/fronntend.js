@@ -31,7 +31,7 @@ const htmlBtn = document.getElementById("html-btn");
 const jsBtn = document.getElementById("js-btn");
 const conHtml = document.querySelector(".konten-html");
 const conJs = document.querySelector(".konten-javascrip");
-console.log(conJs);
+
 jsBtn.addEventListener("click", function () {
   conHtml.classList.add("konten-html-go");
   conJs.classList.remove("konten-javascrip-go");

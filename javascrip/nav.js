@@ -21,7 +21,7 @@ function delay(ms) {
 const navBtn = document.getElementById("nav-btn");
 const conNav = document.querySelector(".nav");
 const conBtn = document.querySelector(".container-nav-btn");
-console.log(navBtn);
+
 // setTimeout(() => conNav.classList.toggle("nav-active"), 1000);
 navBtn.addEventListener("click", function () {
   if (!conNav.classList.contains("nav-active")) {
