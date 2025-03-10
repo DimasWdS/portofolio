@@ -12,12 +12,11 @@
 .no-javascrip {
   position: absolute;
   height: 100%;
-  width: 30px;
+  width: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  margin-left: 10px;
 }
 .no-javascrip span {
   font-weight: 400 !important;
@@ -30,7 +29,7 @@
 }
 .code-javascrip .code {
   display: flex;
-  margin-left: 3rem;
+  margin-left: 2.5rem;
   gap: 0.5rem;
   flex-direction: column;
   width: max-content;
@@ -43,7 +42,6 @@
 }
 
 .purple {
-  /* background-color: purple; */
   color: rgb(208, 0, 208) !important;
 }
 .cyan {
@@ -57,4 +55,7 @@
 }
 .orange {
   color: orange !important;
+}
+.m-l {
+  margin-left: 1rem;
 }
