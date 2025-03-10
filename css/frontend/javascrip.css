@@ -16,9 +16,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
 }
 .no-javascrip span {
+  height: 1.5rem;
   font-weight: 400 !important;
   color: var(--white);
   font-family: "Source Code Pro", Consolas, monospace;
@@ -30,7 +31,7 @@
 .code-javascrip .code {
   display: flex;
   margin-left: 2.5rem;
-  gap: 0.5rem;
+  gap: 0.2rem;
   flex-direction: column;
   width: max-content;
 }
@@ -39,6 +40,8 @@
   color: var(--white);
   font-weight: 400 !important;
   flex-shrink: 1 !important;
+  /* background-color: #00ffcc; */
+  height: 1.5rem;
 }
 
 .purple {
