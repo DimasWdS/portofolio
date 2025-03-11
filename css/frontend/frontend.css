@@ -44,9 +44,7 @@ main {
 }
 .container-teksScroll {
   position: relative;
-  margin: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 5rem;
   width: 20rem;
