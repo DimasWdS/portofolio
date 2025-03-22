@@ -4,13 +4,10 @@
 /* lilita one start*/
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 /* lilita one end*/
+/*font-family: "Inconsolata", monospace;  */
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+/*  font-family: "Inconsolata", monospace;*/
 
-/* font-family: "Montserrat", sans-serif; */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-/*  font-family: "Montserrat", sans-serif;*/
-/* font vs code */
-
-/* font vs code end */
 *,
 body,
 html {

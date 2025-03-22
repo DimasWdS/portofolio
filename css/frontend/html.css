@@ -1,4 +1,6 @@
-.html-konten {
+.html-konten,
+.javascrip-konten {
+  position: absolute;
   height: 100%;
   width: 100%;
 }
@@ -14,6 +16,8 @@
   background-color: rgb(33, 33, 33);
 }
 .nomor span {
+  font-weight: 900;
+  font-family: "Inconsolata", monospace;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +27,6 @@
 }
 .code {
   padding: 0.5rem 0 0 2.4rem;
-
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -39,8 +42,15 @@
   width: 70rem;
   color: var(--white);
 }
+.code span p {
+  font-weight: 900;
+  font-family: "Inconsolata", monospace;
+}
 .space {
   margin-left: 0.5rem;
+}
+.doublespace {
+  margin-left: 1rem;
 }
 .red {
   color: rgb(230, 0, 0);
@@ -51,4 +61,20 @@
 }
 .green {
   color: rgb(0, 230, 0);
+}
+.oldgreen {
+  color: rgb(0, 172, 0);
+}
+.purple {
+  color: purple;
+}
+.cyan {
+  color: cyan;
+}
+.orange {
+  color: orange;
+}
+
+.konten-gone {
+  transform: translateY(100rem);
 }

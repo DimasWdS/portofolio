@@ -27,16 +27,16 @@ function typeEffect() {
 
 window.onload = typeEffect;
 
-// // const htmlBtn = document.getElementById("html-btn");
-// // const jsBtn = document.getElementById("js-btn");
-// // const conHtml = document.querySelector(".konten-html");
-// // const conJs = document.querySelector(".konten-javascrip");
+const htmlBtn = document.getElementById("html-btn");
+const jsBtn = document.getElementById("js-btn");
+const conHtml = document.querySelector(".html-konten");
+const conJs = document.querySelector(".javascrip-konten");
 
-// // jsBtn.addEventListener("click", function () {
-// //   conHtml.classList.add("konten-html-go");
-// //   conJs.classList.remove("konten-javascrip-go");
-// // });
-// // htmlBtn.addEventListener("click", function () {
-// //   conHtml.classList.remove("konten-html-go");
-// //   conJs.classList.add("konten-javascrip-go");
-// // });
+jsBtn.addEventListener("click", function () {
+  conHtml.classList.add("konten-gone");
+  conJs.classList.remove("konten-gone");
+});
+htmlBtn.addEventListener("click", function () {
+  conHtml.classList.remove("konten-gone");
+  conJs.classList.add("konten-gone");
+});
