@@ -96,7 +96,7 @@ body {
 }
 .container-label button:hover {
   background-color: var(--background);
-  transition: all 0.3s linear;
+  transition: all 0.1s linear;
   border: 0.1rem solid transparent;
   color: var(--white);
 }

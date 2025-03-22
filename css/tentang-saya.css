@@ -20,21 +20,28 @@ img {
   z-index: 1;
   overflow: hidden;
 }
+/* container */
 .penjelasan-saya {
   margin-top: 70px;
   width: 90%;
 }
 
-/* .container-tentang-saya .penjelasan-saya div:nth-child(2) {
-  font-size: 0.8em;
-  font-weight: 600;
-  color: var(--white);
-} */
-.penjelasan-saya h2 {
-  margin-top: 1rem;
+.penjelasan-saya div {
+  width: 90%;
+  text-align: justify;
+  hyphens: auto;
+  font-size: 1.2vw;
+  max-width: 40rem;
+  margin: auto;
+  margin-bottom: 4rem;
+  font-family: "Poppins", sans-serif;
 }
 .penjelasan-saya h1 {
   margin-bottom: 0.5rem;
+  margin: auto;
+}
+.penjelasan-saya h2 {
+  margin: auto;
 }
 .penjelasan-saya h2,
 .penjelasan-saya h1 {
@@ -57,6 +64,8 @@ img {
 }
 .container-pengalaman {
   width: 90%;
+  display: flex;
+  justify-content: center;
 }
 .card-pengalaman {
   width: 90%;
@@ -74,6 +83,7 @@ img {
   font-size: 0.8em;
   font-weight: 800;
   margin-right: 1rem;
+  font-family: "Poppins", sans-serif;
 }
 .card-pengalaman summary span:nth-child(2) {
   position: relative;
