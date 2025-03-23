@@ -4,22 +4,77 @@
     margin: auto;
   }
 }
-
+/* header start */
 .container-portofolio header {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4rem;
 }
-.container-portofolio header h1 {
-  font-size: 4em;
+.container-portofolio header::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 25rem;
+  z-index: -1;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 1rem;
-  margin: 5rem 1rem;
-  border-radius: 20px;
+  transform: scale(1.1);
+}
+.container-portofolio header p {
+  position: relative;
+  font-size: 4em;
   color: azure;
   font-family: "Lilita one", sans-serif;
 }
+.container-portofolio header p:nth-child(1) {
+  animation: tes 1s ease-in-out infinite;
+}
+.container-portofolio header p:nth-child(2) {
+  animation: tes 1.2s ease-in-out infinite;
+}
+.container-portofolio header p:nth-child(3) {
+  animation: tes 1.3s ease-in-out infinite;
+}
+.container-portofolio header p:nth-child(4) {
+  animation: tes 1.4s ease-in-out infinite;
+}
+.container-portofolio header p:nth-child(5) {
+  animation: tes 1.5s ease-in-out infinite;
+}
+.container-portofolio header p:nth-child(6) {
+  animation: tes 1.6s ease-in-out infinite;
+}
+.container-portofolio header p:nth-child(7) {
+  animation: tes 1.7s ease-in-out infinite;
+}
+.container-portofolio header p:nth-child(8) {
+  animation: tes 1.8s ease-in-out infinite;
+}
+.container-portofolio header p:nth-child(9) {
+  animation: tes 1.9s ease-in-out infinite;
+}
+.container-portofolio header p:nth-child(10) {
+  animation: tes 2s ease-in-out infinite;
+}
+
+@keyframes tes {
+  0% {
+    transform: scale(1);
+  }
+  33.33% {
+    transform: scale(1.1);
+  }
+  66.66% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* header end */
 .container-portofolio section:nth-child(2) {
   width: 100%;
   height: 40rem;
