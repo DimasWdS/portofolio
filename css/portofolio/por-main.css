@@ -8,6 +8,7 @@
 body {
   background-color: var(--background);
 }
+/* nav strat */
 nav {
   width: 100%;
   justify-content: space-between;
@@ -47,141 +48,53 @@ nav {
 .x-button:hover {
   background-color: red;
 }
-.illustrator-home {
-  width: 100%;
-  height: 100dvh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
-}
-.illustrator-home .container-teks {
-  padding: 1rem 0 1rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  margin: auto;
-  position: relative;
-  border-radius: 20px;
-  gap: 0.5rem;
-}
-.hover-me {
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  position: absolute;
-}
-.hover-me h1 {
-  font-size: 4em;
-  color: var(--white);
-}
-/* .illustrator-home .container-teks:hover {
-  background-color: var(--white);
-} */
-.main-teks {
-  font-family: "Lilita one", sans-serif;
-  font-size: 64px;
-  color: var(--white);
-}
-.atas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
-  width: 90%;
-  max-width: 25rem;
-  overflow: hidden;
-  position: relative;
-}
-.atas::after,
-.tengah::after,
-.bawah::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 15px;
-  background: linear-gradient(
-    to bottom,
-    var(--background),
-    rgba(255, 255, 255, 0)
-  );
-  top: 0;
-  z-index: 5;
-}
-.atas::before,
-.tengah::before,
-.bawah::before {
-  content: "";
-  position: absolute;
-  z-index: 5;
-  height: 15px;
-  width: 100%;
-  background: linear-gradient(
-    to top,
-    var(--background),
-    rgba(255, 255, 255, 0)
-  );
-  bottom: 0;
-}
-
-.atas h1,
-.tengah h1,
-.bawah h1 {
-  position: absolute;
-  transition: all 0.2s linear;
-}
-
+/* nav end */
 /*  */
-.tengah {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
+.container-highlight {
+  position: relative;
   width: 90%;
-  max-width: 25rem;
-  position: relative;
-  overflow: hidden;
+  max-width: 60rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
-
-.tengah h1:nth-child(2) {
-  color: var(--third-color);
+.container-highlight div span {
+  display: inline-flex;
+  font-size: 3em;
+  font-weight: 900;
+  width: 100%;
+  justify-content: space-evenly;
+  color: var(--white);
 }
-
-.bawah {
-  position: relative;
-  overflow: hidden;
-  height: 5rem;
-  width: 20rem;
+.container-highlight div span p {
+  font-family: "Lilita one";
+}
+/*  */
+.teks-atas {
+  position: absolute;
+  bottom: 100%;
+  transform: translateY(50%);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.bawah h1 {
-  position: absolute;
+  height: 4rem;
+  width: 20rem;
+  border-radius: 10px;
+  background: rgba(254, 254, 254, 0.167);
+  backdrop-filter: blur(5px);
+  /* background-color: var(--background); */
 }
 
-.petunjuk {
+.teks-tengah {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  top: 100%;
+  top: 0;
+  margin-top: 4rem;
   height: 4rem;
-  width: 2.5rem;
-  border-radius: 20px;
-  border: 0.1rem solid var(--third-color);
-  animation: mouse 3s linear infinite;
+  width: 20rem;
+  background-color: aqua;
 }
-.petunjuk span {
-  position: absolute;
-  height: 1rem;
-  width: 5px;
-  margin-top: 15px;
-  border-radius: 10px;
-  background-color: var(--third-color);
-  animation: mouseScroll 3s linear infinite;
-}
+/*  */
+/*  */
 
 @keyframes mouse {
   0% {
@@ -218,29 +131,6 @@ nav {
   }
 }
 
-@media (max-width: 640px) {
-  nav {
-    justify-content: end;
-  }
-  .illustrator-home .container-teks {
-    gap: 0;
-  }
-  .main-teks {
-    font-size: 50px;
-  }
-  .petunjuk {
-    height: 3.5rem;
-    width: 2rem;
-  }
-  .petunjuk span {
-    height: 0.5rem;
-    width: 2.5px;
-  }
-  .opsi-menu {
-    display: none;
-  }
-}
-
 @keyframes ke-kiri {
   0% {
     transform: translateX(0);
@@ -265,4 +155,36 @@ nav {
   width: 100%;
   z-index: 5;
   backdrop-filter: blur(5px);
+}
+
+@media (max-width: 640px) {
+  /* nav start */
+  nav {
+    justify-content: end;
+  }
+  .illustrator-home .container-teks {
+    gap: 0;
+  }
+  .main-teks {
+    font-size: 50px;
+  }
+  .petunjuk {
+    height: 3.5rem;
+    width: 2rem;
+  }
+  .petunjuk span {
+    height: 0.5rem;
+    width: 2.5px;
+  }
+  .opsi-menu {
+    display: none;
+  }
+  /* nav end */
+  .teks-atas {
+    width: 60%;
+    height: 2.5rem;
+  }
+  .container-highlight div span {
+    font-size: 1.8em;
+  }
 }

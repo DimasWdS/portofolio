@@ -41,7 +41,6 @@
 }
 .container-contack header .con-header {
   display: flex;
-  font-size: 3em;
   padding: 1rem;
   border-radius: 20px;
   gap: 0.1rem;
@@ -51,6 +50,7 @@
 .container-contack header .con-header p {
   font-family: "Lilita one", sans-serif;
   color: var(--background);
+  font-size: 3em;
 }
 .con-header p:nth-child(1) {
   animation: bigSmall 1s ease-in-out infinite;
@@ -177,9 +177,9 @@
   width: max-content;
 }
 @media (max-width: 640px) {
-  .container-contack header .con-header {
+  /* .container-contack header .con-header p {
     font-size: 3em;
-  }
+  } */
   .icon {
     margin-top: 3rem;
   }
