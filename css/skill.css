@@ -63,9 +63,58 @@
 }
 .container-kanan div span:nth-child(1),
 .container-kanan div span:nth-child(3) {
-  font-size: 4em;
+  font-size: 3.5em;
   font-weight: 700;
+  display: flex;
+  gap: 0.2rem;
 }
+.container-kanan div span:nth-child(1) p,
+.container-kanan div span:nth-child(3) p {
+  font-family: "Lilita one", sans-serif;
+}
+.ill-teks p:nth-child(1),
+.front-teks p:nth-child(1) {
+  animation: bigSmall 1s ease-in-out infinite;
+}
+.ill-teks p:nth-child(2),
+.front-teks p:nth-child(2) {
+  animation: bigSmall 1.2s ease-in-out infinite;
+}
+.ill-teks p:nth-child(3),
+.front-teks p:nth-child(3) {
+  animation: bigSmall 1.3s ease-in-out infinite;
+}
+.ill-teks p:nth-child(4),
+.front-teks p:nth-child(4) {
+  animation: bigSmall 1.4s ease-in-out infinite;
+}
+.ill-teks p:nth-child(5),
+.front-teks p:nth-child(5) {
+  animation: bigSmall 1.5s ease-in-out infinite;
+}
+.ill-teks p:nth-child(6),
+.front-teks p:nth-child(6) {
+  animation: bigSmall 1.6s ease-in-out infinite;
+}
+.ill-teks p:nth-child(7),
+.front-teks p:nth-child(7) {
+  animation: bigSmall 1.7s ease-in-out infinite;
+}
+.ill-teks p:nth-child(8),
+.front-teks p:nth-child(8) {
+  animation: bigSmall 1.8s ease-in-out infinite;
+}
+.ill-teks p:nth-child(9) {
+  animation: bigSmall 1.9s ease-in-out infinite;
+}
+.ill-teks p:nth-child(10) {
+  animation: bigSmall 2s ease-in-out infinite;
+}
+.ill-teks p:nth-child(11) {
+  animation: bigSmall 2.1s ease-in-out infinite;
+}
+
+/* git hub style */
 .github {
   display: flex;
   justify-content: center;
