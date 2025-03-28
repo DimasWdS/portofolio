@@ -51,43 +51,68 @@ nav {
 /* nav end */
 /*  */
 .con-highlight {
-  position: relative;
-  width: 100%;
+  width: 90%;
+  max-width: 60rem;
+  margin: auto;
+  display: flex;
+  gap: 0.1rem;
+}
+.con-highlight .awal,
+.con-highlight .tengah,
+.con-highlight .akhir {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  height: 3rem;
+  width: 20rem;
 }
-.con-highlight div span {
-  display: inline-flex;
-  font-size: 3em;
-  font-weight: 900;
+.awal span,
+.tengah span,
+.akhir span {
+  display: flex;
+  font-size: 2em;
   width: 100%;
   justify-content: space-evenly;
+}
+.awal span p,
+.tengah span p,
+.akhir span p {
+  font-family: "Lilita one", sans-serif;
   color: var(--white);
 }
-.con-highlight div span p {
-  font-family: "Lilita one";
+
+.teks p:nth-child(1) {
+  animation: bigSmall 2s ease-in-out infinite;
+}
+.teks p:nth-child(2) {
+  animation: bigSmall 2.2s ease-in-out infinite;
+}
+.teks p:nth-child(3) {
+  animation: bigSmall 2.3s ease-in-out infinite;
+}
+.teks p:nth-child(4) {
+  animation: bigSmall 2.4s ease-in-out infinite;
+}
+.teks p:nth-child(5) {
+  animation: bigSmall 2.5s ease-in-out infinite;
+}
+.teks p:nth-child(6) {
+  animation: bigSmall 2.6s ease-in-out infinite;
+}
+.teks p:nth-child(7) {
+  animation: bigSmall 2.7s ease-in-out infinite;
+}
+.teks p:nth-child(8) {
+  animation: bigSmall 2.8s ease-in-out infinite;
+}
+.teks p:nth-child(9) {
+  animation: bigSmall 2.9s ease-in-out infinite;
+}
+.teks p:nth-child(10) {
+  animation: bigSmall 2.2s ease-in-out infinite;
 }
 /*  */
-.teks-atas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4rem;
-  width: 20rem;
-  border-radius: 0 0 10px 10px;
-  margin-top: 0.1rem;
-  background: rgba(254, 254, 254, 0.167);
-  backdrop-filter: blur(5px);
-  background-color: var(--third-color);
-}
 
-.teks-tengah {
-  height: 4rem;
-  width: 20rem;
-  background-color: aqua;
-}
 /*  */
 /*  */
 
@@ -175,11 +200,9 @@ nav {
     display: none;
   }
   /* nav end */
-  .teks-atas {
-    width: 60%;
-    height: 2.5rem;
-  }
-  .container-highlight div span {
-    font-size: 1.8em;
+  .con-highlight {
+    flex-direction: column;
+
+    align-items: center;
   }
 }
