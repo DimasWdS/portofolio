@@ -50,15 +50,15 @@ nav {
 }
 /* nav end */
 /*  */
-.container-highlight {
+.con-highlight {
   position: relative;
-  width: 90%;
-  max-width: 60rem;
-  margin: auto;
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.container-highlight div span {
+.con-highlight div span {
   display: inline-flex;
   font-size: 3em;
   font-weight: 900;
@@ -66,29 +66,24 @@ nav {
   justify-content: space-evenly;
   color: var(--white);
 }
-.container-highlight div span p {
+.con-highlight div span p {
   font-family: "Lilita one";
 }
 /*  */
 .teks-atas {
-  position: absolute;
-  bottom: 100%;
-  transform: translateY(50%);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 4rem;
   width: 20rem;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
+  margin-top: 0.1rem;
   background: rgba(254, 254, 254, 0.167);
   backdrop-filter: blur(5px);
-  /* background-color: var(--background); */
+  background-color: var(--third-color);
 }
 
 .teks-tengah {
-  position: absolute;
-  top: 0;
-  margin-top: 4rem;
   height: 4rem;
   width: 20rem;
   background-color: aqua;
