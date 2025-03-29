@@ -16,7 +16,11 @@
   border-radius: 20px;
   margin: auto;
   margin-top: 5rem;
-  background-color: var(--third-color);
+  /* background-color: var(--third-color); */
+  background-image: url(../../asset/svg/BACKGROUND-01.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .container-img div {
   position: relative;
@@ -84,7 +88,7 @@
 }
 @media (max-width: 640px) {
   .container-img {
-    height: 12rem;
+    height: 15rem;
   }
   .container-img div:nth-child(1) img {
     animation: none;
