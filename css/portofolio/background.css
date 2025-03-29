@@ -30,7 +30,7 @@
   align-items: center;
 }
 .container-img div img {
-  position: absolute;
+  max-width: 100%;
 }
 .container-img div:nth-child(1) img {
   position: absolute;
