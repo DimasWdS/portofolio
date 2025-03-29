@@ -96,11 +96,8 @@ img {
 }
 .card-pengalaman p {
   width: 80%;
-  margin-top: 1rem;
   text-align: justify;
   hyphens: auto;
-  font-size: 0.9em;
-  font-weight: 500;
 }
 /* breakpoint start */
 @media (max-width: 640px) {

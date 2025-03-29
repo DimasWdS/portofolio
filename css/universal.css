@@ -22,12 +22,12 @@ html {
 }
 .font-teks {
   color: var(--white);
-  text-wrap: balance;
+  /* text-wrap: balance; */
   margin: 0.1rem;
   font-size: 0.8em;
   font-weight: 500;
   margin-top: 1rem;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
 }
 :root {
   --white: rgb(219, 215, 220);
