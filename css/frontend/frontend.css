@@ -42,40 +42,139 @@ main {
   gap: 0.2rem;
   color: var(--white);
 }
+/*  */
 .container-teksScroll {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
-  height: 5rem;
+  height: 4rem;
   width: 20rem;
   overflow: hidden;
+  /* background-color: aqua; */
 }
-.container-teksScroll h1 {
-  font-family: "Lilita one", sans-serif;
+.container-teksScroll div:first-child,
+.container-teksScroll div:last-child {
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  background-color: yellow;
+  z-index: 2;
+}
+.container-teksScroll div:first-child {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--background),
+    rgba(255, 255, 0, 0)
+  );
+}
+.container-teksScroll div:last-child {
+  right: 0;
+  background: linear-gradient(to left, var(--background), rgba(255, 255, 0, 0));
 }
 .container-teksScroll::after {
+  content: " ";
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--background),
+    rgba(255, 255, 0, 0)
+  );
+  /* background-color: yellow; */
+}
+.container-teksScroll::before {
   content: "";
   position: absolute;
-  height: 20px;
   width: 100%;
-  /* background-color: aqua; */
+  height: 15px;
+  bottom: 0;
+  /* background-color: yellow; */
   background: linear-gradient(to top, var(--background), rgba(255, 255, 0, 0));
 
-  bottom: 0;
+  z-index: 2;
 }
-
-.container-teksScroll h1 {
+.container-teksScroll span {
   position: absolute;
-  color: var(--white);
-  font-size: 3em;
-  opacity: 0;
-  transform: translateY(5rem);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  width: 90%;
 
-.show {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+  /* background-color: blue; */
+}
+.container-teksScroll span p {
+  font-family: "Lilita one", sans-serif;
+  font-size: 2em;
+}
+.container-teksScroll span:nth-child(2) {
+  animation: teksSatu 10s ease-in-out infinite;
+}
+.container-teksScroll span:nth-child(3) {
+  animation: teksDua 10s ease-in-out infinite;
+}
+.container-teksScroll span:nth-child(4) {
+  animation: teksTiga 10s ease-in-out infinite;
+}
+@keyframes teksSatu {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(130%);
+  }
+  95% {
+    transform: translateY(130%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes teksDua {
+  0% {
+    transform: translateY(-130%);
+  }
+  20% {
+    transform: translateY(-130%);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-130%);
+  }
+  100% {
+    transform: translateY(-130%);
+  }
+}
+@keyframes teksTiga {
+  0% {
+    transform: translateX(-130%);
+  }
+  50% {
+    transform: translateX(-130%);
+  }
+  55% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  95% {
+    transform: translateX(-130%);
+  }
+  100% {
+    transform: translateX(-130%);
+  }
 }
 /*  */
 

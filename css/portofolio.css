@@ -174,4 +174,7 @@
   .illustrator div:nth-child(2) {
     justify-content: center;
   }
+  .box .headline-img:hover {
+    transform: translateY(0);
+  }
 }
