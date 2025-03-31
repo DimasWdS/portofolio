@@ -54,7 +54,7 @@ a {
   color: black;
 }
 @keyframes bigSmall {
-  0% {
+  /* 0% {
     transform: scale(1);
   }
   33.33% {
@@ -62,6 +62,21 @@ a {
   }
   66.66% {
     transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  } */
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
