@@ -1,103 +1,126 @@
+@media (min-width: 1024px) {
+  .container-gallery {
+    margin-top: 85%;
+    /* background-color: aqua !important; */
+  }
+}
 .container-gallery {
   position: absolute;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  padding: 1rem;
+  gap: 3rem;
   flex-wrap: wrap;
-  top: 0;
-  z-index: 10;
   width: 100%;
   height: 100dvh;
+  z-index: 10;
   margin-top: 30%;
+  padding: 0 1rem 0 1rem;
   background-color: var(--background);
   border-top: 0.2rem solid var(--third-color);
-  box-shadow: 10px 0 0 0 rgba(0, 0, 0, 0.453);
+  /* box-shadow: 10px 0 0 0 rgba(0, 0, 0, 0.453); */
 }
 
+/* card style start */
+.con-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  max-width: 20rem;
+  height: 20rem;
+  background-color: var(--background);
+  border-radius: 10px;
+  border: 0.1rem solid var(--third-color);
+}
+.con-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(1.02);
+  border-radius: 12px;
+  border: 0.1rem solid var(--third-color);
+  transition: all 0.2s linear;
+  /* background-color: blue; */
+}
+.con-card:hover::after {
+  transform: scale(1);
+  border-radius: 10px;
+}
+.con-card .con-img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.con-card .con-img img {
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+.con-card .con-desc {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  /* background-color: aqua; */
+}
+.btn-call {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 0% 0% 0% 20% / 0% 0% 0% 20%;
+  background-color: var(--white);
+}
+.con-desc div:nth-child(2) {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  transform: translateY(100%);
+  transition: all 0.2s ease-in-out;
+  background-color: var(--third-color);
+  border-radius: 0% 5% 0% 0% / 0% 5% 0% 0%;
+}
+.con-desc div:nth-child(2) header {
+  font-family: "Lilita one", sans-serif;
+  color: var(--white);
+  position: absolute;
+  bottom: 100%;
+  border-radius: 0% 15% 0% 0% / 0% 15% 0% 0%;
+  padding: 0.5rem 0.5rem 0.5rem 0.1rem;
+  background-color: var(--third-color);
+}
+.con-desc:hover div:nth-child(2) {
+  transform: translateY(0);
+}
+.con-desc div:nth-child(2) p {
+  color: var(--white);
+  padding: 0.5rem;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.con-desc div:nth-child(2) span {
+  display: inline-flex;
+}
+/* card style start */
 @media (max-width: 1024px) {
   .container-gallery {
-    margin-top: 85%;
+    margin-top: 65%;
   }
 }
 @media (max-width: 640px) {
   .container-gallery {
     margin-top: 100%;
   }
-}
-
-.card {
-  position: relative;
-  height: 20rem;
-  width: 20rem;
-  cursor: pointer;
-  border-radius: 10px;
-  border: 0.1rem solid var(--third-color);
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: all 100ms ease-in-out;
-}
-.card img {
-  pointer-events: none;
-}
-.card:hover {
-  transform: translateY(-0.1rem);
-}
-.btn-call {
-  position: absolute;
-  height: 3rem;
-  width: 3rem;
-  background-color: var(--white);
-  right: 0;
-  border-radius: 0 0 0 10px;
-}
-.btn-call a {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-}
-.card .card-desc {
-  position: absolute;
-  height: 80%;
-  width: 100%;
-  border-top-right-radius: 10px;
-  transform: translateY(100%);
-  background-color: var(--third-color);
-  bottom: 0;
-  transition: transform 0.3s ease-in-out;
-}
-.card .card-desc .desc-header {
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-  background-color: var(--third-color);
-  position: absolute;
-  bottom: 100%;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  color: var(--white);
-  font-weight: 700;
-}
-.card:hover .card-desc {
-  transform: translateY(0);
-}
-.card .card-desc span {
-  display: inline-block;
-  padding: 1rem;
-  color: var(--white);
-}
-.card .card-desc span h4 {
-  margin-bottom: 0.5rem;
-}
-.card .card-desc span p {
-  font-size: 12px;
-
-  margin-bottom: 0.2rem;
-}
-/* .card:hover > :not(:hover) {
-  opacity: 0.3;
-} */
-
-@media (max-width: 640px) {
   .container-gallery {
     flex-direction: column;
   }
