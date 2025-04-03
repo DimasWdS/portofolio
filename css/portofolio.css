@@ -145,7 +145,27 @@
 
 .box .headline-img:hover {
   transition: all 0.2s ease-out;
-  transform: translateY(-1rem);
+  animation: boxjump 3s linear;
+}
+@keyframes boxjump {
+  0% {
+    transform: translateY(0) rotate(5deg);
+  }
+  10% {
+    transform: translateY(-1.5rem);
+  }
+  15% {
+    transform: translate(0) rotate(-5deg);
+  }
+  16% {
+    transform: translateY(0.5rem);
+  }
+  17% {
+    transform: translateY(0.5rem);
+  }
+  20% {
+    transform: translateY(0);
+  }
 }
 .box .headline-img img {
   height: 100%;
@@ -175,6 +195,6 @@
     justify-content: center;
   }
   .box .headline-img:hover {
-    transform: translateY(0);
+    animation: none;
   }
 }
