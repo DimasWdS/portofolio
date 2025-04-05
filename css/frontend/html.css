@@ -1,7 +1,3 @@
-#html-btn {
-  color: rgb(0, 210, 210);
-}
-
 .html-konten,
 .javascrip-konten {
   position: absolute;
@@ -73,10 +69,13 @@
   color: rgb(197, 0, 197);
 }
 .cyan {
-  color: rgb(0, 211, 211);
+  color: rgb(0, 211, 211) !important;
 }
 .orange {
   color: orange;
+}
+.btn-color {
+  color: rgb(230, 230, 0) !important;
 }
 
 .konten-gone {

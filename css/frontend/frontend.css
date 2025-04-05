@@ -226,10 +226,22 @@ main {
 }
 
 .container-code .code-nav button {
+  position: relative;
   color: var(--white);
   font-family: "Inconsolata", monospace;
   font-weight: 500;
   font-size: 15px;
+}
+.line::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  margin-top: 0.2rem;
+  border-radius: 5px;
+  background-color: rgb(230, 230, 0);
 }
 .container-code .code-nav a {
   position: absolute;

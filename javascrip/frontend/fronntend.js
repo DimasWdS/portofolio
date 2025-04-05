@@ -32,21 +32,21 @@ const jsBtn = document.getElementById("js-btn");
 const conHtml = document.querySelector(".html-konten");
 const conJs = document.querySelector(".javascrip-konten");
 
-function openHtml() {
-  jsBtn.style.color = "rgb(219, 215, 220)";
-  htmlBtn.style.color = "rgb(0, 211, 211)";
-}
-
-function openJs() {
-  jsBtn.style.color = "rgb(0, 211, 211)";
-  htmlBtn.style.color = "rgb(219, 215, 220)";
-}
-
-jsBtn.addEventListener("click", function () {
-  conHtml.classList.add("konten-gone");
-  conJs.classList.remove("konten-gone");
-});
 htmlBtn.addEventListener("click", function () {
+  htmlBtn.classList.add("btn-color");
+  jsBtn.classList.remove("btn-color");
+  htmlBtn.classList.add("line");
+  jsBtn.classList.remove("line");
+  //
   conHtml.classList.remove("konten-gone");
   conJs.classList.add("konten-gone");
+});
+jsBtn.addEventListener("click", function () {
+  htmlBtn.classList.remove("btn-color");
+  jsBtn.classList.add("btn-color");
+  htmlBtn.classList.remove("line");
+  jsBtn.classList.add("line");
+  //
+  conHtml.classList.add("konten-gone");
+  conJs.classList.remove("konten-gone");
 });
