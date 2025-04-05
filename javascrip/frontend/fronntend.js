@@ -32,6 +32,16 @@ const jsBtn = document.getElementById("js-btn");
 const conHtml = document.querySelector(".html-konten");
 const conJs = document.querySelector(".javascrip-konten");
 
+function openHtml() {
+  jsBtn.style.color = "rgb(219, 215, 220)";
+  htmlBtn.style.color = "rgb(0, 211, 211)";
+}
+
+function openJs() {
+  jsBtn.style.color = "rgb(0, 211, 211)";
+  htmlBtn.style.color = "rgb(219, 215, 220)";
+}
+
 jsBtn.addEventListener("click", function () {
   conHtml.classList.add("konten-gone");
   conJs.classList.remove("konten-gone");
