@@ -29,6 +29,13 @@ main {
   width: 80%;
   height: 100%;
 }
+.container-nama span,
+.container-nama h5,
+.container-nama h4,
+.container-nama span h6 {
+  font-family: "Inconsolata", monospace;
+  font-size: 0.9em;
+}
 .container-nama h4 {
   color: var(--white);
   margin: 1rem 0 1rem 0;
@@ -46,33 +53,13 @@ main {
 .container-teksScroll {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 4rem;
   width: 20rem;
   overflow: hidden;
   /* background-color: aqua; */
 }
-.container-teksScroll div:first-child,
-.container-teksScroll div:last-child {
-  position: absolute;
-  width: 15px;
-  height: 100%;
-  background-color: yellow;
-  z-index: 2;
-}
-.container-teksScroll div:first-child {
-  left: 0;
-  background: linear-gradient(
-    to right,
-    var(--background),
-    rgba(255, 255, 0, 0)
-  );
-}
-.container-teksScroll div:last-child {
-  right: 0;
-  background: linear-gradient(to left, var(--background), rgba(255, 255, 0, 0));
-}
+
 .container-teksScroll::after {
   content: " ";
   position: absolute;
@@ -107,16 +94,18 @@ main {
   /* background-color: blue; */
 }
 .container-teksScroll span p {
-  font-family: "Lilita one", sans-serif;
+  /* font-family: "Lilita one", sans-serif; */
+  /* font-family: "Inconsolata", monospace; */
+  font-family: "Poppins", sans-serif;
   font-size: 2em;
 }
-.container-teksScroll span:nth-child(2) {
+.container-teksScroll span:nth-child(1) {
   animation: teksSatu 10s ease-in-out infinite;
 }
-.container-teksScroll span:nth-child(3) {
+.container-teksScroll span:nth-child(2) {
   animation: teksDua 10s ease-in-out infinite;
 }
-.container-teksScroll span:nth-child(4) {
+.container-teksScroll span:nth-child(3) {
   animation: teksTiga 10s ease-in-out infinite;
 }
 @keyframes teksSatu {
@@ -129,7 +118,7 @@ main {
   25% {
     transform: translateY(130%);
   }
-  95% {
+  97% {
     transform: translateY(130%);
   }
   100% {
@@ -150,7 +139,13 @@ main {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-130%);
+    transform: translateY(130%);
+  }
+  93% {
+    transform: translateY(130%);
+  }
+  97% {
+    transform: translateY(0);
   }
   100% {
     transform: translateY(-130%);
@@ -158,22 +153,25 @@ main {
 }
 @keyframes teksTiga {
   0% {
-    transform: translateX(-130%);
+    transform: translateY(-130%);
+  }
+  45% {
+    transform: translateY(-130%);
   }
   50% {
-    transform: translateX(-130%);
+    transform: translateY(0);
   }
-  55% {
-    transform: translateX(0);
+  85% {
+    transform: translateY(0);
   }
-  90% {
-    transform: translateX(0);
+  93% {
+    transform: translateY(0);
   }
-  95% {
-    transform: translateX(-130%);
+  97% {
+    transform: translateY(-130%);
   }
   100% {
-    transform: translateX(-130%);
+    transform: translateY(-130%);
   }
 }
 /*  */
@@ -282,22 +280,5 @@ main {
   .container-kanan {
     width: 90%;
     height: 20rem;
-  }
-}
-
-@keyframes spin-coy {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes counter-spin-coy {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
   }
 }

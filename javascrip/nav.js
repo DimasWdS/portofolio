@@ -1,6 +1,5 @@
-function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+import { nama } from "../module/main.mjs";
+
 const navBtn = document.getElementById("nav-btn");
 const conNav = document.querySelector(".nav");
 const conBtn = document.querySelector(".container-nav-btn");
@@ -9,6 +8,7 @@ const conBtn = document.querySelector(".container-nav-btn");
 navBtn.addEventListener("click", function () {
   if (!conNav.classList.contains("nav-active")) {
     // Jika menu belum aktif (akan dibuka)
+
     conNav.classList.add("nav-active");
     conBtn.classList.add("btn-active");
     navBtn.classList.add("ham-active");
@@ -34,7 +34,7 @@ document.addEventListener("click", function (e) {
       conNav.classList.remove("nav-active");
       conBtn.classList.remove("btn-active");
       navBtn.classList.remove("ham-active");
-    }, 200); // Hapus kelas utama setelah efek selesai
+    }, 200);
     conNav.classList.remove("menu-enter");
   }
 });
