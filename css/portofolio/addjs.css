@@ -9,19 +9,3 @@
   opacity: 1;
   transform: scale(1);
 }
-.from-top {
-  transform: translateY(-5rem);
-  transition: all 0.2s linear;
-}
-.counter-top {
-  transition: all 0.2s linear;
-  transform: translateY(0);
-}
-.from-bottom {
-  transform: translateY(5rem);
-  transition: all 0.2s linear;
-}
-.counter-bottom {
-  transition: all 0.2s linear;
-  transform: translateY(0);
-}

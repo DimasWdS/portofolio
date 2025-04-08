@@ -5,18 +5,17 @@
   }
 }
 .container-gallery {
+  overflow: hidden;
   position: absolute;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
   width: 100%;
-
+  /* naikan tinggi + 40 rem penting !!*/
+  height: 40rem;
   z-index: 10;
   margin-top: 30%;
-  padding: 2rem 1rem 2rem 1rem;
   background-color: var(--background);
   border-top: 0.2rem solid var(--third-color);
   /* box-shadow: 10px 0 0 0 rgba(0, 0, 0, 0.453); */
@@ -24,7 +23,19 @@
 /*  */
 /* card style start */
 /*  */
-.card {
+
+.container-card {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  /* background-color: aqua; */
+}
+.container-card .card {
   position: relative;
   display: flex;
   justify-content: center;
@@ -105,9 +116,9 @@
 /*  */
 /* card style start */
 /*  */
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .container-gallery {
-    margin-top: 65%;
+    margin-top: 100%;
   }
 }
 @media (max-width: 640px) {
@@ -118,6 +129,14 @@
     margin-top: 100%;
   }
   .container-gallery {
+    flex-direction: column;
+  }
+}
+@media (max-width: 640px) {
+  .container-gallery {
+    height: 120rem;
+  }
+  .container-card {
     flex-direction: column;
   }
 }
