@@ -227,7 +227,7 @@ main {
 
 .container-code .code-nav button {
   position: relative;
-  color: var(--white);
+  color: var(--background);
   font-family: "Inconsolata", monospace;
   font-weight: 500;
   font-size: 15px;
@@ -241,7 +241,7 @@ main {
   top: 100%;
   margin-top: 0.2rem;
   border-radius: 5px;
-  background-color: rgb(230, 230, 0);
+  background-color: var(--white);
 }
 .container-code .code-nav a {
   position: absolute;

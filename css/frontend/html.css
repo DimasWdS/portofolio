@@ -75,7 +75,7 @@
   color: orange;
 }
 .btn-color {
-  color: rgb(230, 230, 0) !important;
+  color: var(--white) !important;
 }
 
 .konten-gone {
