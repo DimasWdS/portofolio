@@ -18,6 +18,7 @@
   gap: 0.2rem;
   /* background-color: aqua; */
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .gallery-bg section {

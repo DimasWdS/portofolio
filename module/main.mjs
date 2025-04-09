@@ -1,7 +1,9 @@
-const nama = "dimas";
-
-function addClass(cls, dly) {
-  cls.classList.add(dly);
+function sum(input1, input2) {
+  return input1 + input2;
+}
+function cloneBg(oriElement) {
+  const clone = oriElement.cloneNode(true);
+  oriElement.insertAdjacentElement("afterend", clone);
 }
 
-export { nama, addClass };
+export { sum, cloneBg };
