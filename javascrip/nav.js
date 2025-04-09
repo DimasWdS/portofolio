@@ -1,5 +1,3 @@
-import { nama } from "../module/main.mjs";
-
 const navBtn = document.getElementById("nav-btn");
 const conNav = document.querySelector(".nav");
 const conBtn = document.querySelector(".container-nav-btn");
