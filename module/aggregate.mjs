@@ -1,1 +1,1 @@
-export { cloneBg } from "./main.mjs";
+export { cloneBg, sum } from "./main.mjs";
