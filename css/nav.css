@@ -91,14 +91,17 @@
   box-shadow: none;
 }
 
+/*  */
 .nav {
   position: fixed;
   z-index: 10;
   right: 0;
   width: 25%;
   height: 100%;
+  border-top-left-radius: 20rem;
+  border-bottom-left-radius: 20rem;
   background-color: var(--white);
-  transform: scaleX(0);
+  transform: translateX(100%);
   transition: all 0.3s linear;
   transform-origin: right;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -106,8 +109,10 @@
 }
 .nav-active {
   transition: all 0.3s linear;
-  transform: scaleX(1);
+  transform: translateX(0);
   transform-origin: right;
+  border-top-left-radius: 0.1rem;
+  border-bottom-left-radius: 0.1rem;
 }
 .nav span:nth-child(1) {
   display: inline-block;
