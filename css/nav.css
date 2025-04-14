@@ -195,6 +195,7 @@
   align-items: center;
   transition: all 0.1s linear;
   color: var(--background);
+  font-family: "Inconsolata", monospace;
 }
 
 .nav ul li a::before {

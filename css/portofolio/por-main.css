@@ -101,7 +101,8 @@ nav {
 .akhir span {
   display: flex;
   font-size: 2em;
-  font-family: "Lilita one", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
   color: var(--white);
   width: 100%;
   justify-content: center;

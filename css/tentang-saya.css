@@ -27,7 +27,7 @@ img {
   margin-bottom: 4rem;
 }
 .penjelasan-saya div p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inconsolata", monospace;
   color: var(--main-font);
   font-size: 1.5em;
   text-align: justify;
@@ -67,30 +67,35 @@ img {
 }
 .card-pengalaman {
   display: flex;
-  height: 10rem;
+  align-items: center;
+  height: 8rem;
   width: 90%;
   max-width: 30rem;
   border: 1px solid var(--white);
   border-radius: 10px;
   box-shadow: rgb(0, 0, 0) 0px 3px 8px;
-  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif in !important; */
 }
 .card-pengalaman section {
-  height: 100%;
   width: 100%;
-  padding: 1.5rem;
   display: flex;
+  padding: 0 0 0 2rem;
   flex-direction: column;
 }
+.card-pengalaman section header h3,
+.card-pengalaman section h5 a,
+.card-pengalaman section h6 i,
+.card-pengalaman section p {
+  font-family: "Inconsolata", monospace;
+}
 .card-pengalaman section header h3 {
-  color: var(--white);
+  color: var(--main-font);
   font-weight: 600;
 }
 .card-pengalaman section h5 a {
   color: var(--third-color);
 }
 .card-pengalaman section h6 {
-  color: var(--white);
+  color: var(--main-font);
 }
 .card-pengalaman section p {
   color: var(--main-font);

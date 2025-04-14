@@ -14,14 +14,15 @@
 .container-portofolio header div {
   display: flex;
   gap: 0.1rem;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .container-portofolio header p {
   font-size: 3em;
-  color: azure;
-  font-family: "Lilita one", sans-serif;
+  font-weight: 900;
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
 }
 .container-portofolio header div p:nth-child(1) {
   animation: bigSmall 1s linear infinite;
@@ -108,9 +109,9 @@
   color: var(--white);
 }
 .deskripsi p {
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inconsolata", monospace;
 }
 /* btn start */
 .btn {
@@ -134,8 +135,10 @@
   border-radius: 10px;
   transform: translateY(-0.2rem);
   color: var(--white);
-  font-family: "Lilita one", sans-serif;
-  font-size: 1.2em;
+  /* font-family: "Lilita one", sans-serif; */
+  font-family: "Inconsolata", monospace;
+  font-size: 1em;
+  font-weight: 700;
   transition: all 0.2s ease-in-out;
 }
 .btn a:hover {
