@@ -5,5 +5,8 @@ function cloneBg(oriElement) {
   const clone = oriElement.cloneNode(true);
   oriElement.insertAdjacentElement("afterend", clone);
 }
-
-export { sum, cloneBg };
+function cloneBgV2(oriElement, inElement) {
+  const clone = inElement.cloneNode(true);
+  oriElement.appendChild(clone);
+}
+export { sum, cloneBg, cloneBgV2 };
