@@ -33,6 +33,7 @@ main {
 .container-nama h5,
 .container-nama h4,
 .container-nama span h6 {
+  margin-top: 0.2rem;
   font-family: "Inconsolata", monospace;
   font-size: 0.9em;
 }
