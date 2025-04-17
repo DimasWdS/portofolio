@@ -23,36 +23,8 @@
   font-weight: 900;
   color: var(--white);
   font-family: "Poppins", sans-serif;
-}
-.container-portofolio header div p:nth-child(1) {
-  animation: bigSmall 1s linear infinite;
-}
-.container-portofolio header div p:nth-child(2) {
-  animation: bigSmall 1.2s linear infinite;
-}
-.container-portofolio header div p:nth-child(3) {
-  animation: bigSmall 1.3s linear infinite;
-}
-.container-portofolio header div p:nth-child(4) {
-  animation: bigSmall 1.4s linear infinite;
-}
-.container-portofolio header div p:nth-child(5) {
-  animation: bigSmall 1.5s linear infinite;
-}
-.container-portofolio header div p:nth-child(6) {
-  animation: bigSmall 1.6s linear infinite;
-}
-.container-portofolio header div p:nth-child(7) {
-  animation: bigSmall 1.7s linear infinite;
-}
-.container-portofolio header div p:nth-child(8) {
-  animation: bigSmall 1.8s linear infinite;
-}
-.container-portofolio header div p:nth-child(9) {
-  animation: bigSmall 1.9s linear infinite;
-}
-.container-portofolio header div p:nth-child(10) {
-  animation: bigSmall 2s linear infinite;
+  animation: wave-animation 2s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
 }
 
 /* header end */

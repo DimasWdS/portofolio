@@ -53,31 +53,11 @@
   color: var(--background);
   font-size: 3em;
 }
-.con-header p:nth-child(1) {
-  animation: bigSmall 1s linear infinite;
+.con-header p {
+  animation: wave-animation 2s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
 }
-.con-header p:nth-child(2) {
-  animation: bigSmall 1.2s linear infinite;
-}
-.con-header p:nth-child(3) {
-  animation: bigSmall 1.3s linear infinite;
-}
-.con-header p:nth-child(4) {
-  animation: bigSmall 1.4s linear infinite;
-}
-.con-header p:nth-child(5) {
-  animation: bigSmall 1.5s linear infinite;
-}
-.con-header p:nth-child(6) {
-  margin-left: 1rem;
-  animation: bigSmall 1.6s linear infinite;
-}
-.con-header p:nth-child(7) {
-  animation: bigSmall 1.7s linear infinite;
-}
-.con-header p:nth-child(8) {
-  animation: bigSmall 1.8s linear infinite;
-}
+
 /*  */
 .container-contack .container-both {
   display: flex;
