@@ -69,7 +69,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  animation: berandaTeksAnimation 100s linear infinite;
+  animation: berandaTeksAnimation 10s linear infinite;
 }
 .layer-1-bg section span {
   font-size: 5rem;
@@ -80,16 +80,16 @@ body {
 @keyframes berandaTeksAnimation {
   0%,
   100% {
-    transform: translateY(0) translateX(0) rotate(0) skewY(0);
+    transform: translateY(0) translateX(0) rotate(0) skewX(0);
   }
   25% {
-    transform: translateY(-1rem) translateX(1rem) rotate(-1deg) skewY(10deg);
+    transform: translateY(-1rem) translateX(1rem) rotate(-1deg) skewX(10deg);
   }
   50% {
-    transform: translateY(0) translateX(0) rotate(0) skewY(0);
+    transform: translateY(0) translateX(0) rotate(0) skewX(0);
   }
   75% {
-    transform: translateY(1rem) translateX(1rem) rotate(1deg) skewY(-10deg);
+    transform: translateY(1rem) translateX(1rem) rotate(1deg) skewX(-10deg);
   }
 }
 /*  */
