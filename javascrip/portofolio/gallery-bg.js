@@ -4,7 +4,6 @@ const galleryBg = document.querySelector(".gallery-bg");
 const conTeks = document.querySelectorAll(".gallery-bg section");
 const teks = document.querySelector(".gallery-bg section span");
 
-// Misalnya kamu mau cloning ke setiap section
 conTeks.forEach((section) => {
   for (let i = 0; i < 3; i++) {
     cloneBgV2(section, teks);

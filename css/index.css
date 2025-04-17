@@ -47,59 +47,49 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
   overflow: hidden;
 }
 .layer-1-bg {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   z-index: 0;
   height: 100%;
   width: 100%;
+
   overflow: hidden;
 }
 .layer-1-bg section {
   width: 100%;
   height: 4rem;
-  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: top-bottom 100s linear infinite;
+  flex-shrink: 0;
+  animation: berandaTeksAnimation 100s linear infinite;
 }
-.layer-1-bg section p {
+.layer-1-bg section span {
   font-size: 5rem;
   font-weight: 1000;
   color: var(--tes);
+  font-family: "Poppins", sans-serif;
 }
-@keyframes top-bottom {
-  0% {
-    transform: translateY(-15rem) rotate(0) translateX(0); /* Posisi awal/akhir */
+@keyframes berandaTeksAnimation {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0) rotate(0) skewY(0);
   }
   25% {
-    transform: translateY(-20rem) rotate(5deg) translateX(-2rem); /* Turun 5rem */
-  }
-  26% {
-    transform: translateY(-20.5rem) rotate(5deg) translateX(-2rem); /* Turun 5rem */
-  }
-  27% {
-    transform: translateY(-20rem) rotate(5deg) translateX(-2rem); /* Turun 5rem */
+    transform: translateY(-1rem) translateX(1rem) rotate(-1deg) skewY(10deg);
   }
   50% {
-    transform: translateY(-15rem) rotate(0); /* Kembali ke posisi awal */
-  }
-
-  73% {
-    transform: translateY(-10.5rem) rotate(-5deg) translateX(2rem);
-  }
-  74% {
-    transform: translateY(-10rem) rotate(-5deg) translateX((2rem));
+    transform: translateY(0) translateX(0) rotate(0) skewY(0);
   }
   75% {
-    transform: translateY(
-      -10rem rotate(-5deg) translateX(2rem)
-    ); /* Naik 5rem */
-  }
-  100% {
-    transform: translateY(-15rem) rotate(0) translateX(0); /* Posisi awal/akhir */
+    transform: translateY(1rem) translateX(1rem) rotate(1deg) skewY(-10deg);
   }
 }
 /*  */
