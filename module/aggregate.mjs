@@ -1,1 +1,1 @@
-export { cloneBg, cloneBgV2, sum } from "./main.mjs";
+export { cloneBg, cloneBgV2, sum, gilapBtn } from "./main.mjs";
