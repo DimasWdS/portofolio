@@ -254,11 +254,31 @@ main {
   right: 0;
   border-radius: 2px;
 }
-.container-code .code-nav a img {
-  scale: 0.5;
+
+.btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, var(--white), rgb(85, 85, 85));
+  outline: 0.1rem solid var(--white);
 }
-.container-code .code-nav a:hover {
-  background-color: red;
+.btn a {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.btn a img {
+  transform: scale(0.7);
 }
 .container-code .code-code {
   position: relative;

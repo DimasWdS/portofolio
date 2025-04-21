@@ -11,42 +11,36 @@ body {
 /* nav strat */
 nav {
   width: 100%;
-  justify-content: space-between;
   top: 0;
+  justify-content: end;
   position: fixed;
   z-index: 999;
-  background-color: var(--white);
   display: flex;
   align-items: center;
 }
-.opsi-menu {
-  display: flex;
-  margin-left: 2rem;
-  gap: 1rem;
-  font-size: 0.7em;
-}
-.opsi-menu span {
-  font-family: sans-serif;
-}
-.x-button {
-  display: grid;
-  place-items: center;
-  height: 40px;
-  width: 40px;
-}
-.x-button a {
-  height: 100%;
-  width: 100%;
+.btn {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  align-items: center;
+  margin: 1rem 1rem 0 0;
+  height: 35px;
+  width: 35px;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, var(--white), rgb(105, 105, 105));
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  outline: 0.1rem solid var(--white);
 }
-.x-button a img {
-  scale: 0.5;
-}
-.x-button:hover {
-  background-color: red;
+.btn a {
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  transform: scale(0.7);
 }
 /* nav end */
 /*  */
