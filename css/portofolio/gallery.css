@@ -13,7 +13,7 @@
   align-items: center;
   width: 100%;
   /* naikan tinggi + 40 rem penting !!*/
-  height: 80rem;
+  height: 40rem;
   z-index: 10;
   margin-top: 30%;
   background-color: var(--background);
@@ -86,7 +86,7 @@
 }
 @media (max-width: 640px) {
   .container-gallery {
-    height: 120rem;
+    height: 80rem;
   }
   .container-card {
     flex-direction: column;
