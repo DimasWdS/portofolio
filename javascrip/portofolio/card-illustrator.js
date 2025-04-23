@@ -145,8 +145,5 @@ card(
 voluptate architecto non nesciunt aliquam totam doloribus consequatur
 ullam modi praesentium.`
 );
-card(
-  "karakter+mobil-01.jpg",
-  "illustrasi Desain Baju",
-  `lorem ipsum dolor sit amet`
-);
+card("", "illustrasi Desain Baju", `RRQ juara Lokal`);
+card("", "illustrasi Desain Baju", `RRQ juara Lokal`);
