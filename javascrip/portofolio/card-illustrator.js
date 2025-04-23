@@ -1,6 +1,5 @@
 function card(nameFile, headerConten, desConten) {
   const conCard = document.querySelector(".container-card");
-  const directory = "../../asset/img/";
   const card = document.createElement("div");
   const imgCard = document.createElement("div");
   const img = document.createElement("img");
@@ -30,8 +29,8 @@ function card(nameFile, headerConten, desConten) {
     height: "100%",
     width: "100%",
   });
-  img.src = `${directory}` + `${nameFile}`;
-  img.alt = "Gambar contoh";
+  img.src = `./asset/img/${nameFile}`;
+  img.alt = "Gambar";
 
   Object.assign(btnCall.style, {
     position: "absolute",
@@ -59,7 +58,7 @@ function card(nameFile, headerConten, desConten) {
     // backgroundColor: "yellow",
     transform: "translateY(100%)",
     bottom: "0",
-    transition: "all 0.5s ease-in-out",
+    transition: "all 0.3s ease-in-out",
   });
 
   Object.assign(header.style, {
@@ -117,10 +116,6 @@ function card(nameFile, headerConten, desConten) {
     backgroundColor: "rgba(0, 0, 0, 0.83)",
   });
   p.appendChild(pBg);
-
-  function delay(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
 
   card.addEventListener("mouseenter", function () {
     img.classList.add("shake");
