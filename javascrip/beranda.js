@@ -106,12 +106,24 @@ const layerBawah = document.querySelector(".layer-bawah");
   conImg.appendChild(img);
 
   const conDesc = document.createElement("div");
+  conDesc.classList.add("flex-center");
   Object.assign(conDesc.style, {
     width: "18rem",
-    height: "5rem",
+    padding: "0.2rem 0 0.2rem 0",
     borderRadius: "10px",
     backgroundColor: "var(--main-font)",
+    outline: "2px solid var(--tes)",
   });
   container.appendChild(conDesc);
+
+  const span = document.createElement("span");
+  span.textContent = "Hallo 👋, I'm Widy";
+  conDesc.appendChild(span);
+  Object.assign(span.style, {
+    fontSize: "1.2em",
+    fontWeight: "900",
+    color: "var(--background)",
+    fontFamily: `"Inconsolata", monospace`,
+  });
 }
 //layer atas end

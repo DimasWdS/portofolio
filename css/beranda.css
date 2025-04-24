@@ -63,10 +63,10 @@
 @keyframes geserKiri {
   0%,
   100% {
-    transform: translateX(0);
+    transform: translateX(0) skewX(0);
   }
   50% {
-    transform: translateX(-5rem);
+    transform: translateX(-5rem) skewX(-10deg);
   }
 }
 .geser-kanan {
@@ -75,10 +75,10 @@
 @keyframes geserKanan {
   0%,
   100% {
-    transform: translateX(0);
+    transform: translateX(0) skewX(0);
   }
   50% {
-    transform: translateX(5rem);
+    transform: translateX(5rem) skewX(10deg);
   }
 }
 /* add to javascrip end */
