@@ -84,3 +84,10 @@ const layerBawah = document.querySelector(".layer-bawah");
   // konten div dalam end
 }
 // layer bawah end
+
+//layer atas strat
+{
+  const layerAtas = document.querySelector(".layer-atas");
+  layerAtas.classList.add("flex-center");
+}
+//layer atas end
