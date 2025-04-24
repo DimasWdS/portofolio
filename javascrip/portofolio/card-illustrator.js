@@ -38,7 +38,7 @@ function card(nameFile, headerConten, desConten) {
     right: "0",
     height: "50px",
     width: "50px",
-    borderRadius: "0 0 0 5px",
+    borderRadius: "0 5px 0 5px",
     backgroundColor: "var(--white)",
     cursor: "pointer",
   });
