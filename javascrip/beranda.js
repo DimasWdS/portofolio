@@ -1,4 +1,3 @@
-import { cloneBg, cloneBgV2, sum } from "./../module/aggregate.mjs";
 const layerBawah = document.querySelector(".layer-bawah");
 
 // layer bawah
