@@ -145,5 +145,8 @@ card(
 voluptate architecto non nesciunt aliquam totam doloribus consequatur
 ullam modi praesentium.`
 );
-card("", "illustrasi Desain Baju", `RRQ juara Lokal`);
-card("", "illustrasi Desain Baju", `RRQ juara Lokal`);
+card(
+  "DESAIN-SKELETON-SKATEBOARD-01.svg",
+  "iLLustrasi Skeleton",
+  `RRQ juara lokal`
+);
