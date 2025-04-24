@@ -71,7 +71,6 @@ const layerBawah = document.querySelector(".layer-bawah");
     }
 
     const conTeksSelector = document.querySelectorAll(".container-teks");
-    console.log(conTeksSelector);
 
     conTeksSelector.forEach((el, index) => {
       if (index % 2 !== 0) {
@@ -89,5 +88,30 @@ const layerBawah = document.querySelector(".layer-bawah");
 {
   const layerAtas = document.querySelector(".layer-atas");
   layerAtas.classList.add("flex-center");
+  const container = document.createElement("div");
+  container.classList.add("flex-center");
+  container.style.flexDirection = "column";
+  layerAtas.appendChild(container);
+
+  const conImg = document.createElement("div");
+  Object.assign(conImg.style, {
+    height: "15rem",
+    width: "15rem",
+    // backgroundColor: "yellow",
+  });
+  container.appendChild(conImg);
+  const img = document.createElement("img");
+  img.src = `./asset/myfoto/1.png`;
+  img.alt = "Gambar";
+  conImg.appendChild(img);
+
+  const conDesc = document.createElement("div");
+  Object.assign(conDesc.style, {
+    width: "18rem",
+    height: "5rem",
+    borderRadius: "10px",
+    backgroundColor: "var(--main-font)",
+  });
+  container.appendChild(conDesc);
 }
 //layer atas end
