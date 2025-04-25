@@ -97,6 +97,8 @@ const layerBawah = document.querySelector(".layer-bawah");
   Object.assign(conImg.style, {
     height: "15rem",
     width: "15rem",
+    // outline: "0.1rem solid var(--main-font)",
+    // borderRadius: "50%",
     // backgroundColor: "yellow",
   });
   container.appendChild(conImg);
@@ -117,13 +119,27 @@ const layerBawah = document.querySelector(".layer-bawah");
   container.appendChild(conDesc);
 
   const span = document.createElement("span");
-  span.textContent = "Hallo 👋, I'm Widy";
+  span.textContent = "Hallo👋, I'm Widy";
   conDesc.appendChild(span);
   Object.assign(span.style, {
     fontSize: "1.2em",
-    fontWeight: "900",
+    fontWeight: "700",
     color: "var(--background)",
     fontFamily: `"Inconsolata", monospace`,
+  });
+
+  const a = document.createElement("a");
+  a.href = "#";
+  a.textContent = "Download CV";
+  container.appendChild(a);
+  Object.assign(a.style, {
+    margin: "0.5rem 0 0 0",
+    backgroundColor: "var(--main-font)",
+    padding: "0.2rem 1rem",
+    borderRadius: "10px",
+    fontFamily: `"Inconsolata", monospace`,
+    fontWeight: "600",
+    outline: "0.1rem solid var(--white)",
   });
 }
 //layer atas end
