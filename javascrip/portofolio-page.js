@@ -1,4 +1,4 @@
-import { button } from "../../module/aggregate.mjs";
+import { button } from "../module/aggregate.mjs";
 
 const btnPortofolio = document.querySelector(".btnJs");
 const btnFrontEnd = document.querySelector(".btnFrontEnd");
