@@ -19,6 +19,7 @@ function button(btn, content, href) {
     margin: "1rem 0 0 0",
     borderRadius: "5px",
     overflow: "hidden",
+    backdropFilter: "blur(10px)",
   });
 
   const a = document.createElement("a");
