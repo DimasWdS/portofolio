@@ -8,11 +8,16 @@
   /* background-color: aqua; */
 }
 .container-pengalaman {
+  position: relative;
   height: 15rem;
   width: 100%;
+  max-width: 80rem;
+  margin: auto;
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  /* background-color: aqua; */
+  overflow: hidden;
 }
 .shadow-spin::before {
   position: absolute;
@@ -32,4 +37,13 @@
   gap: 1rem;
   margin: 0 1rem 0 1rem;
   /* background-color: aqua; */
+  animation: scrollKiri 90s linear infinite;
+}
+@keyframes scrollKiri {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

@@ -35,12 +35,12 @@ function cardPengalaman(header, date, deskripsi) {
   const divSpin = document.createElement("div");
   Object.assign(divSpin.style, {
     position: "absolute",
-    height: "20rem",
+    height: "100rem",
     width: "3rem",
     backgroundColor: "var(--third-color)",
-    transformOrigin: "top",
-    top: "50%",
-    transform: "rotate(45deg)",
+    // transformOrigin: "top",
+    // top: "50%",
+    // transform: "rotate(45deg)",
   });
 
   conCard.appendChild(divSpin);
@@ -64,7 +64,7 @@ function cardPengalaman(header, date, deskripsi) {
   });
   const dateCard = document.createElement("span");
   Object.assign(dateCard.style, {
-    margin: "3rem 0 0 0",
+    margin: "2rem 0 0 0",
     width: "100%",
     padding: "0 1rem 0 1rem",
     fontSize: "0.7em",
@@ -84,11 +84,21 @@ function cardPengalaman(header, date, deskripsi) {
 }
 
 cardPengalaman(
-  "Participate in The Teknisi Instalasi wifi at MENAKSOPAL",
+  "Participate in The WiFi Installation Technician at MENAKSOPAL",
   "2023 -2023, 5 months",
-  "asnjaodjoajodjsaoo"
+  "Working"
+);
+cardPengalaman(
+  "Participate in The WiFi Installation Technician at MENAKSOPAL",
+  "2023 -2023, 5 months",
+  "Working"
+);
+cardPengalaman(
+  "Participate in The WiFi Installation Technician at MENAKSOPAL",
+  "2023 -2023, 5 months",
+  "Working"
 );
 
 //
-// const conCardClone = containerCard.cloneNode(true);
-// pengalaman.appendChild(conCardClone);
+const conCardClone = containerCard.cloneNode(true);
+pengalaman.appendChild(conCardClone);
