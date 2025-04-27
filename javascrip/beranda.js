@@ -136,10 +136,25 @@ const layerBawah = document.querySelector(".layer-bawah");
     margin: "0.5rem 0 0 0",
     backgroundColor: "var(--main-font)",
     padding: "0.2rem 1rem",
-    borderRadius: "10px",
+    borderRadius: "5px",
     fontFamily: `"Inconsolata", monospace`,
     fontWeight: "600",
-    outline: "0.1rem solid var(--white)",
+    outline: "0.1rem solid transparent",
+    transition: "all 0.2s ease-in-out",
+  });
+  a.addEventListener("mouseenter", function () {
+    Object.assign(a.style, {
+      outline: "0.1rem solid var(--white)",
+      backgroundColor: "var(--background)",
+      color: "var(--white)",
+    });
+  });
+  a.addEventListener("mouseleave", function () {
+    Object.assign(a.style, {
+      outline: "0.1rem solid transparent",
+      backgroundColor: "var(--main-font)",
+      color: "var(--background)",
+    });
   });
 }
 //layer atas end

@@ -59,49 +59,7 @@ img {
   width: 100%;
   border-radius: 20px;
 }
-/* pengalaman start */
-.container-pengalaman {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-}
-.card-pengalaman {
-  display: flex;
-  align-items: center;
-  height: 8rem;
-  width: 90%;
-  max-width: 30rem;
-  border: 1px solid var(--white);
-  border-radius: 10px;
-  box-shadow: rgb(0, 0, 0) 0px 3px 8px;
-}
-.card-pengalaman section {
-  width: 100%;
-  display: flex;
-  padding: 0 0 0 2rem;
-  flex-direction: column;
-}
-.card-pengalaman section header h3,
-.card-pengalaman section h5 a,
-.card-pengalaman section h6 i,
-.card-pengalaman section p {
-  font-family: "Inconsolata", monospace;
-}
-.card-pengalaman section header h3 {
-  color: var(--main-font);
-  font-weight: 600;
-}
-.card-pengalaman section h5 a {
-  color: var(--third-color);
-}
-.card-pengalaman section h6 {
-  color: var(--main-font);
-}
-.card-pengalaman section p {
-  color: var(--main-font);
-  font-size: 0.9em;
-  font-weight: 400;
-}
+
 /* pengalaman end */
 /* breakpoint start */
 @media (max-width: 640px) {
