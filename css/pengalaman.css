@@ -14,9 +14,7 @@
   max-width: 80rem;
   margin: auto;
   display: flex;
-
   align-items: center;
-
   overflow: hidden;
 }
 .shadow-spin::before {
@@ -47,9 +45,9 @@
   flex-shrink: 0;
   display: flex;
   gap: 1rem;
-  margin: 0 1rem 0 1rem;
+  margin: 0 1rem 0 0;
   /* background-color: aqua; */
-  animation: scrollKiri 90s linear infinite;
+  animation: scrollKiri 9s linear infinite;
 }
 @keyframes scrollKiri {
   0% {
