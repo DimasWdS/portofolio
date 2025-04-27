@@ -47,7 +47,7 @@
   gap: 1rem;
   margin: 0 1rem 0 0;
   /* background-color: aqua; */
-  animation: scrollKiri 9s linear infinite;
+  animation: scrollKiri 90s linear infinite;
 }
 @keyframes scrollKiri {
   0% {
