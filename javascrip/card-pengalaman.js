@@ -35,16 +35,30 @@ function cardPengalaman(header, date, deskripsi) {
   const divSpin = document.createElement("div");
   Object.assign(divSpin.style, {
     position: "absolute",
-    height: "100rem",
+    height: "20rem",
     width: "3rem",
     backgroundColor: "var(--third-color)",
-    // transformOrigin: "top",
-    // top: "50%",
+    transformOrigin: "top",
+    top: "50%",
     // transform: "rotate(45deg)",
+    // zIndex: "2",
+  });
+
+  const divSpin2 = document.createElement("div");
+  Object.assign(divSpin2.style, {
+    position: "absolute",
+    height: "20rem",
+    width: "3rem",
+    backgroundColor: "var(--third-color)",
+    transformOrigin: "bottom",
+    bottom: "50%",
+    // zIndex: "2",
   });
 
   conCard.appendChild(divSpin);
+  conCard.appendChild(divSpin2);
   divSpin.classList.add("spin", "shadow-spin");
+  divSpin2.classList.add("spin", "shadow-spin2");
 
   const headerCard = document.createElement("header");
   Object.assign(headerCard.style, {
@@ -81,6 +95,7 @@ function cardPengalaman(header, date, deskripsi) {
     fontSize: "0.7em",
     color: "var(--main-font)",
   });
+  conCard.classList.add("card");
 }
 
 cardPengalaman(
@@ -100,5 +115,15 @@ cardPengalaman(
 );
 
 //
+const itemCard = document.querySelectorAll(".card");
+
+itemCard.forEach((el) => {
+  el.addEventListener("mouseenter", function () {
+    containerCard.style.animationPlayState = "paused";
+  });
+  el.addEventListener("mouseleave", function () {
+    containerCard.style.animationPlayState = "running";
+  });
+});
 const conCardClone = containerCard.cloneNode(true);
 pengalaman.appendChild(conCardClone);

@@ -14,9 +14,9 @@
   max-width: 80rem;
   margin: auto;
   display: flex;
-  /* justify-content: center; */
+
   align-items: center;
-  /* background-color: aqua; */
+
   overflow: hidden;
 }
 .shadow-spin::before {
@@ -27,6 +27,18 @@
   width: 100%;
   background: linear-gradient(
     to right,
+    var(--third-color),
+    rgba(255, 255, 255, 0)
+  );
+}
+.shadow-spin2::before {
+  position: absolute;
+  right: 100%;
+  content: " ";
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to left,
     var(--third-color),
     rgba(255, 255, 255, 0)
   );
@@ -46,4 +58,7 @@
   100% {
     transform: translateX(-100%);
   }
+}
+.pause {
+  animation-play-state: paused;
 }
