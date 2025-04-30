@@ -7,19 +7,19 @@ conGaruda.classList.add("conGaruda");
 // badan
 const imgBadan = document.createElement("img");
 conGaruda.appendChild(imgBadan);
-imgBadan.src = "../asset/svg/garudav2/badan.svg";
+imgBadan.src = "./../asset/svg/garudav2/badan.svg";
 imgBadan.style.zIndex = "2";
 imgBadan.style.scale = "1.2";
 // sayap kanan
 const imgSayapKanan = document.createElement("img");
 conGaruda.appendChild(imgSayapKanan);
-imgSayapKanan.src = "../asset/svg/garudav2/sayapKanan.svg";
+imgSayapKanan.src = "./../asset/svg/garudav2/sayapKanan.svg";
 imgSayapKanan.classList.add("sayapKanan");
 // sayap kiri
 const imgSayapKiri = document.createElement("img");
 conGaruda.appendChild(imgSayapKiri);
 imgSayapKiri.classList.add("sayapKiri");
-imgSayapKiri.src = "../asset/svg/garudav2/sayapKiri.svg";
+imgSayapKiri.src = "./../asset/svg/garudav2/sayapKiri.svg";
 
 const header = document.createElement("div");
 conSkills.appendChild(header);
