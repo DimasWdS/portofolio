@@ -24,10 +24,8 @@ cardPengalaman(
 const conCardClone = containerCard.cloneNode(true);
 pengalaman.appendChild(conCardClone);
 const itemCard = document.querySelectorAll(".card");
-console.info(itemCard);
 
 const conPause = document.querySelectorAll(".con-pause");
-console.log(conPause);
 
 itemCard.forEach((el) => {
   el.addEventListener("mouseenter", function () {

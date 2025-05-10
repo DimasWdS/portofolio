@@ -1,5 +1,4 @@
 const conSkills = document.querySelector(".skills");
-console.log(conSkills);
 
 const conGaruda = document.createElement("div");
 conSkills.appendChild(conGaruda);

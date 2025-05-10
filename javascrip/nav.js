@@ -1,38 +1,34 @@
-const navBtn = document.getElementById("nav-btn");
-const conNav = document.querySelector(".nav");
-const conBtn = document.querySelector(".container-nav-btn");
+const conNav = document.getElementById("nav");
+const btnHam = document.getElementById("btn-ham");
 
-// setTimeout(() => conNav.classList.toggle("nav-active"), 1000);
-navBtn.addEventListener("click", function () {
-  if (!conNav.classList.contains("nav-active")) {
-    // Jika menu belum aktif (akan dibuka)
+const conMenu = document.createElement("div");
+conMenu.classList.add("menu");
+conNav.appendChild(conMenu);
+Object.assign(conMenu.style, {
+  position: "absolute",
+  // display: "none",
+  transform: "translateY(-100%)",
+  top: "0",
+  right: "0",
+  height: "100dvh",
+  width: "50%",
+  backgroundColor: "var(--white)",
+  borderRadius: "0 0 10% 1000%",
+  transition: "all 0.3s ease-in-out",
+});
 
-    conNav.classList.add("nav-active");
-    conBtn.classList.add("btn-active");
-    navBtn.classList.add("ham-active");
+const hamMenu = document.querySelector(".menu");
+btnHam.addEventListener("click", function () {
+  hamMenu.classList.toggle("menu-active");
+  const hamIcon = document.querySelector(".hamburger");
+  const xIcon = document.querySelector(".xIcon");
 
-    setTimeout(() => {
-      conNav.classList.add("menu-enter");
-    }, 500); // Tambahkan efek setelah 500ms
-  } else {
-    // Jika menu sudah aktif (akan ditutup)
-    conNav.classList.remove("menu-enter");
-
-    setTimeout(() => {
-      conNav.classList.remove("nav-active");
-      conBtn.classList.remove("btn-active");
-      navBtn.classList.remove("ham-active");
-    }, 200); // Hapus kelas utama setelah efek selesai
-  }
+  hamIcon.classList.toggle("scale0");
+  xIcon.classList.toggle("scale0");
 });
 
 document.addEventListener("click", function (e) {
-  if (!navBtn.contains(e.target) && !conNav.contains(e.target)) {
-    setTimeout(() => {
-      conNav.classList.remove("nav-active");
-      conBtn.classList.remove("btn-active");
-      navBtn.classList.remove("ham-active");
-    }, 200);
-    conNav.classList.remove("menu-enter");
+  if (!btnHam.contains(e.target) && !hamMenu.contains(e.target)) {
+    hamMenu.classList.remove("menu-active");
   }
 });
