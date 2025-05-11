@@ -27,10 +27,11 @@ Object.assign(conMenu.style, {
   top: "0",
   right: "0",
   height: "100dvh",
-  width: "50%",
+  width: "20rem",
   backgroundColor: "var(--white)",
   borderRadius: "0 0 10rem 10rem",
   transition: "all 0.7s ease-in-out",
+  boxShadow: "-4px 0px 4px rgba(0, 0, 0, 0.35)",
 });
 conMenu.classList.add("widthMenu");
 
@@ -53,14 +54,13 @@ createli("Reach me", "#contack");
 const hamMenu = document.querySelector(".menu");
 const hamIcon = document.querySelector(".hamburger");
 const xIcon = document.querySelector(".xIcon");
+const menuList = document.querySelectorAll(".menuList");
+const total = menuList.length;
 btnHam.addEventListener("click", function () {
   hamMenu.classList.toggle("menu-active");
 
   hamIcon.classList.toggle("scale0");
   xIcon.classList.toggle("scale0");
-
-  const menuList = document.querySelectorAll(".menuList");
-  const total = menuList.length;
 
   menuList.forEach((el, index) => {
     setTimeout(() => {
@@ -74,5 +74,10 @@ document.addEventListener("click", function (e) {
     hamMenu.classList.remove("menu-active");
     hamIcon.classList.remove("scale0");
     xIcon.classList.add("scale0");
+    menuList.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.remove("animationMenu");
+      }, (total - index - 1) * 50); // Mulai dari elemen terakhir
+    });
   }
 });
