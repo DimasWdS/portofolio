@@ -2,9 +2,6 @@
   .container-nav .hamburger-menu {
     margin-right: 0 !important;
   }
-  .widthMenu {
-    width: 30rem !important;
-  }
 }
 
 .menu-active {
@@ -106,5 +103,10 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+@media (min-width: 640px) {
+  .widthMenu {
+    width: 30rem !important;
   }
 }

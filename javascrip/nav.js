@@ -1,14 +1,18 @@
 function createli(konten, menuju) {
   const menu1 = document.createElement("li");
   listMenu.appendChild(menu1);
+
   const a1 = document.createElement("a");
   a1.textContent = `${konten}`;
   a1.href = `${menuju}`;
   menu1.appendChild(a1);
   Object.assign(a1.style, {
+    display: "inline-flex",
     fontSize: "2em",
     marginLeft: "2%",
     textDecoration: "none",
+
+    width: "100%",
   });
   menu1.classList.add("menuList");
 }
@@ -27,7 +31,7 @@ Object.assign(conMenu.style, {
   top: "0",
   right: "0",
   height: "100dvh",
-  width: "20rem",
+  width: "100%",
   backgroundColor: "var(--white)",
   borderRadius: "0 0 10rem 10rem",
   transition: "all 0.7s ease-in-out",
@@ -80,4 +84,17 @@ document.addEventListener("click", function (e) {
       }, (total - index - 1) * 50); // Mulai dari elemen terakhir
     });
   }
+});
+
+menuList.forEach((el) => {
+  el.addEventListener("click", function () {
+    hamMenu.classList.remove("menu-active");
+    hamIcon.classList.remove("scale0");
+    xIcon.classList.add("scale0");
+    menuList.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.remove("animationMenu");
+      }, (total - index - 1) * 50); // Mulai dari elemen terakhir
+    });
+  });
 });
