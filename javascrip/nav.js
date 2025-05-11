@@ -51,10 +51,10 @@ createli("Portofolio", "#portofolio");
 createli("Reach me", "#contack");
 
 const hamMenu = document.querySelector(".menu");
+const hamIcon = document.querySelector(".hamburger");
+const xIcon = document.querySelector(".xIcon");
 btnHam.addEventListener("click", function () {
   hamMenu.classList.toggle("menu-active");
-  const hamIcon = document.querySelector(".hamburger");
-  const xIcon = document.querySelector(".xIcon");
 
   hamIcon.classList.toggle("scale0");
   xIcon.classList.toggle("scale0");
@@ -72,5 +72,7 @@ btnHam.addEventListener("click", function () {
 document.addEventListener("click", function (e) {
   if (!btnHam.contains(e.target) && !hamMenu.contains(e.target)) {
     hamMenu.classList.remove("menu-active");
+    hamIcon.classList.remove("scale0");
+    xIcon.classList.add("scale0");
   }
 });
