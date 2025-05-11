@@ -1,3 +1,17 @@
+function createli(konten, menuju) {
+  const menu1 = document.createElement("li");
+  listMenu.appendChild(menu1);
+  const a1 = document.createElement("a");
+  a1.textContent = `${konten}`;
+  a1.href = `${menuju}`;
+  menu1.appendChild(a1);
+  Object.assign(a1.style, {
+    fontSize: "2em",
+    marginLeft: "2%",
+    textDecoration: "none",
+  });
+  menu1.classList.add("menuList");
+}
 const conNav = document.getElementById("nav");
 const btnHam = document.getElementById("btn-ham");
 
@@ -6,16 +20,35 @@ conMenu.classList.add("menu");
 conNav.appendChild(conMenu);
 Object.assign(conMenu.style, {
   position: "absolute",
-  // display: "none",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "Center",
   transform: "translateY(-100%)",
   top: "0",
   right: "0",
   height: "100dvh",
   width: "50%",
   backgroundColor: "var(--white)",
-  borderRadius: "0 0 10% 1000%",
-  transition: "all 0.3s ease-in-out",
+  borderRadius: "0 0 10rem 10rem",
+  transition: "all 0.7s ease-in-out",
 });
+conMenu.classList.add("widthMenu");
+
+const listMenu = document.createElement("ul");
+conMenu.appendChild(listMenu);
+Object.assign(listMenu.style, {
+  display: "flex",
+  flexDirection: "column",
+  gap: "10px",
+  listStyleType: "none",
+});
+// Object.assign(menu1.style, {});
+
+createli("Beranda", "#");
+createli("About me", "#tentang-saya");
+createli("Skills", "#skills");
+createli("Portofolio", "#portofolio");
+createli("Reach me", "#contack");
 
 const hamMenu = document.querySelector(".menu");
 btnHam.addEventListener("click", function () {
@@ -25,6 +58,15 @@ btnHam.addEventListener("click", function () {
 
   hamIcon.classList.toggle("scale0");
   xIcon.classList.toggle("scale0");
+
+  const menuList = document.querySelectorAll(".menuList");
+  const total = menuList.length;
+
+  menuList.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.toggle("animationMenu");
+    }, (total - index - 1) * 50); // Mulai dari elemen terakhir
+  });
 });
 
 document.addEventListener("click", function (e) {

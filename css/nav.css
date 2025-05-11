@@ -2,6 +2,9 @@
   .container-nav .hamburger-menu {
     margin-right: 0 !important;
   }
+  .widthMenu {
+    width: 30rem !important;
+  }
 }
 
 .menu-active {
@@ -85,4 +88,23 @@
 }
 .xIcon span:nth-child(2) {
   transform: rotate(-45deg);
+}
+
+.animationMenu {
+  animation: menu 0.9s ease-in-out;
+}
+
+@keyframes menu {
+  0% {
+    transform: translateY(-90rem);
+  }
+  98% {
+    transform: translateY(0);
+  }
+  99% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
