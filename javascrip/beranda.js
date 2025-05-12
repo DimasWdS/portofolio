@@ -47,10 +47,10 @@ const layerBawah = document.querySelector(".layer-bawah");
     conTeks.classList.add("container-teks");
     conTeks.classList.add("flex-center");
     Object.assign(conTeks.style, {
-      height: "6rem",
+      height: "5rem",
       width: "100rem",
       flexShrink: "0",
-      //   backgroundColor: "yellow",
+      // backgroundColor: "yellow",
     });
 
     const span = document.createElement("p");
@@ -123,9 +123,10 @@ const layerBawah = document.querySelector(".layer-bawah");
   conDesc.appendChild(span);
   Object.assign(span.style, {
     fontSize: "1.2em",
+    padding: "1rem 2rem",
     fontWeight: "700",
     color: "var(--background)",
-    fontFamily: `"Inconsolata", monospace`,
+    fontFamily: `"Poppins"`,
   });
 
   const a = document.createElement("a");
@@ -137,7 +138,7 @@ const layerBawah = document.querySelector(".layer-bawah");
     backgroundColor: "var(--main-font)",
     padding: "0.2rem 1rem",
     borderRadius: "5px",
-    fontFamily: `"Inconsolata", monospace`,
+    fontFamily: `"Poppins"`,
     fontWeight: "600",
     outline: "0.1rem solid transparent",
     transition: "all 0.2s ease-in-out",

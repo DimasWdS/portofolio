@@ -38,6 +38,7 @@
   width: 3rem;
   background-color: var(--white);
   border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .hamburger-menu button {
   display: inline-flex;
@@ -109,4 +110,28 @@
   .widthMenu {
     width: 30rem !important;
   }
+}
+
+.animationHedNav {
+  animation: headerNav 1.2s ease-in-out;
+}
+@keyframes headerNav {
+  0% {
+    transform: translateX(100%);
+  }
+  80% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  /* 0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  } */
 }
