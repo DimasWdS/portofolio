@@ -89,18 +89,18 @@
 }
 
 .animationMenu {
-  animation: menu 0.9s ease-in-out;
+  animation: menu 1s ease-in-out;
 }
 
 @keyframes menu {
   0% {
     transform: translateY(-90rem);
   }
-  98% {
+  60% {
     transform: translateY(0);
   }
-  99% {
-    transform: translateY(10px);
+  65% {
+    transform: translateY(1rem);
   }
   100% {
     transform: translateY(0);
