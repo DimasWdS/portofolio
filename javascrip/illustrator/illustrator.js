@@ -8,21 +8,26 @@ Object.assign(container.style, {
 const pageBlur = document.createElement("div");
 container.appendChild(pageBlur);
 Object.assign(pageBlur.style, {
-  //   display: "none",
   position: "absolute",
+  top: "0",
+  left: "0", // ✅ disarankan untuk posisi absolut
   zIndex: "1",
   height: "100%",
-  backgroundColor: "blue",
-  //   backdropFilter: "blur(10px)",
+  width: "100%",
+  backdropFilter: "blur(5px)",
+  backgroundColor: "rgba(255, 255, 255, 0.08)", // ✅ agar blur kelihatan
+  transformOrigin: "top",
+  transition: "all 0.2s ease-in-out",
 });
+pageBlur.classList.add("scale0");
 
+//
 const pageOne = document.createElement("section");
 container.appendChild(pageOne);
 Object.assign(pageOne.style, {
   height: "100dvh",
   //   backgroundColor: "yellow",
 });
-//
 {
   const conImg = document.createElement("div");
   pageOne.appendChild(conImg);
@@ -62,7 +67,39 @@ Object.assign(pageOne.style, {
   img2.src = "./asset/webp/moonknight.webp";
   img2.classList.add("animationKanan");
 }
+
+const conGallery = document.createElement("section");
+container.appendChild(conGallery);
+conGallery.classList.add("conGallery");
+const gallery = document.querySelector(".conGallery");
+conGallery.classList.add("scale0");
+Object.assign(conGallery.style, {
+  position: "absolute",
+  display: "flex",
+  justifyContent: "center",
+  alignItem: "center",
+  top: "0",
+  margin: "25rem 0 0 0",
+  zIndex: "2",
+  width: "100%",
+  height: "40rem",
+  backgroundColor: "yellow",
+  transformOrigin: "bottom",
+  transition: "all 0.3s ease-in-out",
+  borderTop: "2px solid var(--third-color)",
+});
+{
+}
 //
 [pageOne].forEach((el) => {
   el.classList.add("width");
+});
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 1) {
+    pageBlur.classList.remove("scale0");
+    gallery.classList.remove("scale0");
+  } else {
+    pageBlur.classList.add("scale0");
+    gallery.classList.add("scale0");
+  }
 });

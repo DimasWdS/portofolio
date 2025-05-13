@@ -34,6 +34,11 @@ body {
   display: block;
 }
 
+.scale0 {
+  transform: scaleY(0);
+}
+
+/* Bagian container img */
 .animationKiri {
   animation: kiri 20s ease-in-out infinite;
 }
