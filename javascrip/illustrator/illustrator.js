@@ -34,7 +34,7 @@ Object.assign(pageOne.style, {
     width: "100%",
     margin: "5% 0 0 0",
     // backgroundColor: "yellow",
-    backgroundImage: "url(./../asset/svg/BACKGROUND-01.svg)",
+    backgroundImage: "url(./asset/svg/BACKGROUND-01.svg)",
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -57,8 +57,10 @@ Object.assign(pageOne.style, {
   });
   div.appendChild(img);
   img.src = "./asset/webp/HELLCAT(MOBIL).webp";
+  img.classList.add("animationKiri");
   div2.appendChild(img2);
   img2.src = "./asset/webp/moonknight.webp";
+  img2.classList.add("animationKanan");
 }
 //
 [pageOne].forEach((el) => {

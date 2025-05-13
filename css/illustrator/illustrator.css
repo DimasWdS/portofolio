@@ -33,3 +33,80 @@ body {
   height: auto;
   display: block;
 }
+
+.animationKiri {
+  animation: kiri 20s ease-in-out infinite;
+}
+@keyframes kiri {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5rem);
+  }
+}
+.animationKanan {
+  animation: kanan 20s ease-in-out infinite;
+}
+@keyframes kanan {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-6.5rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(6.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .animationKiri {
+    animation: kiriLayarKecil 20s ease-in-out infinite;
+  }
+  @keyframes kiriLayarKecil {
+    0%,
+    100% {
+      transform: translateY(0) scale(2);
+    }
+    25% {
+      transform: translateY(3rem) scale(2);
+    }
+    50% {
+      transform: translateY(0) scale(2);
+    }
+    75% {
+      transform: translateY(-3rem) scale(2);
+    }
+  }
+
+  .animationKanan {
+    animation: kananLayarKecil 20s ease-in-out infinite;
+  }
+  @keyframes kananLayarKecil {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(0);
+    }
+  }
+}
