@@ -28,25 +28,25 @@
 @keyframes sayapKiri {
   0%,
   100% {
-    transform: skewY(15deg) scale(1.2);
+    transform: skewY(15deg) scale(1.4);
   }
   50% {
-    transform: skewY(0) scale(1.2);
+    transform: skewY(0) scale(1.4);
   }
 }
 @keyframes sayapKanan {
   0%,
   100% {
-    transform: skewY(0) scale(1.2);
+    transform: skewY(0) scale(1.4);
   }
   50% {
-    transform: skewY(25deg) scale(1.2);
+    transform: skewY(25deg) scale(1.4);
   }
 }
 @keyframes goUp {
   0%,
   100% {
-    transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0) scale(1.1);
   }
   50% {
     transform: translateY(-1rem) rotate(2deg);
