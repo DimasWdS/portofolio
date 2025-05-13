@@ -56,9 +56,9 @@ Object.assign(pageOne.style, {
     el.classList.add("imgMaxContainer");
   });
   div.appendChild(img);
-  img.src = "./../asset/webp/HELLCAT(MOBIL).webp";
+  img.src = "./asset/webp/HELLCAT(MOBIL).webp";
   div2.appendChild(img2);
-  img2.src = "./../asset/webp/moonknight.webp";
+  img2.src = "./asset/webp/moonknight.webp";
 }
 //
 [pageOne].forEach((el) => {
