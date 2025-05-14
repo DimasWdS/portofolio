@@ -26,7 +26,7 @@ Object.assign(pageBlur.style, {
   backdropFilter: "blur(5px)",
   backgroundColor: "rgba(255, 255, 255, 0.08)", // ✅ agar blur kelihatan
   transformOrigin: "top",
-  transition: "all 0.2s ease-in-out",
+  // transition: "all 0.2s ease-in-out",
 });
 pageBlur.classList.add("scale0");
 
@@ -35,7 +35,7 @@ const pageOne = document.createElement("section");
 container.appendChild(pageOne);
 Object.assign(pageOne.style, {
   height: "100dvh",
-  //   backgroundColor: "yellow",
+  // backgroundColor: "yellow",
 });
 {
   const conImg = document.createElement("div");
@@ -76,7 +76,87 @@ Object.assign(pageOne.style, {
   img2.src = "./asset/webp/moonknight.webp";
   img2.classList.add("animationKanan");
 }
+{
+  const conTeks = document.createElement("section");
+  pageOne.appendChild(conTeks);
+  Object.assign(conTeks.style, {
+    width: "100%",
+    height: "3rem",
+    // backgroundColor: "yellow",
+    margin: "1rem 0 0 0",
+  });
+}
+{
+  const conTeks = document.createElement("section");
+  pageOne.appendChild(conTeks);
+  Object.assign(conTeks.style, {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
 
+    // backgroundColor: "yellow",
+    margin: "1rem 0 0 0",
+  });
+  const div = document.createElement("div");
+  conTeks.appendChild(div);
+  Object.assign(div.style, {
+    width: "10rem",
+    // backgroundColor: "yellow",
+    display: "flex",
+    // justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+  });
+  const btnBack = document.createElement("a");
+  div.appendChild(btnBack);
+  btnBack.textContent = "Back";
+  btnBack.href = "index.html#portofolio";
+  Object.assign(btnBack.style, {
+    display: "inline-flex",
+    backgroundColor: "var(--third-color)",
+    fontWeight: "500",
+    padding: "0.5rem 1.4rem",
+    borderRadius: "10px",
+    color: "var(--white)",
+    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+  });
+  const span = document.createElement("span");
+  div.appendChild(span);
+  span.textContent = "OR";
+  Object.assign(span.style, {
+    margin: "0.2rem 0 0 0",
+    backgroundColor: "var(--white)",
+    borderRadius: "10px",
+    fontWeight: "500",
+    padding: "0.5rem 1.4rem",
+    fontWeight: "600",
+    color: "var(--background)",
+    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+  });
+  const mouse = document.createElement("div");
+  mouse.classList.add("mouse");
+  const scroll = document.createElement("div");
+  scroll.classList.add("scroll");
+  div.appendChild(mouse);
+  Object.assign(mouse.style, {
+    display: "flex",
+    justifyContent: "center",
+    margin: "1rem 0 0 0",
+    height: "2.8rem",
+    width: "1.8rem",
+    borderRadius: "15px",
+    // backgroundColor: "yellow",
+    border: "2px solid var(--third-color)",
+  });
+  mouse.appendChild(scroll);
+  Object.assign(scroll.style, {
+    width: "0.2rem",
+    height: "35%",
+    backgroundColor: "var(--third-color)",
+    borderRadius: "5px",
+    margin: "0.2rem 0 0 0",
+  });
+}
 const conGallery = document.createElement("section");
 container.appendChild(conGallery);
 conGallery.classList.add("conGallery");
@@ -94,7 +174,7 @@ Object.assign(conGallery.style, {
   height: "60rem",
   backgroundColor: "var(--background)",
   transformOrigin: "bottom",
-  transition: "all 0.3s ease-in-out",
+  // transition: "all 0.3s ease-in-out",
   borderTop: "2px solid var(--third-color)",
 });
 //
@@ -109,7 +189,7 @@ Object.assign(conGallery.style, {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    // backgroundColor: "blue",,
+    // backgroundColor: "blue",
   });
   const conTeks = document.createElement("section");
   conTeks.classList.add("containerTeks");
@@ -164,15 +244,27 @@ Object.assign(conGallery.style, {
   });
 }
 //
-[pageOne].forEach((el) => {
+
+const conCard = document.createElement("section");
+conGallery.appendChild(conCard);
+Object.assign(conCard.style, {
+  position: "absolute",
+  top: "0",
+  height: "100%",
+  // backgroundColor: "yellow",
+});
+//
+[pageOne, conCard].forEach((el) => {
   el.classList.add("width");
 });
 window.addEventListener("scroll", function () {
   if (window.scrollY > 1) {
     pageBlur.classList.remove("scale0");
     gallery.classList.remove("scale0");
+    gallery.classList.add("animasiGallery");
   } else {
     pageBlur.classList.add("scale0");
     gallery.classList.add("scale0");
+    gallery.classList.remove("animasiGallery");
   }
 });

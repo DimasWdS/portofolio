@@ -142,3 +142,44 @@ body {
   }
 }
 /* animasi teks background end */
+
+/*  */
+.animasiGallery {
+  animation: gallery 0.5s linear;
+}
+@keyframes gallery {
+  0% {
+    transform: translateY(1rem);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*  animation mouse*/
+.mouse {
+  animation: mouse 2s ease-in-out infinite;
+}
+.scroll {
+  animation: mouse 2s ease-in-out infinite;
+}
+@keyframes mouse {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
