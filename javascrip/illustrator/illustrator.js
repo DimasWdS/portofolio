@@ -2,7 +2,16 @@ const container = document.createElement("main");
 document.body.appendChild(container);
 container.classList.add("container");
 Object.assign(container.style, {
-  margin: "0 0 5rem 0",
+  // margin: "0 0 5rem 0",
+});
+
+const blok = document.createElement("section");
+document.body.appendChild(blok);
+blok.classList.add("blok");
+const conBlok = document.querySelector(".blok");
+Object.assign(blok.style, {
+  height: "4rem",
+  width: "100%",
 });
 
 const pageBlur = document.createElement("div");
@@ -82,13 +91,68 @@ Object.assign(conGallery.style, {
   margin: "25rem 0 0 0",
   zIndex: "2",
   width: "100%",
-  height: "40rem",
-  backgroundColor: "yellow",
+  height: "60rem",
+  backgroundColor: "var(--background)",
   transformOrigin: "bottom",
   transition: "all 0.3s ease-in-out",
   borderTop: "2px solid var(--third-color)",
 });
+//
 {
+  const background = document.createElement("section");
+  conGallery.appendChild(background);
+  Object.assign(background.style, {
+    overflow: "hidden",
+    height: "100%",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    // backgroundColor: "blue",,
+  });
+  const conTeks = document.createElement("section");
+  conTeks.classList.add("containerTeks");
+  background.appendChild(conTeks);
+  Object.assign(conTeks.style, {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "5.5rem",
+    width: "100%",
+    // backgroundColor: "yellow",
+  });
+  const teks = document.createElement("span");
+  conTeks.appendChild(teks);
+  Object.assign(teks.style, {
+    display: "flex",
+  });
+  function createP(konten) {
+    const p = document.createElement("P");
+    teks.appendChild(p);
+    p.textContent = `${konten}`;
+    Object.assign(p.style, {
+      fontSize: "7.5rem",
+      fontWeight: "900",
+      color: "var(--tes)",
+    });
+  }
+  createP("P");
+  createP("O");
+  createP("R");
+  createP("T");
+  createP("O");
+  createP("F");
+  createP("O");
+  createP("L");
+  createP("I");
+  createP("O");
+  for (let i = 0; i < 100; i++) {
+    const spanClone = teks.cloneNode(true);
+    conTeks.appendChild(spanClone);
+    const conTeksClone = conTeks.cloneNode(true);
+    background.appendChild(conTeksClone);
+  }
 }
 //
 [pageOne].forEach((el) => {
