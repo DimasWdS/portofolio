@@ -23,7 +23,7 @@ Object.assign(pageBlur.style, {
   position: "absolute",
   top: "0",
   left: "0", // ✅ disarankan untuk posisi absolut
-  zIndex: "1",
+  zIndex: "2",
   height: "100%",
   width: "100%",
   backdropFilter: "blur(5px)",
