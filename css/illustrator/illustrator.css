@@ -115,3 +115,30 @@ body {
     }
   }
 }
+
+/* animasi teks background start */
+.genap {
+  animation: genap 100s linear infinite;
+}
+@keyframes genap {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10rem);
+  }
+}
+.ganjil {
+  animation: ganjil 100s linear infinite;
+}
+@keyframes ganjil {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10rem);
+  }
+}
+/* animasi teks background end */

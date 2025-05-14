@@ -152,7 +152,16 @@ Object.assign(conGallery.style, {
     conTeks.appendChild(spanClone);
     const conTeksClone = conTeks.cloneNode(true);
     background.appendChild(conTeksClone);
+    // console.log(i);
   }
+  const containerTeks = document.querySelectorAll(".containerTeks");
+  containerTeks.forEach((el, index) => {
+    if (index % 2 !== 0) {
+      el.classList.add("genap");
+    } else {
+      el.classList.add("ganjil");
+    }
+  });
 }
 //
 [pageOne].forEach((el) => {
