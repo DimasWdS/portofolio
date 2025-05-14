@@ -5,6 +5,7 @@ Object.assign(container.style, {
   // margin: "0 0 5rem 0",
 });
 
+// element trigger untuk memunculkan gallery start
 const blok = document.createElement("section");
 document.body.appendChild(blok);
 blok.classList.add("blok");
@@ -13,7 +14,9 @@ Object.assign(blok.style, {
   height: "4rem",
   width: "100%",
 });
+// element trigger untuk memunculkan gallery end
 
+// element blur start
 const pageBlur = document.createElement("div");
 container.appendChild(pageBlur);
 Object.assign(pageBlur.style, {
@@ -29,14 +32,19 @@ Object.assign(pageBlur.style, {
   // transition: "all 0.2s ease-in-out",
 });
 pageBlur.classList.add("scale0");
+// element blur end
 
-//
+//container start
 const pageOne = document.createElement("section");
 container.appendChild(pageOne);
 Object.assign(pageOne.style, {
   height: "100dvh",
   // backgroundColor: "yellow",
 });
+//container end
+
+// container foto pajangan start
+
 {
   const conImg = document.createElement("div");
   pageOne.appendChild(conImg);
@@ -76,16 +84,87 @@ Object.assign(pageOne.style, {
   img2.src = "./asset/webp/moonknight.webp";
   img2.classList.add("animationKanan");
 }
+//container foro pajangan end
+
+// container teks baha foto pajangan start
 {
   const conTeks = document.createElement("section");
   pageOne.appendChild(conTeks);
   Object.assign(conTeks.style, {
+    display: "flex",
+    justifyContent: "center",
     width: "100%",
-    height: "3rem",
     // backgroundColor: "yellow",
     margin: "1rem 0 0 0",
+    flexWrap: "wrap",
   });
+  const div = document.createElement("div");
+  const div2 = document.createElement("div");
+  const div3 = document.createElement("div");
+  [div, div2, div3].forEach((el) => {
+    conTeks.appendChild(el);
+    el.classList.add("responsive");
+    el.classList.add("shadow");
+    Object.assign(el.style, {
+      overflow: "hidden",
+      position: "relative",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexShrink: "0",
+      height: "100%",
+      width: "33.33%",
+      height: "4rem",
+      // backgroundColor: "blue",
+    });
+  });
+
+  const span = document.createElement("span");
+  const span2 = document.createElement("span");
+  const span3 = document.createElement("span");
+  const span4 = document.createElement("span");
+  const span5 = document.createElement("span");
+  const span6 = document.createElement("span");
+  [span, span2, span3, span4, span5, span6].forEach((el) => {
+    Object.assign(el.style, {
+      position: "absolute",
+      fontSize: "2rem",
+      fontWeight: "800",
+      color: "var(--main-font)",
+    });
+  });
+  {
+    span.textContent = "PORTOFOLIO";
+    span2.textContent = "MAKE";
+    span.classList.add("teksToBotom");
+    span2.classList.add("teksFromTop");
+    div.appendChild(span);
+    div.appendChild(span2);
+  }
+  {
+    span3.textContent = "ILLUSTRATOR";
+    span4.textContent = "SOMETHING";
+    span3.classList.add("teksToBotom");
+    span4.classList.add("teksFromTop");
+    div2.appendChild(span3);
+    div2.appendChild(span4);
+    span3.style.animationDelay = "0.2s";
+    span4.style.animationDelay = "0.2s";
+  }
+  {
+    span5.textContent = "WIDY";
+    span6.textContent = "COOL.";
+    span5.classList.add("teksToBotom");
+    span6.classList.add("teksFromTop");
+    div3.appendChild(span5);
+    div3.appendChild(span6);
+    span5.style.animationDelay = "0.2s";
+    span6.style.animationDelay = "0.2s";
+  }
 }
+// container teks baha foto pajangan end
+
+//
 {
   const conTeks = document.createElement("section");
   pageOne.appendChild(conTeks);

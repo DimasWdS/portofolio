@@ -183,3 +183,77 @@ body {
     transform: translateY(0);
   }
 }
+
+.shadow:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  /* background-color: brown; */
+  background: linear-gradient(
+    to bottom,
+    var(--background),
+    rgba(255, 255, 255, 0)
+  );
+  top: 0;
+}
+.shadow:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 20px;
+  /* background-color: brown; */
+  background: linear-gradient(
+    to top,
+    var(--background),
+    rgba(255, 255, 255, 0)
+  );
+  bottom: 0;
+}
+@media (max-width: 640px) {
+  .responsive {
+    width: 100% !important;
+  }
+}
+
+.teksToBotom {
+  animation: toBottom 10s ease-in-out infinite;
+}
+@keyframes toBottom {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4rem);
+  }
+  90% {
+    transform: translateY(4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.teksFromTop {
+  animation: fromTop 10s ease-in-out infinite;
+}
+@keyframes fromTop {
+  0% {
+    transform: translateY(-4rem);
+  }
+  40% {
+    transform: translateY(-4rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4rem);
+  }
+}
