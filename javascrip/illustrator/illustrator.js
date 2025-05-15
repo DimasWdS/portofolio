@@ -150,6 +150,9 @@ Object.assign(pageOne.style, {
     div2.appendChild(span4);
     span3.style.animationDelay = "0.2s";
     span4.style.animationDelay = "0.2s";
+    Object.assign(span4.style, {
+      color: "var(--third-color)",
+    });
   }
   {
     span5.textContent = "WIDY";
@@ -230,7 +233,7 @@ Object.assign(pageOne.style, {
   mouse.appendChild(scroll);
   Object.assign(scroll.style, {
     width: "0.2rem",
-    height: "35%",
+    height: "20%",
     backgroundColor: "var(--third-color)",
     borderRadius: "5px",
     margin: "0.2rem 0 0 0",
@@ -326,8 +329,14 @@ Object.assign(conGallery.style, {
 
 const conCard = document.createElement("section");
 conGallery.appendChild(conCard);
+conCard.classList.add("containerCard");
 Object.assign(conCard.style, {
   position: "absolute",
+  padding: "1rem 0 1rem 0",
+  display: "flex",
+  justifyContent: "center",
+  gap: "1rem",
+  flexWrap: "wrap",
   top: "0",
   height: "100%",
   // backgroundColor: "yellow",

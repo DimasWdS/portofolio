@@ -167,7 +167,7 @@ body {
   animation: mouse 2s ease-in-out infinite;
 }
 .scroll {
-  animation: mouse 2s ease-in-out infinite;
+  animation: scroll 2s ease-in-out infinite;
 }
 @keyframes mouse {
   0% {
@@ -178,6 +178,21 @@ body {
   }
   75% {
     transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  75% {
+    transform: translateY(-0.1rem);
   }
   100% {
     transform: translateY(0);
@@ -224,13 +239,13 @@ body {
   0% {
     transform: translateY(0);
   }
-  40% {
+  43% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(4rem);
   }
-  90% {
+  93% {
     transform: translateY(4rem);
   }
   100% {
@@ -244,16 +259,23 @@ body {
   0% {
     transform: translateY(-4rem);
   }
-  40% {
+  43% {
     transform: translateY(-4rem);
   }
   50% {
     transform: translateY(0);
   }
-  90% {
+  93% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(-4rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .containerCard {
+    flex-direction: column;
+    align-items: center;
   }
 }
