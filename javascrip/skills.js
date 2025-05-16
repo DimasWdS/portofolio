@@ -1,3 +1,38 @@
+{
+  const skills = document.getElementById("skills");
+  Object.assign(skills.style, {
+    // overflow: "hidden",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    // backgroundColor: "yellow",
+    margin: "5rem 0 5rem 0",
+  });
+  const div = document.createElement("div");
+  const div2 = document.createElement("div");
+  skills.appendChild(div);
+  skills.appendChild(div2);
+  [div, div2].forEach((el) => {
+    el.classList.add("batas");
+    Object.assign(el.style, {
+      position: "absolute",
+      width: "100%",
+      height: "1rem",
+      // backgroundColor: "blue",
+    });
+  });
+  Object.assign(div.style, {
+    top: "0",
+    transform: "rotate(2deg) scale(1.4)",
+    transformOrigin: "left",
+  });
+  Object.assign(div2.style, {
+    bottom: "0",
+    transform: "rotate(-2deg) scale(1.4)",
+    transformOrigin: "left",
+  });
+}
+
 const conSkills = document.querySelector(".skills");
 
 const conGaruda = document.createElement("div");

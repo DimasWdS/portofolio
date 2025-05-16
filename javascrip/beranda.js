@@ -135,26 +135,27 @@ const layerBawah = document.querySelector(".layer-bawah");
   container.appendChild(a);
   Object.assign(a.style, {
     margin: "0.5rem 0 0 0",
-    backgroundColor: "var(--main-font)",
+    backgroundColor: "var(--background)",
     padding: "0.2rem 1rem",
-    borderRadius: "5px",
+    borderRadius: "10px",
     fontFamily: `"Poppins"`,
     fontWeight: "600",
-    outline: "0.1rem solid transparent",
+    outline: "0.1rem solid var(--main-font)",
     transition: "all 0.2s ease-in-out",
+    color: "var(--main-font)",
   });
   a.addEventListener("mouseenter", function () {
     Object.assign(a.style, {
-      outline: "0.1rem solid var(--white)",
-      backgroundColor: "var(--background)",
-      color: "var(--white)",
+      outline: "0.1rem solid var(--background)",
+      backgroundColor: "var(--main-font)",
+      color: "var(--background)",
     });
   });
   a.addEventListener("mouseleave", function () {
     Object.assign(a.style, {
-      outline: "0.1rem solid transparent",
-      backgroundColor: "var(--main-font)",
-      color: "var(--background)",
+      outline: "0.1rem solid var(--main-font)",
+      backgroundColor: "var(--background)",
+      color: "var(--main-font)",
     });
   });
 }

@@ -10,71 +10,6 @@ function cloneBgV2(oriElement, inElement) {
   oriElement.appendChild(clone);
 }
 
-function button(btn, content, href) {
-  Object.assign(btn.style, {
-    position: "relative",
-    // backgroundColor: "yellow",
-    outline: "0.1rem solid var(--white)",
-    width: "max-content",
-    margin: "1rem 0 0 0",
-    borderRadius: "5px",
-    overflow: "hidden",
-    backdropFilter: "blur(10px)",
-  });
-
-  const a = document.createElement("a");
-  a.href = `${href}`;
-  a.textContent = `${content}`;
-  btn.appendChild(a);
-  Object.assign(a.style, {
-    position: "relative",
-    zIndex: "3",
-    display: "inline-flex",
-    padding: "0.4rem 3rem",
-    fontFamily: `"Inconsolata", monospace`,
-    fontWeight: "800",
-    fontSize: "1rem",
-    color: "var(--main-font)",
-    transition: "all 0.3s ease-in-out",
-  });
-
-  const span = document.createElement("span");
-  btn.appendChild(span);
-  Object.assign(span.style, {
-    position: "absolute",
-    left: "0",
-    height: "100%",
-    width: "50%",
-    backgroundColor: "var(--third-color)",
-    transform: "translateX(-100%)",
-    transition: "all 0.3s ease-in-out",
-  });
-  const span2 = document.createElement("span");
-  btn.appendChild(span2);
-  Object.assign(span2.style, {
-    position: "absolute",
-    right: "0",
-    height: "100%",
-    width: "50%",
-    backgroundColor: "var(--white)",
-    transform: "translateX(100%)",
-    transition: "all 0.3s ease-in-out",
-  });
-
-  btn.addEventListener("mouseenter", function () {
-    btn.classList.add("btnPopUp");
-    span.style.transform = "translateX(0)";
-    span2.style.transform = "translateX(0)";
-    a.style.color = "var(--background)";
-  });
-  btn.addEventListener("mouseleave", function () {
-    btn.classList.remove("btnPopUp");
-    span.style.transform = "translateX(-100%)";
-    span2.style.transform = "translateX(100%)";
-    a.style.color = "var(--main-font)";
-  });
-}
-
 function cardPengalaman(header, date, deskripsi) {
   const conCard = document.createElement("div");
   const containerCard = document.querySelector(".container-card");
@@ -85,7 +20,7 @@ function cardPengalaman(header, date, deskripsi) {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "13rem",
+    height: "10rem",
     width: "30rem",
     padding: "0.1rem",
     borderRadius: "10px",
@@ -174,4 +109,4 @@ function cardPengalaman(header, date, deskripsi) {
   conCard.classList.add("card");
 }
 
-export { sum, cloneBg, cloneBgV2, button, cardPengalaman };
+export { sum, cloneBg, cloneBgV2, cardPengalaman };
