@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* flex-direction: column; */
 }
 
 .possitionGaruda {
@@ -74,9 +75,9 @@
   top: 1rem;
   left: -1rem;
   height: 100%;
-  width: 100%;
+  width: 120%;
   opacity: 0.2;
-  filter: blur(10px);
+  filter: blur(1px);
   animation: randomUppercase 2s ease-in-out infinite;
   color: var(--main-font);
 }
@@ -89,7 +90,7 @@
   height: 100%;
   width: 100%;
   opacity: 0.2;
-  filter: blur(10px);
+  filter: blur(1px);
   animation: randomUppercase2 2s ease-in-out infinite;
   color: var(--main-font);
 }

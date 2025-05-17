@@ -1,12 +1,42 @@
 const skills = document.querySelector(".skills");
-console.log(skills);
+// console.log(skills);
 skills.classList.add("flexCenter");
+skills.style.flexDirection = "column";
 Object.assign(skills.style, {
-  margin: "10rem 0 5rem 0",
+  position: "relative",
+  overflow: "hidden",
+  margin: "5rem 0 5rem 0",
+  padding: "10rem 0 5rem 0",
   width: "100%",
-  height: "100vh",
+  // backgroundColor: "yellow",
+  // height: "100dvh",
 });
-
+{
+  const div = document.createElement("div");
+  const div2 = document.createElement("div");
+  [div, div2].forEach((el) => {
+    skills.appendChild(el);
+    Object.assign(el.style, {
+      position: "absolute",
+      height: "0.5rem",
+      width: "100%",
+      backgroundColor: "var(--white)",
+      filter: "blur(1px)",
+    });
+  });
+  Object.assign(div.style, {
+    // backgroundColor: "blue",
+    top: "0",
+    transform: "rotate(-1deg)",
+    transformOrigin: "right",
+  });
+  Object.assign(div2.style, {
+    // backgroundColor: "blue",
+    bottom: "0",
+    transform: "rotate(-1deg)",
+    transformOrigin: "left",
+  });
+}
 const conSkills = document.createElement("section");
 skills.appendChild(conSkills);
 Object.assign(conSkills.style, {
@@ -14,9 +44,9 @@ Object.assign(conSkills.style, {
   width: "90%",
   maxWidth: "60rem",
   height: "100%",
-  // backgroundColor: "blue",
 });
 
+// garuda start
 const possitionGaruda = document.createElement("section");
 conSkills.appendChild(possitionGaruda);
 possitionGaruda.classList.add("possitionGaruda");
@@ -61,3 +91,36 @@ imgSayapKanan.classList.add("sayapKanan");
     width: "max-content",
   });
 });
+// garuda end
+
+// teks start
+const conTeks = document.createElement("section");
+conSkills.appendChild(conTeks);
+Object.assign(conTeks.style, {
+  display: "flex",
+  justifyContent: "center",
+  flexDirection: "column",
+  alignItems: "end",
+  height: "15rem",
+  width: "100%",
+  // backgroundColor: "yellow",
+});
+
+const p = document.createElement("p");
+p.textContent = "iLLustrator";
+p.classList.add("teks2");
+const p2 = document.createElement("p");
+p2.textContent = "FrontEnd";
+p2.classList.add("teks1");
+[p, p2].forEach((el) => {
+  conTeks.appendChild(el);
+  Object.assign(el.style, {
+    fontFamily: `"Montserrat", sans-serif`,
+    position: "relative",
+    fontSize: "clamp(3.5rem, 4vw + 1rem, 5rem)",
+    fontWeight: "900",
+    color: "var(--white)",
+  });
+});
+
+// teks end
