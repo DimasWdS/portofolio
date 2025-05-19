@@ -87,7 +87,7 @@ Object.assign(container.style, {
   const a = document.createElement("a");
   btnIll.appendChild(a);
   a.textContent = "See more..";
-  a.href = "iLLustrator.html";
+  a.href = "illustrator.html";
   Object.assign(a.style, {
     display: "inline-flex",
     height: "100%",
