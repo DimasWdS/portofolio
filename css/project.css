@@ -1,0 +1,17 @@
+.cardMouseEnter {
+  z-index: 1;
+  transform: translateX(0) translateY(0) !important;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid var(--third-color);
+}
+
+.cardMouseLeave {
+  transition: all 0.2s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0) 0px 5px 15px;
+  border: 2px solid transparent;
+}
+@media (max-width: 640px) {
+  .mobileGone {
+    display: none;
+  }
+}

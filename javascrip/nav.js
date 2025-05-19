@@ -82,7 +82,7 @@ Object.assign(listMenu.style, {
 createli("Beranda", "#");
 createli("About me", "#tentang-saya");
 createli("Skills", "#skills");
-createli("Portofolio", "#portofolio");
+createli("Portofolio", "#project");
 createli("Reach me", "#contack");
 
 const hamMenu = document.querySelector(".menu");
