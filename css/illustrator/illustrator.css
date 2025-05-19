@@ -76,46 +76,6 @@ body {
   }
 }
 
-@media (max-width: 640px) {
-  .animationKiri {
-    animation: kiriLayarKecil 20s ease-in-out infinite;
-  }
-  @keyframes kiriLayarKecil {
-    0%,
-    100% {
-      transform: translateY(0) scale(2);
-    }
-    25% {
-      transform: translateY(3rem) scale(2);
-    }
-    50% {
-      transform: translateY(0) scale(2);
-    }
-    75% {
-      transform: translateY(-3rem) scale(2);
-    }
-  }
-
-  .animationKanan {
-    animation: kananLayarKecil 20s ease-in-out infinite;
-  }
-  @keyframes kananLayarKecil {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    25% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(0);
-    }
-    75% {
-      transform: translateY(0);
-    }
-  }
-}
-
 /* animasi teks background start */
 .genap {
   animation: genap 100s linear infinite;
@@ -226,11 +186,6 @@ body {
   );
   bottom: 0;
 }
-@media (max-width: 640px) {
-  .responsive {
-    width: 100% !important;
-  }
-}
 
 .teksToBotom {
   animation: toBottom 10s ease-in-out infinite;
@@ -273,9 +228,94 @@ body {
   }
 }
 
+.conBackground::after {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 2rem;
+  /* background-color: aqua; */
+  background: linear-gradient(
+    to right,
+    var(--background),
+    rgba(255, 255, 255, 0)
+  );
+  left: 0;
+}
+.conBackground::before {
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2rem;
+  /* background-color: aqua; */
+  background: linear-gradient(
+    to left,
+    var(--background),
+    rgba(255, 255, 255, 0)
+  );
+  right: 0;
+}
+
 @media (max-width: 640px) {
+  .responsive {
+    width: 100% !important;
+  }
+
+  .animationKiri {
+    animation: kiriLayarKecil 20s ease-in-out infinite;
+  }
+  @keyframes kiriLayarKecil {
+    0%,
+    100% {
+      transform: translateY(0) scale(2);
+    }
+    25% {
+      transform: translateY(3rem) scale(2);
+    }
+    50% {
+      transform: translateY(0) scale(2);
+    }
+    75% {
+      transform: translateY(-3rem) scale(2);
+    }
+  }
+
+  .animationKanan {
+    animation: kananLayarKecil 20s ease-in-out infinite;
+  }
+  @keyframes kananLayarKecil {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(0);
+    }
+  }
   .containerCard {
     flex-direction: column;
     align-items: center;
+  }
+  .conGallery {
+    margin-top: 30rem;
+    /* background-color: green !important; */
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .conGallery {
+    margin-top: 60% !important;
+    /* background-color: aqua !important; */
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .conGallery {
+    margin-top: 40% !important;
+    /* background-color: aqua !important; */
   }
 }

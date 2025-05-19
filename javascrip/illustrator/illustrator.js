@@ -167,7 +167,7 @@ Object.assign(pageOne.style, {
 }
 // container teks baha foto pajangan end
 
-//
+// bawah teks foto pajangan start
 {
   const conTeks = document.createElement("section");
   pageOne.appendChild(conTeks);
@@ -239,6 +239,9 @@ Object.assign(pageOne.style, {
     margin: "0.2rem 0 0 0",
   });
 }
+//bawah teks foto pajangan start
+
+// container foto project
 const conGallery = document.createElement("section");
 container.appendChild(conGallery);
 conGallery.classList.add("conGallery");
@@ -250,28 +253,28 @@ Object.assign(conGallery.style, {
   justifyContent: "center",
   alignItem: "center",
   top: "0",
-  margin: "25rem 0 0 0",
   zIndex: "2",
   width: "100%",
-  height: "60rem",
   backgroundColor: "var(--background)",
   transformOrigin: "bottom",
   // transition: "all 0.3s ease-in-out",
   borderTop: "2px solid var(--third-color)",
+  // backgroundColor: "yellow",
 });
 //
 {
   const background = document.createElement("section");
+  background.classList.add("conBackground");
   conGallery.appendChild(background);
   Object.assign(background.style, {
     overflow: "hidden",
-    height: "100%",
+    position: "relative",
     width: "100%",
+    maxWidth: "70rem",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    // backgroundColor: "blue",
   });
   const conTeks = document.createElement("section");
   conTeks.classList.add("containerTeks");
@@ -312,9 +315,12 @@ Object.assign(conGallery.style, {
   for (let i = 0; i < 100; i++) {
     const spanClone = teks.cloneNode(true);
     conTeks.appendChild(spanClone);
+    // console.log(i);
+  }
+  for (let i = 0; i < 10; i++) {
     const conTeksClone = conTeks.cloneNode(true);
     background.appendChild(conTeksClone);
-    // console.log(i);
+    console.log(i);
   }
   const containerTeks = document.querySelectorAll(".containerTeks");
   containerTeks.forEach((el, index) => {

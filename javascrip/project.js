@@ -87,7 +87,9 @@ Object.assign(container.style, {
   const a = document.createElement("a");
   btnIll.appendChild(a);
   a.textContent = "See more..";
-  a.href = "illustrator.html";
+  a.setAttribute("href", "illustrator.html");
+  // a.setAttribute("target", "_blank");
+  a.setAttribute("title", "Go to Illustrator page");
   Object.assign(a.style, {
     display: "inline-flex",
     height: "100%",
