@@ -192,7 +192,7 @@ Object.assign(pageOne.style, {
   const btnBack = document.createElement("a");
   div.appendChild(btnBack);
   btnBack.textContent = "Back";
-  btnBack.href = "index.html#portofolio";
+  btnBack.href = "index.html#project";
   Object.assign(btnBack.style, {
     display: "inline-flex",
     backgroundColor: "var(--third-color)",

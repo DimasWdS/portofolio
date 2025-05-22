@@ -11,6 +11,7 @@ Object.assign(container.style, {
   width: "90%",
   maxWidth: "60rem",
   height: "100%",
+  flexDirection: "column",
   // backgroundColor: "green",
 });
 
@@ -33,70 +34,107 @@ Object.assign(container.style, {
     // backgroundColor: "yellow",
   });
 
-  const conImg1 = document.createElement("section");
-  const conImg2 = document.createElement("section");
-  Object.assign(conImg1.style, {
-    transform: "rotate(5deg)",
-  });
-  Object.assign(conImg2.style, {
-    transform: "rotate(5deg)",
-  });
-  [conImg1, conImg2].forEach((el) => {
-    el.classList.add("mobileGone");
-    conImg.appendChild(el);
-    Object.assign(el.style, {
-      height: "25rem",
-      flexShrink: "0",
+  function createContainerProject() {
+    const container = document.createElement("section");
+    container.classList.add("mobileGone");
+    conImg.appendChild(container);
+    Object.assign(container.style, {
+      overflow: "hidden",
+      position: "relative",
       width: "45rem",
+      height: "25rem",
       backgroundColor: "var(--tes)",
+      border: "2px solid transparent",
       borderRadius: "10px",
-      transition: "all 0.2s ease-in-out",
-      // border: "2px solid transparent",
+      boxShadow: "rgba(0, 0, 0, 0) 1.95px 1.95px 2.6px",
     });
-    el.addEventListener("mouseenter", function () {
-      el.classList.add("cardMouseEnter");
-      el.classList.remove("cardMouseLeave");
+    // container btn
+    const conBtn = document.createElement("section");
+    container.appendChild(conBtn);
+    conBtn.classList.add("flexCenter");
+    Object.assign(conBtn.style, {
+      position: "absolute",
+      height: "2rem",
+      width: "100%",
+      // backgroundColor: "cyan",
+      bottom: "0",
+      transform: "translateY(110%)",
     });
-    el.addEventListener("mouseleave", function () {
-      el.classList.add("cardMouseEnter");
-      el.classList.remove("cardMouseEnter");
+    const button = document.createElement("div");
+    conBtn.appendChild(button);
+    Object.assign(button.style, {
+      height: "100%",
+      width: "5rem",
+      borderRadius: "5px 5px 0 0",
+      backgroundColor: "var(--third-color",
     });
-  });
-  const conBtn = document.createElement("section");
-  conBtn.classList.add("flexCenter");
-  conIll.appendChild(conBtn);
-  Object.assign(conBtn.style, {
-    position: "relative",
-    margin: "5rem 0 5rem 0",
+    // container desc
+    const conDesc = document.createElement("section");
+    container.appendChild(conDesc);
+    Object.assign(conDesc.style, {
+      position: "absolute",
+      height: "60%",
+      width: "100%",
+      backgroundColor: "var(--third-color)",
+      bottom: "0",
+      transform: "translateY(110%)",
+    });
+    container.addEventListener("mouseenter", function () {
+      // memunculkan container btn
+      conBtn.style.transform = "translateY(0)";
+
+      // memunculkan border
+      container.style.border = "2px solid var(--third-color)";
+
+      container.style.boxShadowshadow =
+        "rgba(255, 255, 255, 0.57) 1.95px 1.95px 2.6px";
+    });
+    container.addEventListener("mouseleave", function () {
+      // menghilangkan container btn
+      conBtn.style.transform = "translateY(110%)";
+      container.style.boxShadowshadow = "rgba(0, 0, 0, 0) 1.95px 1.95px 2.6px";
+
+      // menghilangkan border
+      container.style.border = "2px solid transparent";
+      conDesc.style.transform = "translateY(110%)";
+    });
+    button.addEventListener("mouseenter", function () {
+      // memunculkan container btn
+      conDesc.style.transform = "translateY(0)";
+    });
+    conDesc.addEventListener("mouseleave", function () {
+      // memunculkan container btn
+      conDesc.style.transform = "translateY(110%)";
+    });
+    [container, conBtn, conDesc].forEach((el) => {
+      el.style.transition = "all 0.2s ease-in-out";
+    });
+  }
+  createContainerProject();
+  createContainerProject();
+}
+{
+  const conPageIll = document.createElement("section");
+  container.appendChild(conPageIll);
+  conPageIll.classList.add("flexCenter");
+  Object.assign(conPageIll.style, {
+    height: "5rem",
     width: "100%",
-    height: "4rem",
-    backgroundColor: "var(--tes)",
-    borderRadius: "10px",
-  });
-  const btnIll = document.createElement("section");
-  conBtn.appendChild(btnIll);
-  Object.assign(btnIll.style, {
-    position: "absolute",
-    height: "4rem",
-    width: "9rem",
-    backgroundColor: "var(--white)",
-    bottom: "100%",
-    transform: "translateY(50%)",
-    borderRadius: "5px",
+    // backgroundColor: "yellow",
   });
   const a = document.createElement("a");
-  btnIll.appendChild(a);
-  a.textContent = "See more..";
+  conPageIll.appendChild(a);
+  a.textContent = "See more...";
   a.setAttribute("href", "illustrator.html");
-  // a.setAttribute("target", "_blank");
-  a.setAttribute("title", "Go to Illustrator page");
   Object.assign(a.style, {
+    backgroundColor: "var(--white)",
     display: "inline-flex",
-    height: "100%",
-    width: "100%",
-    fontWeight: "bold",
-    color: "var(--background)",
-    fontFamily: `"Montserrat", sans-serif`,
+    justifyContent: "center",
+    alignItems: "center",
+    height: "3rem",
+    width: "8rem",
+    fontWeight: "600",
+    borderRadius: "10px",
+    color: "var(--third-color)",
   });
-  a.classList.add("flexCenter");
 }
