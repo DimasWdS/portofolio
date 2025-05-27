@@ -270,11 +270,12 @@ Object.assign(conGallery.style, {
     overflow: "hidden",
     position: "relative",
     width: "100%",
-    maxWidth: "70rem",
+    maxWidth: "80rem",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
+    // backgroundColor: "yellow",
   });
   const conTeks = document.createElement("section");
   conTeks.classList.add("containerTeks");
@@ -320,7 +321,6 @@ Object.assign(conGallery.style, {
   for (let i = 0; i < 10; i++) {
     const conTeksClone = conTeks.cloneNode(true);
     background.appendChild(conTeksClone);
-    console.log(i);
   }
   const containerTeks = document.querySelectorAll(".containerTeks");
   containerTeks.forEach((el, index) => {

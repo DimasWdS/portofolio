@@ -22,6 +22,21 @@ Object.assign(container.style, {
     width: "100%",
     // backgroundColor: "blue",
   });
+  const header = document.createElement("header");
+  const textHeader = document.createElement("p");
+  textHeader.textContent = "Recent Illustrator Projects";
+  conIll.appendChild(header);
+  header.appendChild(textHeader);
+  Object.assign(header.style, {
+    width: "100%",
+    // height: "3rem",
+    // backgroundColor: "yellow",
+  });
+  Object.assign(textHeader.style, {
+    fontWeight: "bold",
+    fontSize: "clamp(1.5rem, 2.5vw, 4rem)",
+    color: "var(--white)",
+  });
   const conImg = document.createElement("section");
   conImg.classList.add("flexCenter");
   conIll.appendChild(conImg);
@@ -34,7 +49,7 @@ Object.assign(container.style, {
     // backgroundColor: "yellow",
   });
 
-  function createContainerProject() {
+  function createContainerProject(pictures) {
     const container = document.createElement("section");
     container.classList.add("mobileGone");
     conImg.appendChild(container);
@@ -44,10 +59,15 @@ Object.assign(container.style, {
       width: "45rem",
       height: "25rem",
       backgroundColor: "var(--tes)",
+      // backgroundColor: "yellow",
       border: "2px solid transparent",
       borderRadius: "10px",
       boxShadow: "rgba(0, 0, 0, 0) 1.95px 1.95px 2.6px",
+      cursor: "pointer",
     });
+    const conPictures = document.createElement("img");
+    container.appendChild(conPictures);
+    conPictures.setAttribute("src", `./asset/img/${pictures}`);
     // container btn
     const conBtn = document.createElement("section");
     container.appendChild(conBtn);
@@ -110,8 +130,8 @@ Object.assign(container.style, {
       el.style.transition = "all 0.2s ease-in-out";
     });
   }
-  createContainerProject();
-  createContainerProject();
+  createContainerProject("livery1.png");
+  createContainerProject("livery1.png");
 }
 {
   const conPageIll = document.createElement("section");

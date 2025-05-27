@@ -1,0 +1,13 @@
+@media (min-width: 1280px) {
+  .container-form {
+    width: 40rem !important;
+  }
+}
+@media (max-width: 640px) {
+  .container-maskot {
+    display: none;
+  }
+  .container-form {
+    width: 100% !important;
+  }
+}

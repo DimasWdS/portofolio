@@ -1,0 +1,13 @@
+@media (max-width: 640px) {
+  .container-box {
+    flex-direction: column;
+  }
+}
+
+.container-box {
+  flex-wrap: wrap;
+}
+.container-box div {
+  flex-shrink: 0;
+  /* background-color: aqua; */
+}
