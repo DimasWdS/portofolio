@@ -2,6 +2,7 @@ const conProject = document.querySelector(".project");
 conProject.classList.add("flexCenter");
 Object.assign(conProject.style, {
   width: "100%",
+  margin: "1rem 0 1rem 0",
 });
 
 const container = document.createElement("section");
@@ -49,9 +50,9 @@ Object.assign(container.style, {
     // backgroundColor: "yellow",
   });
 
-  function createContainerProject(pictures) {
+  function createContainerProject(pictures, deskripsi) {
     const container = document.createElement("section");
-    container.classList.add("mobileGone");
+    container.classList.add("mobileGone", "flexCenter");
     conImg.appendChild(container);
     Object.assign(container.style, {
       overflow: "hidden",
@@ -94,10 +95,24 @@ Object.assign(container.style, {
     Object.assign(conDesc.style, {
       position: "absolute",
       height: "60%",
-      width: "100%",
-      backgroundColor: "var(--third-color)",
+      width: "95%",
       bottom: "0",
       transform: "translateY(110%)",
+      borderRadius: "15px 15px 20px 20px",
+      padding: "1rem",
+      backgroundImage: "url(./asset/texture/walltexture.jpg)",
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      border: "0.2rem solid var(--white)",
+    });
+    const descText = document.createElement("p");
+    conDesc.appendChild(descText);
+    descText.textContent = `${deskripsi}`;
+    Object.assign(descText.style, {
+      // backgroundColor: "yellow",
+      fontSize: "0.9em",
+      color: "var(--tes)",
+      fontWeight: "500",
     });
     container.addEventListener("mouseenter", function () {
       // memunculkan container btn
@@ -130,31 +145,116 @@ Object.assign(container.style, {
       el.style.transition = "all 0.2s ease-in-out";
     });
   }
-  createContainerProject("livery1.png");
-  createContainerProject("livery1.png");
+  createContainerProject(
+    "livery1.png",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum officiis architecto nesciunt obcaecati a enim eveniet, similique reiciendis nemo fugit facilis corrupti, provident asperiores! Minima quasi architecto repellendus incidunt nulla nesciunt recusandae fugit quos, earum sint rerum, neque, quae officia aliquam! Quisquam ad iusto nesciunt aspernatur magni soluta, corrupti quis?"
+  );
+  createContainerProject(
+    "livery1.png",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum officiis architecto nesciunt obcaecati a enim eveniet, similique reiciendis nemo fugit facilis corrupti, provident asperiores! Minima quasi architecto repellendus incidunt nulla nesciunt recusandae fugit quos, earum sint rerum, neque, quae officia aliquam! Quisquam ad iusto nesciunt aspernatur magni soluta, corrupti quis?"
+  );
 }
+
+//
 {
   const conPageIll = document.createElement("section");
   container.appendChild(conPageIll);
   conPageIll.classList.add("flexCenter");
   Object.assign(conPageIll.style, {
-    height: "5rem",
     width: "100%",
     // backgroundColor: "yellow",
   });
-  const a = document.createElement("a");
-  conPageIll.appendChild(a);
-  a.textContent = "See more...";
-  a.setAttribute("href", "illustrator.html");
-  Object.assign(a.style, {
-    backgroundColor: "var(--white)",
-    display: "inline-flex",
+  const section = document.createElement("section");
+  section.classList.add("scaleKecil");
+  conPageIll.appendChild(section);
+  Object.assign(section.style, {
+    display: "flex",
+    gap: "0.1rem",
+    padding: "1rem",
+    backgroundColor: "var(--tes)",
+    borderRadius: "5px",
+    border: "0.1rem solid rgba(255,255,255, 0.2)",
+  });
+  const conImg = document.createElement("div");
+  const img = document.createElement("img");
+  conImg.appendChild(img);
+  img.setAttribute("src", "./asset/svg/PROFIL-ILLUSTRATOR.svg");
+  section.appendChild(conImg);
+  Object.assign(conImg.style, {
+    height: "5rem",
+    width: "5rem",
+    backgroundColor: "var(--background)",
+    borderRadius: "5px",
+    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+  });
+  Object.assign(img.style, {
+    width: "100%",
+    height: "100%",
+  });
+
+  const conTeks = document.createElement("section");
+  const span = document.createElement("span");
+  const span2 = document.createElement("span");
+  conTeks.appendChild(span);
+  conTeks.appendChild(span2);
+  span.textContent = "iLLustrator Design";
+  span2.textContent = "999+ Project";
+  section.appendChild(conTeks);
+  Object.assign(conTeks.style, {
+    display: "flex",
     justifyContent: "center",
-    alignItems: "center",
-    height: "3rem",
-    width: "8rem",
+    flexDirection: "column",
+    height: "5rem",
+    width: "15rem",
+    // backgroundColor: "green",
+    borderRadius: "5px",
+    padding: "0 0 0 0.5rem",
+  });
+  Object.assign(span.style, {
+    fontSize: "1.5em",
     fontWeight: "600",
-    borderRadius: "10px",
-    color: "var(--third-color)",
+    color: "var(--white)",
+  });
+  Object.assign(span2.style, {
+    fontSize: "0.7em",
+    fontWeight: "600",
+    color: "var(--main-font)",
+  });
+
+  const conBtn = document.createElement("section");
+  conBtn.classList.add("flexCenter");
+  const a = document.createElement("a");
+  conBtn.appendChild(a);
+  a.setAttribute("href", "./iLLustrator.html");
+  Object.assign(a.style, {
+    display: "inline-flex",
+    height: "100%",
+    width: "100%",
+    transform: "scale(1.1)",
+  });
+  a.classList.add("flexCenter");
+  section.appendChild(conBtn);
+  const aLogo = document.createElement("img");
+  aLogo.setAttribute("src", "./asset/icon/arrowright.svg");
+  a.appendChild(aLogo);
+  Object.assign(conBtn.style, {
+    height: "5rem",
+    width: "5rem",
+    // backgroundColor: "green",
+    borderRadius: "50%",
+    border: "0.1rem solid transparent",
+    transition: "all 0.2s ease-in-out",
+  });
+  conBtn.addEventListener("mouseenter", function () {
+    Object.assign(conBtn.style, {
+      border: "0.1rem solid rgba(255,255,255, 0.5)",
+      backgroundColor: "var(--background)",
+    });
+  });
+  conBtn.addEventListener("mouseleave", function () {
+    Object.assign(conBtn.style, {
+      border: "0.1rem solid transparent",
+      backgroundColor: "transparent",
+    });
   });
 }
