@@ -225,7 +225,7 @@ Object.assign(container.style, {
   conBtn.classList.add("flexCenter");
   const a = document.createElement("a");
   conBtn.appendChild(a);
-  a.setAttribute("href", "./../iLLustrator.html");
+  a.setAttribute("href", "../iLLustrator.html");
   Object.assign(a.style, {
     display: "inline-flex",
     height: "100%",
