@@ -15,7 +15,7 @@ Object.assign(contack.style, {
 [containerForm, containerMaskot].forEach((el) => {
   Object.assign(el.style, {
     width: "50%",
-    height: "40rem",
+    height: "50rem",
     // backgroundColor: "yellow",
   });
 });
@@ -75,27 +75,52 @@ Object.assign(contack.style, {
   });
 
   const formNama = document.createElement("input");
-  formNama.setAttribute("id", "namaInput");
-  formNama.classList.add("namaInput");
-  const namaInput = document.getElementById("formNama");
-  console.log(namaInput);
-
-  const formEmail = document.createElement("input");
   const namaLabel = document.createElement("label");
+  const formEmail = document.createElement("input");
   const emailLabel = document.createElement("label");
-  namaLabel.textContent = "Nama";
-  emailLabel.textContent = "Email";
-  formNama.setAttribute("type", "text");
-  formEmail.setAttribute("type", "email");
-
-  const btnSubmit = document.createElement("button");
-  btnSubmit.textContent = "Submit";
 
   containerNama.appendChild(namaLabel);
   containerNama.appendChild(formNama);
   containerEmail.appendChild(emailLabel);
   containerEmail.appendChild(formEmail);
-  containerBtn.appendChild(btnSubmit);
+
+  // nama
+  formNama.setAttribute("type", "text");
+  formNama.setAttribute("id", "namaInput");
+  formNama.classList.add("namaInput");
+  const nama = document.getElementById("namaInput");
+
+  // nama label
+  namaLabel.classList.add("labelNama");
+  namaLabel.textContent = "Nama";
+  namaLabel.setAttribute("for", "namaInput");
+  const labelNama = document.querySelector(".labelNama");
+
+  //email
+  formEmail.setAttribute("type", "email");
+  formEmail.setAttribute("id", "emailInput");
+  const email = document.getElementById("emailInput");
+
+  // email label
+  emailLabel.classList.add("labelEmail");
+  emailLabel.textContent = "Email";
+  emailLabel.setAttribute("for", "emailInput");
+  const labelEmail = document.querySelector(".labelEmail");
+
+  nama.addEventListener("input", () => {
+    if (nama.value.trim() !== "") {
+      labelNama.classList.add("displayNone");
+    } else {
+      labelNama.classList.remove("displayNone");
+    }
+  });
+  email.addEventListener("input", () => {
+    if (email.value.trim() !== "") {
+      labelEmail.classList.add("displayNone");
+    } else {
+      labelEmail.classList.remove("displayNone");
+    }
+  });
 
   [formNama, formEmail].forEach((el) => {
     Object.assign(el.style, {
@@ -130,15 +155,5 @@ Object.assign(contack.style, {
       fontFamily: `"Montserrat", sans-serif`,
       fontWeight: "500",
     });
-  });
-
-  Object.assign(btnSubmit.style, {
-    margin: "0 0 0 1rem",
-    backgroundColor: "var(--third-color)",
-    padding: "0.4rem 1rem ",
-    borderRadius: "10px",
-    fontWeight: "500",
-    fontSize: "1em",
-    color: "var(--white)",
   });
 }

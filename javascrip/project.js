@@ -85,7 +85,7 @@ Object.assign(container.style, {
     conBtn.appendChild(button);
     Object.assign(button.style, {
       height: "100%",
-      width: "5rem",
+      width: "10rem",
       borderRadius: "5px 5px 0 0",
       backgroundColor: "var(--third-color",
     });
@@ -100,10 +100,12 @@ Object.assign(container.style, {
       transform: "translateY(110%)",
       borderRadius: "15px 15px 20px 20px",
       padding: "1rem",
-      backgroundImage: "url(./asset/texture/walltexture.jpg)",
+      backgroundColor: "var(--tes)",
       backgroundPosition: "center",
       backgroundSize: "cover",
-      border: "0.2rem solid var(--white)",
+      border: "0.1rem solid var(--background)",
+      boxShadow:
+        "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
     });
     const descText = document.createElement("p");
     conDesc.appendChild(descText);
@@ -111,7 +113,7 @@ Object.assign(container.style, {
     Object.assign(descText.style, {
       // backgroundColor: "yellow",
       fontSize: "0.9em",
-      color: "var(--tes)",
+      color: "var(--white)",
       fontWeight: "500",
     });
     container.addEventListener("mouseenter", function () {
