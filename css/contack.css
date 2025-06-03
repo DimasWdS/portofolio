@@ -10,4 +10,8 @@
   .container-form {
     width: 100% !important;
   }
+
+  .marginLeft {
+    margin: 0 0 0 2rem;
+  }
 }

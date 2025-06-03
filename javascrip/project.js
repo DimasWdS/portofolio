@@ -50,7 +50,7 @@ Object.assign(container.style, {
     // backgroundColor: "yellow",
   });
 
-  function createContainerProject(pictures, deskripsi) {
+  function createContainerProject(title, pictures, deskripsi) {
     const container = document.createElement("section");
     container.classList.add("mobileGone", "flexCenter");
     conImg.appendChild(container);
@@ -68,7 +68,7 @@ Object.assign(container.style, {
     });
     const conPictures = document.createElement("img");
     container.appendChild(conPictures);
-    conPictures.setAttribute("src", `./asset/img/${pictures}`);
+    conPictures.setAttribute("src", `./asset/svg/${pictures}`);
     // container btn
     const conBtn = document.createElement("section");
     container.appendChild(conBtn);
@@ -88,6 +88,26 @@ Object.assign(container.style, {
       width: "10rem",
       borderRadius: "5px 5px 0 0",
       backgroundColor: "var(--third-color",
+    });
+
+    //
+    const header = document.createElement("section");
+    container.appendChild(header);
+    header.textContent = `${title}`;
+    Object.assign(header.style, {
+      position: "absolute",
+      top: "0",
+      left: "0",
+      margin: "1rem",
+      fontSize: "1.2em",
+      color: "var(--white)",
+      fontWeight: "600",
+      backgroundColor: "var(--tes)",
+      border: "0.1rem solid var(--background)",
+      padding: "0.5rem 1rem ",
+      borderRadius: "5px",
+      boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+      transform: "translateY(-200%)",
     });
     // container desc
     const conDesc = document.createElement("section");
@@ -138,21 +158,25 @@ Object.assign(container.style, {
     button.addEventListener("mouseenter", function () {
       // memunculkan container btn
       conDesc.style.transform = "translateY(0)";
+      header.style.transform = "translateY(0)";
     });
     conDesc.addEventListener("mouseleave", function () {
       // memunculkan container btn
+      header.style.transform = "translateY(-200%)";
       conDesc.style.transform = "translateY(110%)";
     });
-    [container, conBtn, conDesc].forEach((el) => {
+    [container, conBtn, conDesc, header].forEach((el) => {
       el.style.transition = "all 0.2s ease-in-out";
     });
   }
   createContainerProject(
-    "livery1.png",
+    "Design Livery",
+    "mocupmobilv2.svg",
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum officiis architecto nesciunt obcaecati a enim eveniet, similique reiciendis nemo fugit facilis corrupti, provident asperiores! Minima quasi architecto repellendus incidunt nulla nesciunt recusandae fugit quos, earum sint rerum, neque, quae officia aliquam! Quisquam ad iusto nesciunt aspernatur magni soluta, corrupti quis?"
   );
   createContainerProject(
-    "livery1.png",
+    "RRQ Badut",
+    "mocupmobilv2.svg",
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum officiis architecto nesciunt obcaecati a enim eveniet, similique reiciendis nemo fugit facilis corrupti, provident asperiores! Minima quasi architecto repellendus incidunt nulla nesciunt recusandae fugit quos, earum sint rerum, neque, quae officia aliquam! Quisquam ad iusto nesciunt aspernatur magni soluta, corrupti quis?"
   );
 }
