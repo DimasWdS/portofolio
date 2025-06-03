@@ -9,13 +9,14 @@ const container = document.createElement("section");
 conProject.appendChild(container);
 container.classList.add("flexCenter");
 Object.assign(container.style, {
-  width: "90%",
+  width: "100%",
   maxWidth: "60rem",
   height: "100%",
   flexDirection: "column",
   // backgroundColor: "green",
 });
 
+// iLLustrator
 {
   const conIll = document.createElement("section");
   container.appendChild(conIll);
@@ -180,19 +181,18 @@ Object.assign(container.style, {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum officiis architecto nesciunt obcaecati a enim eveniet, similique reiciendis nemo fugit facilis corrupti, provident asperiores! Minima quasi architecto repellendus incidunt nulla nesciunt recusandae fugit quos, earum sint rerum, neque, quae officia aliquam! Quisquam ad iusto nesciunt aspernatur magni soluta, corrupti quis?"
   );
 }
-
 //
 {
-  const conPageIll = document.createElement("section");
-  container.appendChild(conPageIll);
-  conPageIll.classList.add("flexCenter");
-  Object.assign(conPageIll.style, {
+  const conPageWeb = document.createElement("section");
+  container.appendChild(conPageWeb);
+  conPageWeb.classList.add("flexCenter");
+  Object.assign(conPageWeb.style, {
     width: "100%",
     // backgroundColor: "yellow",
   });
   const section = document.createElement("section");
   section.classList.add("scaleKecil");
-  conPageIll.appendChild(section);
+  conPageWeb.appendChild(section);
   Object.assign(section.style, {
     display: "flex",
     gap: "0.1rem",
@@ -252,6 +252,138 @@ Object.assign(container.style, {
   const a = document.createElement("a");
   conBtn.appendChild(a);
   a.href = "illustrator.html";
+  Object.assign(a.style, {
+    display: "inline-flex",
+    height: "100%",
+    width: "100%",
+    transform: "scale(1.1)",
+  });
+  a.classList.add("flexCenter");
+  section.appendChild(conBtn);
+  const aLogo = document.createElement("img");
+  aLogo.setAttribute("src", "./asset/icon/arrowright.svg");
+  a.appendChild(aLogo);
+  Object.assign(conBtn.style, {
+    height: "5rem",
+    width: "5rem",
+    // backgroundColor: "green",
+    borderRadius: "50%",
+    border: "0.1rem solid transparent",
+    transition: "all 0.2s ease-in-out",
+  });
+  conBtn.addEventListener("mouseenter", function () {
+    Object.assign(conBtn.style, {
+      border: "0.1rem solid rgba(255,255,255, 0.5)",
+      backgroundColor: "var(--background)",
+    });
+  });
+  conBtn.addEventListener("mouseleave", function () {
+    Object.assign(conBtn.style, {
+      border: "0.1rem solid transparent",
+      backgroundColor: "transparent",
+    });
+  });
+}
+
+//FrontEnd
+{
+  const conFrontEnd = document.createElement("section");
+  const headerFrontEnd = document.createElement("header");
+  const headerTeks = document.createElement("p");
+  headerTeks.textContent = "Recent Website Projects";
+  container.appendChild(conFrontEnd);
+  conFrontEnd.appendChild(headerFrontEnd);
+  headerFrontEnd.appendChild(headerTeks);
+  conFrontEnd.classList.add("flexCenter");
+  Object.assign(conFrontEnd.style, {
+    // height: "100vh",
+    width: "100%",
+    flexDirection: "column",
+  });
+  Object.assign(headerFrontEnd.style, {
+    margin: "5rem 0 0 0",
+    width: "100%",
+    // height: "10rem",
+    // backgroundColor: "yellow",
+  });
+  Object.assign(headerTeks.style, {
+    fontWeight: "bold",
+    fontSize: "clamp(1.5rem, 2.5vw, 4rem)",
+    color: "var(--white)",
+  });
+}
+//
+{
+  const conPageWeb = document.createElement("section");
+  container.appendChild(conPageWeb);
+  conPageWeb.classList.add("flexCenter");
+  Object.assign(conPageWeb.style, {
+    width: "100%",
+    margin: "2rem 0 2rem 0",
+    // backgroundColor: "yellow",
+  });
+  const section = document.createElement("section");
+  section.classList.add("scaleKecil");
+  conPageWeb.appendChild(section);
+  Object.assign(section.style, {
+    display: "flex",
+    gap: "0.1rem",
+    padding: "1rem",
+    backgroundColor: "var(--tes)",
+    borderRadius: "5px",
+    border: "0.1rem solid rgba(255,255,255, 0.2)",
+  });
+  const conImg = document.createElement("div");
+  const img = document.createElement("img");
+  conImg.appendChild(img);
+  img.setAttribute("src", "./asset/svg/PROFIL-ILLUSTRATOR.svg");
+  section.appendChild(conImg);
+  Object.assign(conImg.style, {
+    height: "5rem",
+    width: "5rem",
+    backgroundColor: "var(--background)",
+    borderRadius: "5px",
+    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+  });
+  Object.assign(img.style, {
+    width: "100%",
+    height: "100%",
+  });
+
+  const conTeks = document.createElement("section");
+  const span = document.createElement("span");
+  const span2 = document.createElement("span");
+  conTeks.appendChild(span);
+  conTeks.appendChild(span2);
+  span.textContent = "Website Design";
+  span2.textContent = "999+ Project";
+  section.appendChild(conTeks);
+  Object.assign(conTeks.style, {
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+    height: "5rem",
+    width: "15rem",
+    // backgroundColor: "green",
+    borderRadius: "5px",
+    padding: "0 0 0 0.5rem",
+  });
+  Object.assign(span.style, {
+    fontSize: "1.5em",
+    fontWeight: "600",
+    color: "var(--white)",
+  });
+  Object.assign(span2.style, {
+    fontSize: "0.7em",
+    fontWeight: "600",
+    color: "var(--main-font)",
+  });
+
+  const conBtn = document.createElement("section");
+  conBtn.classList.add("flexCenter");
+  const a = document.createElement("a");
+  conBtn.appendChild(a);
+  a.href = "frontend.html";
   Object.assign(a.style, {
     display: "inline-flex",
     height: "100%",
