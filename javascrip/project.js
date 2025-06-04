@@ -299,9 +299,10 @@ Object.assign(container.style, {
     // height: "100vh",
     width: "100%",
     flexDirection: "column",
+    gap: "0.5rem",
   });
   Object.assign(headerFrontEnd.style, {
-    margin: "5rem 0 0 0",
+    margin: "5rem 0 2rem 0",
     width: "100%",
     // height: "10rem",
     // backgroundColor: "yellow",
@@ -311,6 +312,52 @@ Object.assign(container.style, {
     fontSize: "clamp(1.5rem, 2.5vw, 4rem)",
     color: "var(--white)",
   });
+  //
+  function createCardWeb() {
+    const containerCard = document.createElement("section");
+    containerCard.classList.add("mobileGone");
+    containerCard.classList.add("flexCenter");
+    conFrontEnd.appendChild(containerCard);
+    Object.assign(containerCard.style, {
+      position: "relative",
+      width: "45rem",
+      height: "25rem",
+      backgroundColor: "var(--background)",
+
+      borderRadius: "10px",
+      // border: "0.1rem solid transparent",
+      overflow: "hidden",
+      padding: "1px",
+    });
+    const blokSpin = document.createElement("div");
+    blokSpin.classList.add("spin");
+    blokSpin.classList.add("shadowWeb");
+    containerCard.appendChild(blokSpin);
+    Object.assign(blokSpin.style, {
+      position: "absolute",
+      height: "100rem",
+      width: "10rem",
+      // backgroundColor: "green",
+      bottom: "50%",
+      // transform: "translateY(-50%)",
+      transformOrigin: "bottom",
+      // zIndex: "2",
+      background: "linear-gradient(to left, #e6521f, #80d8c3)",
+    });
+
+    const card = document.createElement("section");
+    containerCard.appendChild(card);
+    Object.assign(card.style, {
+      position: "relative",
+      // zIndex: "1",
+      height: "100%",
+      width: "100%",
+      backgroundColor: "var(--tes)",
+      borderRadius: "9px",
+    });
+  }
+  createCardWeb();
+  createCardWeb();
 }
 //
 {
