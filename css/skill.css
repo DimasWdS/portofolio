@@ -141,30 +141,35 @@
   width: 100%;
   max-width: 40rem;
 }
-
-.shadowLeft::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 2rem;
-  background: linear-gradient(
-    to right,
-    var(--background),
-    rgba(255, 255, 0, 0)
-  );
-  /* background-color: aqua; */
-  left: 0;
-  z-index: 1;
-}
-.shadowLeft::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 2rem;
-  background: linear-gradient(to left, var(--background), rgba(255, 255, 0, 0));
-  /* background-color: aqua; */
-  right: 0;
-  z-index: 1;
+@media (min-width: 640px) {
+  .shadowLeft::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2rem;
+    background: linear-gradient(
+      to right,
+      var(--background),
+      rgba(255, 255, 0, 0)
+    );
+    /* background-color: aqua; */
+    left: 0;
+    z-index: 1;
+  }
+  .shadowLeft::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2rem;
+    background: linear-gradient(
+      to left,
+      var(--background),
+      rgba(255, 255, 0, 0)
+    );
+    /* background-color: aqua; */
+    right: 0;
+    z-index: 1;
+  }
 }
 
 /*  skills programing end*/
