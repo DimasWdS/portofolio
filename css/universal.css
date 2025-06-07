@@ -95,3 +95,16 @@ a {
   max-width: 100%;
   height: auto;
 }
+
+.scrollLeft {
+  animation: scrollLeft 15s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

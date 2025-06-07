@@ -124,3 +124,82 @@ p2.classList.add("teks1");
 });
 
 // teks end
+
+// skills programing
+{
+  const container = document.createElement("section");
+  skills.appendChild(container);
+  Object.assign(container.style, {
+    display: "flex",
+    height: "10rem",
+    width: "100%",
+    maxWidth: "70rem",
+    // backgroundColor: "yellow",
+  });
+  // container luar
+  const skillScroll = document.createElement("section");
+  skillScroll.classList.add("shadowLeft");
+  container.appendChild(skillScroll);
+  Object.assign(skillScroll.style, {
+    position: "relative",
+    width: "100%",
+    maxWidth: "40rem",
+    backgroundColor: "var(--background)",
+    height: "5rem",
+    display: "flex",
+    overflow: "hidden",
+  });
+
+  const conCardSkill = document.createElement("section");
+  conCardSkill.classList.add("containerCard");
+  skillScroll.appendChild(conCardSkill);
+  Object.assign(conCardSkill.style, {
+    flexShrink: "0",
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    padding: "0 0 0 1rem",
+  });
+
+  function createCard(nama, logo) {
+    const card = document.createElement("section");
+    const icon = document.createElement("section");
+    const imgIcon = document.createElement("img");
+    const teks = document.createElement("h1");
+    teks.textContent = `${nama}`;
+    conCardSkill.appendChild(card);
+    card.appendChild(icon);
+    card.appendChild(teks);
+    icon.appendChild(imgIcon);
+    Object.assign(card.style, {
+      display: "flex",
+      gap: "0.5rem",
+      alignItems: "center",
+      backgroundColor: "var(--tes)",
+      padding: "0.5rem 1rem",
+      borderRadius: "5px",
+      flexShrink: "0",
+    });
+    Object.assign(icon.style, {
+      height: "3rem",
+      width: "3rem",
+      // backgroundColor: "red",
+    });
+    icon.classList.add("flexCenter");
+    Object.assign(teks.style, {
+      fontSize: "1em",
+      color: "var(--main-font)",
+    });
+    imgIcon.setAttribute("src", `./asset/icon/${logo}`);
+  }
+
+  createCard("Tailwind CSS", "tailwindcss.svg");
+  createCard("Javascrip", "javascript.svg");
+  createCard("HTML", "html.svg");
+  createCard("CSS", "css.svg");
+
+  const containerCard = document.querySelector(".containerCard");
+  containerCard.classList.add("scrollLeft");
+  const clone = containerCard.cloneNode(true);
+  skillScroll.appendChild(clone);
+}
