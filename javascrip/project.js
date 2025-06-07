@@ -323,7 +323,6 @@ Object.assign(container.style, {
       width: "45rem",
       height: "25rem",
       backgroundColor: "var(--background)",
-
       borderRadius: "10px",
       // border: "0.1rem solid transparent",
       overflow: "hidden",
@@ -346,6 +345,7 @@ Object.assign(container.style, {
     });
 
     const card = document.createElement("section");
+    card.classList.add("flexCenter");
     containerCard.appendChild(card);
     Object.assign(card.style, {
       position: "relative",
@@ -354,6 +354,148 @@ Object.assign(container.style, {
       width: "100%",
       backgroundColor: "var(--tes)",
       borderRadius: "9px",
+      // backgroundColor: "yellow",
+    });
+
+    // deskripsi start
+    const conDesc = document.createElement("section");
+    card.appendChild(conDesc);
+    Object.assign(conDesc.style, {
+      position: "absolute",
+      display: "flex",
+      alignItems: "center",
+      height: "90%",
+      width: "50%",
+      left: "0",
+      borderRadius: "0 50% 50% 0",
+      backgroundColor: "var(--white)",
+      transform: "translateX(-200%)",
+    });
+
+    const conTeks = document.createElement("section");
+    conDesc.appendChild(conTeks);
+    Object.assign(conTeks.style, {
+      display: "flex",
+      flexDirection: "column",
+      gap: "0.5rem",
+      margin: "0 0 0 1rem",
+    });
+
+    const H1 = document.createElement("h1");
+    conTeks.appendChild(H1);
+    H1.textContent = "LOREM IPSUM";
+    Object.assign(H1.style, {
+      color: "var(--tes)",
+      fontSize: "1.5em",
+    });
+
+    const deskripsi = document.createElement("p");
+    conTeks.appendChild(deskripsi);
+    deskripsi.textContent =
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat quas ad qui nesciunt, officia deleniti veritatis sapiente necessitatibus iure sint cumque omnis corrupti libero ratione aliquam a aperiam hic quidem!";
+    Object.assign(deskripsi.style, {
+      fontSize: "0.7em",
+      color: "var(--tes)",
+      fontWeight: "500",
+    });
+
+    const tools = document.createElement("p");
+    conTeks.appendChild(tools);
+    tools.textContent = "Gergaji mesin";
+    Object.assign(tools.style, {
+      fontSize: "0.8em",
+      fontWeight: "500",
+      color: "var(--tes)",
+    });
+
+    // deskripsi end
+
+    //links start
+    const conLinks = document.createElement("section");
+    card.appendChild(conLinks);
+    conLinks.classList.add("flexCenter");
+    Object.assign(conLinks.style, {
+      position: "absolute",
+      gap: "0.2rem",
+      bottom: "0",
+      right: "0",
+      margin: "1rem",
+      transform: "translateY(200%)",
+    });
+
+    const link = document.createElement("div");
+    const link2 = document.createElement("div");
+    conLinks.appendChild(link);
+    conLinks.appendChild(link2);
+    [link, link2].forEach((el) => {
+      el.classList.add("flexCenter");
+      Object.assign(el.style, {
+        height: "3.2rem",
+        width: "3.2rem",
+        backgroundColor: "blue",
+        borderRadius: "50%",
+        backgroundColor: "var(--white)",
+        overflow: "hidden",
+      });
+    });
+    const aLink = document.createElement("a");
+    const aLink2 = document.createElement("a");
+    aLink.setAttribute("href", "#");
+    aLink2.setAttribute("href", "#");
+    link.appendChild(aLink);
+    link2.appendChild(aLink2);
+
+    [aLink, aLink2].forEach((el) => {
+      el.classList.add("flexCenter");
+      Object.assign(el.style, {
+        display: "inline-flex",
+        height: "100%",
+        width: "100%",
+        // backgroundColor: "yellow",
+      });
+    });
+
+    const linkImg = document.createElement("img");
+    const linkImg2 = document.createElement("img");
+    linkImg2.setAttribute("src", "./asset/icon/github.svg");
+    linkImg.setAttribute("src", "./asset/icon/link.svg");
+    aLink.appendChild(linkImg);
+    aLink2.appendChild(linkImg2);
+
+    [linkImg, linkImg2].forEach((el) => {
+      Object.assign(el.style, {
+        transform: "scale(0.8)",
+      });
+    });
+
+    [link, link2].forEach((el) => {
+      el.addEventListener("mouseenter", function () {
+        el.style.opacity = "70%";
+      });
+    });
+    [link, link2].forEach((el) => {
+      el.addEventListener("mouseleave", function () {
+        el.style.opacity = "100%";
+      });
+    });
+
+    //links end
+
+    [conDesc, conLinks].forEach((el) => {
+      Object.assign(el.style, {
+        transition: "all 0.5s ease-in-out",
+      });
+    });
+
+    card.addEventListener("mouseenter", function () {
+      [conDesc, conLinks].forEach((el) => {
+        el.classList.add("translate0");
+      });
+    });
+    card.addEventListener("mouseleave", function () {
+      [conDesc, conLinks].forEach((el) => {
+        el.classList.remove("translate0");
+      });
     });
   }
   createCardWeb();

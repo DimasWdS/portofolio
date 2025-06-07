@@ -28,3 +28,6 @@
   right: 100%;
   background: linear-gradient(to left, #80d8c3, rgba(0, 0, 0, 0));
 }
+.translate0 {
+  transform: translate(0) !important;
+}
