@@ -12,8 +12,9 @@
 }
 @media (max-width: 640px) {
   .mobileGone {
-    display: none;
+    display: none !important;
   }
+  /* for btn link  */
   .scaleKecil {
     transform: scale(0.8);
   }

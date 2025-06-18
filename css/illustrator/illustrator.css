@@ -219,3 +219,12 @@
     }
   }
 }
+.shadowWeb::after {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 5rem;
+  /* background-color: yellow; */
+  right: 100%;
+  background: linear-gradient(to left, #80d8c3, rgba(0, 0, 0, 0));
+}
