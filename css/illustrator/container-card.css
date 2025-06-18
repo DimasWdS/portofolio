@@ -1,0 +1,6 @@
+@media (max-width: 640px) {
+  .card {
+    /* background-color: aqua !important; */
+    width: 90% !important;
+  }
+}

@@ -241,124 +241,34 @@ Object.assign(pageOne.style, {
 }
 //bawah teks foto pajangan start
 
-// container foto project
+//
 const conGallery = document.createElement("section");
 container.appendChild(conGallery);
-conGallery.classList.add("conGallery");
-const gallery = document.querySelector(".conGallery");
-conGallery.classList.add("scale0");
 Object.assign(conGallery.style, {
-  position: "absolute",
   display: "flex",
   justifyContent: "center",
-  alignItem: "center",
-  top: "0",
-  zIndex: "2",
   width: "100%",
-  backgroundColor: "var(--background)",
-  transformOrigin: "bottom",
-  // transition: "all 0.3s ease-in-out",
-  borderTop: "2px solid var(--third-color)",
-  // backgroundColor: "yellow",
+  // backgroundColor: "green",
 });
-//
 {
-  const background = document.createElement("section");
-  background.classList.add("conBackground");
-  conGallery.appendChild(background);
-  Object.assign(background.style, {
-    overflow: "hidden",
-    position: "relative",
+  const condalam = document.createElement("section");
+  condalam.classList.add("containerCard");
+  conGallery.appendChild(condalam);
+  Object.assign(condalam.style, {
+    height: "100%",
     width: "100%",
     maxWidth: "80rem",
+    // backgroundColor: "blue",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: "column",
-    // backgroundColor: "yellow",
-  });
-  const conTeks = document.createElement("section");
-  conTeks.classList.add("containerTeks");
-  background.appendChild(conTeks);
-  Object.assign(conTeks.style, {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "5.5rem",
-    width: "100%",
-    // backgroundColor: "yellow",
-  });
-  const teks = document.createElement("span");
-  conTeks.appendChild(teks);
-  Object.assign(teks.style, {
-    display: "flex",
-  });
-  function createP(konten) {
-    const p = document.createElement("P");
-    teks.appendChild(p);
-    p.textContent = `${konten}`;
-    Object.assign(p.style, {
-      fontSize: "7.5rem",
-      fontWeight: "900",
-      color: "var(--tes)",
-    });
-  }
-  createP("P");
-  createP("O");
-  createP("R");
-  createP("T");
-  createP("O");
-  createP("F");
-  createP("O");
-  createP("L");
-  createP("I");
-  createP("O");
-  for (let i = 0; i < 100; i++) {
-    const spanClone = teks.cloneNode(true);
-    conTeks.appendChild(spanClone);
-    // console.log(i);
-  }
-  for (let i = 0; i < 10; i++) {
-    const conTeksClone = conTeks.cloneNode(true);
-    background.appendChild(conTeksClone);
-  }
-  const containerTeks = document.querySelectorAll(".containerTeks");
-  containerTeks.forEach((el, index) => {
-    if (index % 2 !== 0) {
-      el.classList.add("genap");
-    } else {
-      el.classList.add("ganjil");
-    }
+    gap: "1rem",
+    flexWrap: "wrap",
+    padding: "1rem 0 1rem 0",
   });
 }
-//
 
-const conCard = document.createElement("section");
-conGallery.appendChild(conCard);
-conCard.classList.add("containerCard");
-Object.assign(conCard.style, {
-  position: "absolute",
-  padding: "1rem 0 1rem 0",
-  display: "flex",
-  justifyContent: "center",
-  gap: "1rem",
-  flexWrap: "wrap",
-  top: "0",
-  height: "100%",
-  // backgroundColor: "yellow",
-});
-//
-[pageOne, conCard].forEach((el) => {
+[pageOne].forEach((el) => {
   el.classList.add("width");
-});
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 1) {
-    pageBlur.classList.remove("scale0");
-    gallery.classList.remove("scale0");
-    gallery.classList.add("animasiGallery");
-  } else {
-    pageBlur.classList.add("scale0");
-    gallery.classList.add("scale0");
-    gallery.classList.remove("animasiGallery");
-  }
+  // el.style.backgroundColor = "yellow";
 });

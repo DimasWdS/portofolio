@@ -1,16 +1,10 @@
-*,
-html,
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   /* background-color: aqua; */
   background-color: var(--background);
+  flex-direction: column;
 }
 
 .width {
@@ -73,52 +67,6 @@ body {
   }
   75% {
     transform: translateY(6.5rem);
-  }
-}
-
-/* animasi teks background start */
-.genap {
-  animation: genap 100s linear infinite;
-}
-@keyframes genap {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10rem);
-  }
-}
-.ganjil {
-  animation: ganjil 100s linear infinite;
-}
-@keyframes ganjil {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-10rem);
-  }
-}
-/* animasi teks background end */
-
-/*  */
-.animasiGallery {
-  animation: gallery 0.5s linear;
-}
-@keyframes gallery {
-  0% {
-    transform: translateY(1rem);
-  }
-  10% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2rem);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 
@@ -269,54 +217,5 @@ body {
     75% {
       transform: translateY(0);
     }
-  }
-  .containerCard {
-    flex-direction: column;
-    align-items: center;
-  }
-  .conGallery {
-    margin-top: 30rem;
-    /* background-color: green !important; */
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .conGallery {
-    margin-top: 60% !important;
-    /* background-color: aqua !important; */
-  }
-}
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .conGallery {
-    margin-top: 40% !important;
-    /* background-color: aqua !important; */
-  }
-}
-@media (min-width: 1080px) {
-  .conBackground::after {
-    content: " ";
-    position: absolute;
-    height: 100%;
-    width: 2rem;
-    /* background-color: aqua; */
-    background: linear-gradient(
-      to right,
-      var(--background),
-      rgba(255, 255, 255, 0)
-    );
-    left: 0;
-  }
-  .conBackground::before {
-    content: " ";
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    width: 2rem;
-    /* background-color: aqua; */
-    background: linear-gradient(
-      to left,
-      var(--background),
-      rgba(255, 255, 255, 0)
-    );
-    right: 0;
   }
 }

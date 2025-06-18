@@ -1,0 +1,67 @@
+/* mobile start */
+@media (max-width: 640px) {
+  .containerHome {
+    flex-direction: column;
+  }
+  .boxMobile {
+    width: 100% !important;
+  }
+  .teksMobile {
+    margin: 0 0 0 0.5rem !important;
+    font-size: 3em !important;
+  }
+}
+
+.teksFaseSatu {
+  animation: teksFaseSatu 10s ease-in-out infinite;
+}
+
+@keyframes teksFaseSatu {
+  0%,
+  25% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30%,
+  70% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  75%,
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.teksFaseDua {
+  animation: teksFaseDua 10s ease-in-out infinite;
+}
+
+@keyframes teksFaseDua {
+  0%,
+  25% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  30%,
+  70% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  75%,
+  100% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+}
+
+/* mobile end */
+/* tablet start */
+
+@media (max-width: 1024px) {
+  .teksMobile {
+    margin: 0 0 0 0.5rem !important;
+    font-size: 3.5em !important;
+  }
+}
