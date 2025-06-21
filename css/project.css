@@ -70,7 +70,7 @@
 @media (max-width: 1024px) {
   .cardIllustrator {
     flex-direction: column;
-    height: 40rem;
+    height: 60rem;
   }
   .containerDeskripsi {
     width: 100%;
@@ -90,7 +90,7 @@
 }
 @media (max-width: 640px) {
   .cardIllustrator {
-    height: 40rem;
+    height: 45rem;
   }
   .containerDeskripsi {
     width: 100%;

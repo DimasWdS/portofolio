@@ -133,6 +133,9 @@ Object.assign(pageOne.style, {
       color: "var(--main-font)",
     });
   });
+  [span2, span4, span6].forEach((el) => {
+    el.style.top = "-100%";
+  });
   {
     span.textContent = "PORTOFOLIO";
     span2.textContent = "MAKE";
