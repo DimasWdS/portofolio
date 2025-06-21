@@ -92,7 +92,7 @@ Object.assign(container.style, {
     Object.assign(containerCard.style, {
       display: "flex",
       flexDirection: "column",
-      gap: "1rem",
+      gap: "5rem",
     });
 
     Object.assign(conIcon.style, {
@@ -133,7 +133,7 @@ Object.assign(container.style, {
       backgroundImage: `url(./asset/svg/${image})`,
       backgroundPosition: "center",
       backgroundSize: "cover",
-      backgroundRepeate: "no-repeate",
+      backgroundRepeat: "no-repeat",
     });
 
     Object.assign(conImgBg.style, {
