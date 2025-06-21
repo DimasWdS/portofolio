@@ -40,7 +40,7 @@ Object.assign(container.style, {
     color: "var(--white)",
   });
 
-  function illustratorCard(image, judul, teksDeskripsi) {
+  function illustratorCard(image, judul, bgImage, teksDeskripsi) {
     function createIcon(image) {
       const container = document.createElement("section");
       conIcon.appendChild(container);
@@ -59,6 +59,8 @@ Object.assign(container.style, {
 
     const card = document.createElement("section");
     const conImg = document.createElement("section");
+    const conImgBg = document.createElement("section");
+    const backgroundImage = document.createElement("section");
     const conDes = document.createElement("section");
     const conImg1 = document.createElement("section");
     const conIcon = document.createElement("section");
@@ -70,6 +72,7 @@ Object.assign(container.style, {
     card.classList.add("cardIllustrator");
     conImg.classList.add("containerImg");
     conDes.classList.add("containerDeskripsi");
+    conImgBg.classList.add("flexCenter");
 
     desHeaderContent.textContent = `${judul}`;
     deskripsiContent.textContent = `${teksDeskripsi}`;
@@ -78,6 +81,8 @@ Object.assign(container.style, {
     card.appendChild(conDes);
     card.appendChild(conImg);
     conImg.appendChild(conImg1);
+    conImg.appendChild(conImgBg);
+    conImgBg.appendChild(backgroundImage);
     conDes.appendChild(conIcon);
     conDes.appendChild(desHeader);
     desHeader.appendChild(desHeaderContent);
@@ -121,6 +126,7 @@ Object.assign(container.style, {
 
     Object.assign(conImg1.style, {
       position: "absolute",
+      zIndex: "2",
       aspectRatio: "16/9",
       width: "100%",
       bottom: "0",
@@ -129,15 +135,30 @@ Object.assign(container.style, {
       backgroundSize: "cover",
       backgroundRepeate: "no-repeate",
     });
+
+    Object.assign(conImgBg.style, {
+      height: "100%",
+      width: "100%",
+    });
+    Object.assign(backgroundImage.style, {
+      width: "90%",
+      height: "90%",
+      opacity: "50%",
+      backgroundImage: `url(./asset/svg/${bgImage})`,
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    });
   }
   illustratorCard(
     "mocupmobilv2.svg",
     "Livery Design",
+    "PROFIL-ILLUSTRATOR.svg",
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eveniet excepturi aspernatur error illum velit animi iusto totam corporis at officia, debitis doloremque repellat, quia nobis. Maiores quasi qui vitae?"
   );
   illustratorCard(
     "mocupmobilv2.svg",
     "Livery Design",
+    "PROFIL-ILLUSTRATOR.svg",
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eveniet excepturi aspernatur error illum velit animi iusto totam corporis at officia, debitis doloremque repellat, quia nobis. Maiores quasi qui vitae?"
   );
 }

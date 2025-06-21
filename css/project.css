@@ -52,24 +52,21 @@
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.cardIllustrator:hover {
-  outline: 0.1rem solid var(--third-color);
-}
 .containerImg {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40rem;
   height: 100%;
   /* background-color: green; */
-  box-shadow: rgba(0, 0, 0, 0.444) -4px 0px 5px -1px,
-    rgba(0, 0, 0, 0.3) -3px 0px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.444) -8px 0px 10px -2px,
+    rgba(0, 0, 0, 0.3) -6px 0px 6px -2px;
 }
 .containerDeskripsi {
   width: 25rem;
   height: 100%;
-  /* background-color: aqua; */
-  /* border-right: 0.1rem solid var(--third-color); */
 }
-
 @media (max-width: 1024px) {
   .cardIllustrator {
     flex-direction: column;
@@ -85,15 +82,15 @@
     /* background-color: green; */
   }
   .containerImg {
-    box-shadow: rgba(0, 0, 0, 0) -4px 0px 5px -1px,
+    box-shadow: rgba(0, 0, 0, 0) -8px 0px 10px -2px,
       rgba(0, 0, 0, 0) -3px 0px 3px -1px;
     box-shadow: rgba(16, 16, 16, 0.25) 0px -4px 5px -1px,
-      rgba(0, 0, 0, 0.3) 0px -3px 3px -1px;
+      rgba(0, 0, 0, 0.3) 0px -6px 6px -2px;
   }
 }
 @media (max-width: 640px) {
   .cardIllustrator {
-    height: 35rem;
+    height: 40rem;
   }
   .containerDeskripsi {
     width: 100%;
@@ -103,8 +100,8 @@
   .containerImg {
     box-shadow: rgba(0, 0, 0, 0) -4px 0px 5px -1px,
       rgba(0, 0, 0, 0) -3px 0px 3px -1px;
-    box-shadow: rgba(16, 16, 16, 0.25) 0px -4px 5px -1px,
-      rgba(0, 0, 0, 0.3) 0px -3px 3px -1px;
+    box-shadow: rgba(16, 16, 16, 0.25) 0px -8px 10px -2px,
+      rgba(0, 0, 0, 0.3) 0px -6px 6px -2px;
   }
 }
 
