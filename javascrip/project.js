@@ -27,6 +27,12 @@ Object.assign(container.style, {
   containerCard.appendChild(header);
   header.appendChild(hedTeks);
 
+  Object.assign(containerCard.style, {
+    display: "flex",
+    flexDirection: "column",
+    gap: "2.5rem",
+  });
+
   Object.assign(header.style, {
     width: "100%",
   });
@@ -165,6 +171,7 @@ Object.assign(container.style, {
   conPageWeb.classList.add("flexCenter");
   Object.assign(conPageWeb.style, {
     width: "100%",
+    margin: "4rem 0 3rem 0",
     // backgroundColor: "yellow",
   });
   const section = document.createElement("section");
@@ -277,6 +284,9 @@ Object.assign(container.style, {
 
   Object.assign(containerFrontend.style, {
     // backgroundColor: "yellow",
+    display: "flex",
+    flexDirection: "column",
+    gap: "2.5rem",
   });
 
   Object.assign(frontendHeader.style, {
@@ -290,9 +300,12 @@ Object.assign(container.style, {
     margin: "0 0 0 1rem",
   });
 
-  function CardWeb() {
+  function CardWeb(namaWeb, des, teknologi, github, web) {
     const container = document.createElement("section");
     const conDesc = document.createElement("section");
+    const header = document.createElement("header");
+    const deskripsi = document.createElement("section");
+    const teknologiUse = document.createElement("section");
     const conContent = document.createElement("section");
     const conWebLg = document.createElement("section");
     const conWebSm = document.createElement("section");
@@ -308,6 +321,9 @@ Object.assign(container.style, {
     conContent.appendChild(conWebLg);
     conContent.appendChild(conWebSm);
     conDesc.appendChild(conLink);
+    conDesc.appendChild(header);
+    conDesc.appendChild(deskripsi);
+    conDesc.appendChild(teknologiUse);
     conLink.appendChild(githubLink);
     conLink.appendChild(webLink);
     githubLink.appendChild(gLink);
@@ -315,10 +331,14 @@ Object.assign(container.style, {
 
     container.classList.add("cardWeb");
 
-    gLink.setAttribute("href", "#");
+    gLink.setAttribute("href", `${github}`);
     gLink.setAttribute("target", "_blanks");
-    wLink.setAttribute("href", "#");
+    wLink.setAttribute("href", `${web}`);
     wLink.setAttribute("target", "_blanks");
+
+    header.textContent = `${namaWeb}`;
+    deskripsi.textContent = `${des}`;
+    teknologiUse.textContent = `${teknologi}`;
 
     [conDesc, conContent].forEach((el) => {
       el.classList.add("cardWebMobile");
@@ -327,10 +347,31 @@ Object.assign(container.style, {
         height: "100%",
       });
     });
+    Object.assign(header.style, {
+      width: "100%",
+      padding: "1.5rem 0.5rem 1.5rem 1rem",
+      // backgroundColor: "purple",
+      fontSize: "clamp(2em,3vh,3em)",
+      fontWeight: "700",
+      color: "var(--white)",
+    });
+
+    Object.assign(deskripsi.style, {
+      padding: "0 0.5rem 0 1rem",
+      // backgroundColor: "green",
+      fontWeight: "600",
+      fontSize: "0.8em",
+      color: "var(--main-font)",
+    });
+
+    Object.assign(teknologiUse.style, {
+      padding: "1rem 0.5rem 0 1rem",
+      color: "var(--main-font)",
+      fontWeight: "800",
+    });
 
     Object.assign(conContent.style, {
       position: "relative",
-      backgroundColor: "yellow",
     });
 
     Object.assign(conWebLg.style, {
@@ -381,7 +422,13 @@ Object.assign(container.style, {
     });
   }
   for (let i = 0; i < 2; i++) {
-    CardWeb();
+    CardWeb(
+      "Web TODOLIST",
+      "ANTI KINGDOM, ANTI RRQ, ANTI BAPER, ANTI PAK AP,(CINCIN SANZ ADA 6)",
+      "Javascrip Css Html",
+      "#",
+      "#"
+    );
   }
 }
 //
@@ -391,6 +438,7 @@ Object.assign(container.style, {
   conPageWeb.classList.add("flexCenter");
   Object.assign(conPageWeb.style, {
     width: "100%",
+    margin: "4rem 0 3rem 0",
     // backgroundColor: "yellow",
   });
   const section = document.createElement("section");
