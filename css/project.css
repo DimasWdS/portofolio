@@ -1,36 +1,7 @@
-.cardMouseEnter {
-  z-index: 1;
-  transform: translateX(0) translateY(0) !important;
-  transition: all 0.2s ease-in-out;
-  border: 2px solid var(--third-color);
-}
-
-.cardMouseLeave {
-  transition: all 0.2s ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0) 0px 5px 15px;
-  border: 2px solid transparent;
-}
-
-.shadowWeb::after {
-  content: " ";
-  position: absolute;
-  height: 100%;
-  width: 5rem;
-  /* background-color: yellow; */
-  right: 100%;
-  background: linear-gradient(to left, #80d8c3, rgba(0, 0, 0, 0));
-}
-.translate0 {
-  transform: translate(0) !important;
-}
-
-/*  */
-
 .containerCardProject {
   width: 100%;
   max-width: 65rem;
-  padding: 0 1rem 2rem 1rem;
-  /* background-color: blueviolet; */
+  padding: 0 1rem 0 1rem;
 }
 @media (max-width: 640px) {
   .scaleKecil {
@@ -60,8 +31,6 @@
   width: 40rem;
   height: 100%;
   /* background-color: green; */
-  box-shadow: rgba(0, 0, 0, 0.444) -8px 0px 10px -2px,
-    rgba(0, 0, 0, 0.3) -6px 0px 6px -2px;
 }
 .containerDeskripsi {
   width: 25rem;
@@ -81,12 +50,6 @@
     width: 100%;
     /* background-color: green; */
   }
-  .containerImg {
-    box-shadow: rgba(0, 0, 0, 0) -8px 0px 10px -2px,
-      rgba(0, 0, 0, 0) -3px 0px 3px -1px;
-    box-shadow: rgba(16, 16, 16, 0.25) 0px -4px 5px -1px,
-      rgba(0, 0, 0, 0.3) 0px -6px 6px -2px;
-  }
 }
 @media (max-width: 640px) {
   .cardIllustrator {
@@ -97,12 +60,36 @@
     height: max-content;
     /* background-color: aqua; */
   }
-  .containerImg {
-    box-shadow: rgba(0, 0, 0, 0) -4px 0px 5px -1px,
-      rgba(0, 0, 0, 0) -3px 0px 3px -1px;
-    box-shadow: rgba(16, 16, 16, 0.25) 0px -8px 10px -2px,
-      rgba(0, 0, 0, 0.3) 0px -6px 6px -2px;
-  }
 }
 
 /* illustrator end */
+/* front end start */
+.cardWeb {
+  display: flex;
+  width: 100%;
+  height: 33rem;
+  /* background-color: yellow; */
+  border-radius: 10px;
+  outline: 0.1rem solid transparent;
+  background-color: var(--tes);
+  transition: all ease-in-out 0.5s;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (max-width: 1024px) {
+  .cardWeb {
+    height: 35rem;
+  }
+}
+@media (max-width: 640px) {
+  .cardWeb {
+    height: 50rem;
+    flex-direction: column;
+  }
+  .cardWebMobile {
+    width: 100% !important;
+    height: 50% !important;
+  }
+}
+/* front end end */

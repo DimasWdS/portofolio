@@ -10,9 +10,7 @@ conProject.appendChild(container);
 container.classList.add("flexCenter");
 Object.assign(container.style, {
   width: "100%",
-  height: "100%",
   flexDirection: "column",
-  // backgroundColor: "green",
 });
 
 // iLLustrator
@@ -36,7 +34,6 @@ Object.assign(container.style, {
   Object.assign(hedTeks.style, {
     fontSize: "clamp(1.5rem, 5vw, 2.5rem)",
     fontWeight: "600",
-    margin: "2rem 0 2rem 0",
     color: "var(--white)",
   });
 
@@ -92,7 +89,6 @@ Object.assign(container.style, {
     Object.assign(containerCard.style, {
       display: "flex",
       flexDirection: "column",
-      gap: "5rem",
     });
 
     Object.assign(conIcon.style, {
@@ -143,7 +139,7 @@ Object.assign(container.style, {
     Object.assign(backgroundImage.style, {
       width: "90%",
       height: "90%",
-      opacity: "50%",
+
       backgroundImage: `url(./asset/svg/${bgImage})`,
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
@@ -265,7 +261,129 @@ Object.assign(container.style, {
     });
   });
 }
+// front end
+{
+  const containerFrontend = document.createElement("section");
+  const frontendHeader = document.createElement("section");
+  const headerTeks = document.createElement("p");
 
+  container.appendChild(containerFrontend);
+  containerFrontend.appendChild(frontendHeader);
+  frontendHeader.appendChild(headerTeks);
+
+  containerFrontend.classList.add("containerCardProject");
+
+  headerTeks.textContent = "Recent Website Projects";
+
+  Object.assign(containerFrontend.style, {
+    // backgroundColor: "yellow",
+  });
+
+  Object.assign(frontendHeader.style, {
+    width: "100%",
+  });
+
+  Object.assign(headerTeks.style, {
+    fontSize: "clamp(1.5rem, 5vw, 2.5rem)",
+    fontWeight: "600",
+    color: "var(--white)",
+    margin: "0 0 0 1rem",
+  });
+
+  function CardWeb() {
+    const container = document.createElement("section");
+    const conDesc = document.createElement("section");
+    const conContent = document.createElement("section");
+    const conWebLg = document.createElement("section");
+    const conWebSm = document.createElement("section");
+    const conLink = document.createElement("section");
+    const githubLink = document.createElement("section");
+    const webLink = document.createElement("section");
+    const gLink = document.createElement("a");
+    const wLink = document.createElement("a");
+
+    containerFrontend.appendChild(container);
+    container.appendChild(conDesc);
+    container.appendChild(conContent);
+    conContent.appendChild(conWebLg);
+    conContent.appendChild(conWebSm);
+    conDesc.appendChild(conLink);
+    conLink.appendChild(githubLink);
+    conLink.appendChild(webLink);
+    githubLink.appendChild(gLink);
+    webLink.appendChild(wLink);
+
+    container.classList.add("cardWeb");
+
+    gLink.setAttribute("href", "#");
+    gLink.setAttribute("target", "_blanks");
+    wLink.setAttribute("href", "#");
+    wLink.setAttribute("target", "_blanks");
+
+    [conDesc, conContent].forEach((el) => {
+      el.classList.add("cardWebMobile");
+      Object.assign(el.style, {
+        width: "50%",
+        height: "100%",
+      });
+    });
+
+    Object.assign(conContent.style, {
+      position: "relative",
+      backgroundColor: "yellow",
+    });
+
+    Object.assign(conWebLg.style, {
+      position: "absolute",
+      bottom: "0",
+      right: "0",
+      width: "90%",
+      aspectRatio: "16/9",
+      backgroundColor: "green",
+      borderTopLeftRadius: "10px",
+      borderBottomLeftRadius: "10px",
+    });
+    Object.assign(conWebSm.style, {
+      position: "absolute",
+      bottom: "0",
+      left: "0",
+      width: "200px",
+      aspectRatio: "9/16",
+      backgroundColor: "cyan",
+      borderRadius: "10px",
+      margin: "0 0 1rem 0",
+    });
+    Object.assign(conLink.style, {
+      display: "flex",
+      gap: "1rem",
+      width: "100%",
+      padding: "3rem 0 0 2rem",
+    });
+    [githubLink, webLink].forEach((el) => {
+      Object.assign(el.style, {
+        height: "3.5rem",
+        width: "3.5rem",
+        // backgroundColor: "yellow",
+        borderRadius: "50%",
+        padding: "0.2rem",
+        outline: "0.1rem solid var(--white)",
+      });
+    });
+
+    [gLink, wLink].forEach((el) => {
+      Object.assign(el.style, {
+        display: "inline-flex",
+        height: "100%",
+        width: "100%",
+        backgroundColor: "var(--white)",
+        borderRadius: "50%",
+      });
+    });
+  }
+  for (let i = 0; i < 2; i++) {
+    CardWeb();
+  }
+}
 //
 {
   const conPageWeb = document.createElement("section");
@@ -273,7 +391,6 @@ Object.assign(container.style, {
   conPageWeb.classList.add("flexCenter");
   Object.assign(conPageWeb.style, {
     width: "100%",
-    margin: "2rem 0 2rem 0",
     // backgroundColor: "yellow",
   });
   const section = document.createElement("section");
