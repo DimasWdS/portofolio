@@ -1,6 +1,19 @@
 @media (max-width: 640px) {
-  .card {
-    /* background-color: aqua !important; */
+  .containerCard {
+    width: 80% !important;
+  }
+}
+@media (max-width: 1024px) {
+  .containerCard {
     width: 90% !important;
   }
+}
+
+.shadowSpin::before {
+  position: absolute;
+  right: 100%;
+  content: "";
+  width: 3rem;
+  height: 100%;
+  background: linear-gradient(to left, #ff4f0f, rgba(255, 255, 0, 0));
 }

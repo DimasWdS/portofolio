@@ -402,9 +402,9 @@ Object.assign(container.style, {
     });
     [githubLink, webLink].forEach((el) => {
       Object.assign(el.style, {
+        display: "flex",
         height: "3.5rem",
         width: "3.5rem",
-        // backgroundColor: "yellow",
         borderRadius: "50%",
         padding: "0.2rem",
         outline: "0.1rem solid var(--white)",
@@ -414,8 +414,7 @@ Object.assign(container.style, {
     [gLink, wLink].forEach((el) => {
       Object.assign(el.style, {
         display: "inline-flex",
-        height: "100%",
-        width: "100%",
+        flex: "1",
         backgroundColor: "var(--white)",
         borderRadius: "50%",
       });

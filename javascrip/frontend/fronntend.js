@@ -48,9 +48,11 @@ Object.assign(containerHome.style, {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    gap: "0.3rem",
   });
 
   [conTeks1, conTeks2, conTeks3].forEach((el) => {
+    el.classList.add("shadowTeks");
     Object.assign(el.style, {
       position: "relative",
       display: "flex",
