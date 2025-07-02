@@ -300,7 +300,7 @@ Object.assign(container.style, {
     margin: "0 0 0 1rem",
   });
 
-  function CardWeb(namaWeb, des, teknologi, github, web) {
+  function CardWeb(namaWeb, des, teknologi, github, web, webSm, webLg) {
     const container = document.createElement("section");
     const conDesc = document.createElement("section");
     const header = document.createElement("header");
@@ -380,9 +380,12 @@ Object.assign(container.style, {
       right: "0",
       width: "90%",
       aspectRatio: "16/9",
-      backgroundColor: "green",
       borderTopLeftRadius: "10px",
       borderBottomLeftRadius: "10px",
+      backgroundImage: `url(./asset/project/web/${webLg})`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
     });
     Object.assign(conWebSm.style, {
       position: "absolute",
@@ -390,9 +393,13 @@ Object.assign(container.style, {
       left: "0",
       width: "200px",
       aspectRatio: "9/16",
-      backgroundColor: "cyan",
+      backgroundImage: `url(./asset/project/web/${webSm})`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
       borderRadius: "10px",
       margin: "0 0 1rem 0",
+      boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
     });
     Object.assign(conLink.style, {
       display: "flex",
@@ -400,7 +407,7 @@ Object.assign(container.style, {
       width: "100%",
       padding: "3rem 0 0 2rem",
     });
-    [githubLink, webLink].forEach((el) => {
+    [githubLink, webLink].forEach((el, dex) => {
       Object.assign(el.style, {
         display: "flex",
         height: "3.5rem",
@@ -409,15 +416,32 @@ Object.assign(container.style, {
         padding: "0.2rem",
         outline: "0.1rem solid var(--white)",
       });
+      if (dex === 0) {
+        Object.assign(el.style, {
+          backgroundColor: "var(--white)",
+        });
+      }
     });
 
-    [gLink, wLink].forEach((el) => {
+    [gLink, wLink].forEach((el, dex) => {
       Object.assign(el.style, {
         display: "inline-flex",
         flex: "1",
         backgroundColor: "var(--white)",
         borderRadius: "50%",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
       });
+      if (dex === 1) {
+        Object.assign(el.style, {
+          backgroundImage: `url(./asset/icon/link.svg)`,
+        });
+      } else {
+        Object.assign(el.style, {
+          backgroundImage: `url(./asset/icon/github.png)`,
+        });
+      }
     });
   }
   for (let i = 0; i < 2; i++) {
@@ -425,8 +449,10 @@ Object.assign(container.style, {
       "Web TODOLIST",
       "ANTI KINGDOM, ANTI RRQ, ANTI BAPER, ANTI PAK AP,(CINCIN SANZ ADA 6)",
       "Javascrip Css Html",
-      "#",
-      "#"
+      "https://github.com/DimasWdS/TODOLIST",
+      "https://dimaswds.github.io/TODOLIST/",
+      "mobiledisplay.png",
+      "lgdisplay.png"
     );
   }
 }
