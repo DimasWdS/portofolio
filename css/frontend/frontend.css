@@ -1,92 +1,9 @@
-/* mobile start */
-@media (max-width: 640px) {
-  .containerHome {
-    flex-direction: column;
-  }
-  .boxMobile {
-    width: 100% !important;
-  }
-  .teksMobile {
-    margin: 0 0 0 0.5rem !important;
-    font-size: 3em !important;
-  }
+.homeInput:focus {
+  outline: 2px solid yellow;
 }
-
-.teksFaseSatu {
-  animation: teksFaseSatu 10s ease-in-out infinite;
+#btnSearch:hover {
+  opacity: 80%;
 }
-
-@keyframes teksFaseSatu {
-  0%,
-  25% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  30%,
-  70% {
-    transform: translateX(-120%);
-    opacity: 0;
-  }
-  75%,
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.teksFaseDua {
-  animation: teksFaseDua 10s ease-in-out infinite;
-}
-
-@keyframes teksFaseDua {
-  0%,
-  25% {
-    transform: translateX(-120%);
-    opacity: 0;
-  }
-  30%,
-  70% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  75%,
-  100% {
-    transform: translateX(-120%);
-    opacity: 0;
-  }
-}
-
-/* mobile end */
-/* tablet start */
-
-@media (max-width: 1024px) {
-  .teksMobile {
-    margin: 0 0 0 0.5rem !important;
-    font-size: 3.5em !important;
-  }
-}
-.shadowTeks::after {
-  position: absolute;
-  content: "";
-  height: 45%;
-  width: 100%;
-  background: linear-gradient(
-    to bottom,
-    var(--background),
-    rgba(255, 255, 255, 0)
-  );
-  top: 0;
-}
-.shadowTeks::before {
-  position: absolute;
-  content: "";
-  height: 45%;
-  width: 100%;
-  background: linear-gradient(
-    to top,
-    var(--background),
-    rgba(255, 255, 255, 0)
-  );
-  bottom: 0;
-  z-index: 1;
+.hiddenLabel {
+  display: none;
 }
