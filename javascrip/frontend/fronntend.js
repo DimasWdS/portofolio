@@ -122,7 +122,24 @@ home.appendChild(conOrnamen);
     scale: "50%",
   });
 }
-
+// container clean code
+{
+  const container = document.createElement("section");
+  container.textContent = "Clean Code.";
+  containerFrontend.appendChild(container);
+  Object.assign(container.style, {
+    position: "absolute",
+    right: "0",
+    bottom: "0",
+    margin: "0 2rem 4rem 0",
+    backgroundColor: "var(--tes)",
+    fontSize: "clamp(16px, 2vw, 2em)",
+    color: "var(--main-font)",
+    fontWeight: "500",
+    padding: "1rem 2rem",
+    borderRadius: "10px",
+  });
+}
 Object.assign(home.style, {
   position: "relative",
   width: "100%",

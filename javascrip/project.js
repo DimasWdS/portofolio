@@ -413,13 +413,11 @@ Object.assign(container.style, {
         height: "3.5rem",
         width: "3.5rem",
         borderRadius: "50%",
-        padding: "0.2rem",
         outline: "0.1rem solid var(--white)",
+        outlineOffset: "5px",
       });
       if (dex === 0) {
-        Object.assign(el.style, {
-          backgroundColor: "var(--white)",
-        });
+        Object.assign(el.style, {});
       }
     });
 
@@ -439,7 +437,7 @@ Object.assign(container.style, {
         });
       } else {
         Object.assign(el.style, {
-          backgroundImage: `url(./asset/icon/github.png)`,
+          backgroundImage: `url(./asset/icon/github.svg)`,
         });
       }
     });
