@@ -132,7 +132,7 @@ Object.assign(container.style, {
       aspectRatio: "16/9",
       width: "100%",
       bottom: "0",
-      backgroundImage: `url(./asset/svg/${image})`,
+      backgroundImage: `url(./asset/project/illustrator/${image})`,
       backgroundPosition: "center",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
@@ -145,24 +145,21 @@ Object.assign(container.style, {
     Object.assign(backgroundImage.style, {
       width: "90%",
       height: "90%",
-
-      backgroundImage: `url(./asset/svg/${bgImage})`,
+      backgroundImage: `url(./asset/project/illustrator/${bgImage})`,
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
     });
   }
-  illustratorCard(
-    "mocupmobilv2.svg",
-    "Livery Design",
-    "PROFIL-ILLUSTRATOR.svg",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eveniet excepturi aspernatur error illum velit animi iusto totam corporis at officia, debitis doloremque repellat, quia nobis. Maiores quasi qui vitae?"
-  );
-  illustratorCard(
-    "mocupmobilv2.svg",
-    "Livery Design",
-    "PROFIL-ILLUSTRATOR.svg",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eveniet excepturi aspernatur error illum velit animi iusto totam corporis at officia, debitis doloremque repellat, quia nobis. Maiores quasi qui vitae?"
-  );
+
+  for (let i = 0; i < 2; i++) {
+    illustratorCard(
+      "banner-tambalban.svg",
+      "BANNER DESIGN",
+      "banner-tambalbanBG.svg",
+      "Proyek ini dibuat menggunakan Adobe Illustrator dengan tujuan untuk membuat desain illustrasi bengkel tambal ban. Desain ini menekankan pada efek semangat untuk menciptakan kesan mekanik yang professional."
+    );
+  }
 }
 //
 {
