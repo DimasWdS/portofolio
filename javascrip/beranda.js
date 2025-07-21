@@ -1,162 +1,80 @@
-const layerBawah = document.querySelector(".layer-bawah");
+const containerBeranda = document.getElementById("beranda");
 
-// layer bawah
-{
-  const divLuar = document.createElement("div");
-  Object.assign(divLuar.style, {
-    position: "relative",
-    height: "85%",
-    width: "80%",
-    padding: "0.2rem",
-    backgroundColor: "var(--background)",
-    borderRadius: "24px",
-    overflow: "hidden",
-  });
-  divLuar.classList.add("flex-center");
-  layerBawah.appendChild(divLuar);
+Object.assign(containerBeranda.style, {
+  width: "100%",
+  height: "100vh",
+  // backgroundColor: "green",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+});
 
-  const divRotate = document.createElement("div");
-  divLuar.appendChild(divRotate);
-  divRotate.classList.add("divRotate");
-  Object.assign(divRotate.style, {
-    position: "absolute",
-    zIndex: "1",
-    width: "10rem",
-    height: "200rem",
-    backgroundColor: "var(--main-font)",
-  });
+const conNama = document.createElement("section");
+const conKonten = document.createElement("section");
+const conImg = document.createElement("div");
+const conTeksIllustrator = document.createElement("div");
+const conTeksFrontend = document.createElement("div");
+const imgFace = document.createElement("img");
+const teksNama = document.createElement("p");
 
-  const divDalam = document.createElement("div");
-  divLuar.appendChild(divDalam);
-  Object.assign(divDalam.style, {
-    flexDirection: "column",
-    position: "relative",
-    zIndex: "2",
+teksNama.textContent = "HI, I'M WIDY";
+conTeksIllustrator.textContent = "Illustrator";
+conTeksFrontend.textContent = "Front End";
+
+imgFace.setAttribute("src", "./asset/svg/myface.svg");
+
+containerBeranda.appendChild(conNama);
+containerBeranda.appendChild(conKonten);
+conNama.appendChild(teksNama);
+conKonten.appendChild(conTeksIllustrator);
+conKonten.appendChild(conImg);
+conKonten.appendChild(conTeksFrontend);
+conImg.appendChild(imgFace);
+
+Object.assign(conNama.style, {
+  position: "relative",
+  width: "100%",
+  height: "6rem",
+  // backgroundColor: "yellow",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+});
+
+Object.assign(teksNama.style, {
+  position: "absolute",
+  top: "1.5rem",
+  fontSize: "clamp(3em, 9vw, 10em)",
+  fontWeight: "800",
+  color: "var(--white)",
+});
+
+Object.assign(conKonten.style, {
+  position: "relative",
+  width: "100%",
+  display: "flex",
+  justifyContent: "center",
+
+  // backgroundColor: "yellow",
+});
+
+conImg.classList.add("conImgMobile");
+Object.assign(conImg.style, {
+  height: "20rem",
+  aspectRatio: "1/1",
+  scale: "1.1",
+  // backgroundColor: "yellow",
+});
+
+[conTeksIllustrator, conTeksFrontend].forEach((el) => {
+  el.classList.add("mobileGone");
+  Object.assign(el.style, {
+    display: "flex",
+    alignItems: "center",
     height: "100%",
-    width: "100%",
-    borderRadius: "22px",
-    overflow: "hidden",
-    gap: "0.1rem",
-    backgroundColor: "var(--background)",
-  });
-  // konten div dalam start
-  {
-    divDalam.classList.add("flex-center");
-
-    const conTeks = document.createElement("div");
-    conTeks.classList.add("container-teks");
-    conTeks.classList.add("flex-center");
-    Object.assign(conTeks.style, {
-      height: "5rem",
-      width: "100rem",
-      flexShrink: "0",
-      // backgroundColor: "yellow",
-    });
-
-    const span = document.createElement("p");
-    span.textContent = "WIDY";
-    conTeks.appendChild(span);
-    Object.assign(span.style, {
-      fontSize: "7rem",
-      fontFamily: "Poppins",
-      fontWeight: "900",
-      color: "var(--tes)",
-    });
-
-    for (let i = 0; i < 50; i++) {
-      const conTeksClone = conTeks.cloneNode(true); // Kloning lengkap
-      divDalam.appendChild(conTeksClone);
-      const cloneSpan = span.cloneNode(true);
-      conTeks.appendChild(cloneSpan);
-    }
-
-    const conTeksSelector = document.querySelectorAll(".container-teks");
-
-    conTeksSelector.forEach((el, index) => {
-      if (index % 2 !== 0) {
-        el.classList.add("geser-kiri");
-      } else {
-        el.classList.add("geser-kanan");
-      }
-    });
-  }
-  // konten div dalam end
-}
-// layer bawah end
-
-//layer atas strat
-{
-  const layerAtas = document.querySelector(".layer-atas");
-  layerAtas.classList.add("flex-center");
-  const container = document.createElement("div");
-  container.classList.add("flex-center");
-  container.style.flexDirection = "column";
-  layerAtas.appendChild(container);
-
-  const conImg = document.createElement("div");
-  Object.assign(conImg.style, {
-    height: "15rem",
-    width: "15rem",
-    // outline: "0.1rem solid var(--main-font)",
-    // borderRadius: "50%",
-    // backgroundColor: "yellow",
-  });
-  container.appendChild(conImg);
-  const img = document.createElement("img");
-  img.src = `./asset/myfoto/1.png`;
-  img.alt = "Gambar";
-  conImg.appendChild(img);
-
-  const conDesc = document.createElement("div");
-  conDesc.classList.add("flex-center");
-  Object.assign(conDesc.style, {
-    width: "18rem",
-    padding: "0.2rem 0 0.2rem 0",
-    borderRadius: "10px",
-    backgroundColor: "var(--main-font)",
-    outline: "2px solid var(--tes)",
-  });
-  container.appendChild(conDesc);
-
-  const span = document.createElement("span");
-  span.textContent = "Hallo👋, I'm Widy";
-  conDesc.appendChild(span);
-  Object.assign(span.style, {
-    fontSize: "1.2em",
-    padding: "1rem 2rem",
-    fontWeight: "700",
-    color: "var(--background)",
-    fontFamily: `"Poppins"`,
-  });
-
-  const a = document.createElement("a");
-  a.href = "#";
-  a.textContent = "Download CV";
-  container.appendChild(a);
-  Object.assign(a.style, {
-    margin: "0.5rem 0 0 0",
-    backgroundColor: "var(--background)",
-    padding: "0.2rem 1rem",
-    borderRadius: "10px",
-    fontFamily: `"Poppins"`,
-    fontWeight: "600",
-    outline: "0.1rem solid var(--main-font)",
-    transition: "all 0.2s ease-in-out",
+    // fontSize: "clamp(1em, 3vw, 4em)",
+    fontSize: "1.5em",
     color: "var(--main-font)",
   });
-  a.addEventListener("mouseenter", function () {
-    Object.assign(a.style, {
-      outline: "0.1rem solid var(--background)",
-      backgroundColor: "var(--main-font)",
-      color: "var(--background)",
-    });
-  });
-  a.addEventListener("mouseleave", function () {
-    Object.assign(a.style, {
-      outline: "0.1rem solid var(--main-font)",
-      backgroundColor: "var(--background)",
-      color: "var(--main-font)",
-    });
-  });
-}
-//layer atas end
+});
