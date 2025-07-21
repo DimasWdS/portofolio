@@ -152,14 +152,18 @@ Object.assign(container.style, {
     });
   }
 
-  for (let i = 0; i < 2; i++) {
-    illustratorCard(
-      "banner-tambalban.svg",
-      "BANNER DESIGN",
-      "banner-tambalbanBG.svg",
-      "Proyek ini dibuat menggunakan Adobe Illustrator dengan tujuan untuk membuat desain illustrasi bengkel tambal ban. Desain ini menekankan pada efek semangat untuk menciptakan kesan mekanik yang professional."
-    );
-  }
+  illustratorCard(
+    "banner-tambalban.svg",
+    "BANNER DESIGN",
+    "banner-tambalbanBG.svg",
+    "Proyek ini dibuat menggunakan Adobe Illustrator dengan tujuan untuk membuat desain illustrasi bengkel tambal ban. Desain ini menekankan pada efek semangat untuk menciptakan kesan mekanik yang professional."
+  );
+  illustratorCard(
+    "banner-warkop.svg",
+    "BANNER DESIGN",
+    "banner-warkopBG.svg",
+    "Proyek ini dibuat menggunakan Adobe Illustrator dengan tujuan untuk membuat desain illustrasi bengkel tambal ban. Desain ini menekankan pada efek semangat untuk menciptakan kesan mekanik yang professional."
+  );
 }
 //
 {
