@@ -559,3 +559,11 @@ Object.assign(container.style, {
     });
   });
 }
+
+const cardWeb = document.querySelectorAll(".cardWeb");
+const cardIllustrator = document.querySelectorAll(".cardIllustrator");
+
+[...cardWeb, ...cardIllustrator].forEach((el) => {
+  el.setAttribute("data-aos", "fade-up");
+  el.setAttribute("data-aos-delay", "200");
+});

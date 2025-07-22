@@ -42,6 +42,7 @@ Object.assign(conNama.style, {
   alignItems: "center",
 });
 
+teksNama.classList.add("teksNamaMobile");
 Object.assign(teksNama.style, {
   position: "absolute",
   top: "1.5rem",
@@ -65,6 +66,10 @@ Object.assign(conImg.style, {
   aspectRatio: "1/1",
   scale: "1.1",
   // backgroundColor: "yellow",
+});
+
+Object.assign(imgFace.style, {
+  filter: "drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.8))",
 });
 
 [conTeksIllustrator, conTeksFrontend].forEach((el) => {

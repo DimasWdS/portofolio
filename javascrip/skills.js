@@ -68,23 +68,27 @@ Object.assign(conGaruda.style, {
 // badan
 const imgBadan = document.createElement("img");
 conGaruda.appendChild(imgBadan);
+imgBadan.classList.add("badan");
 imgBadan.src = "./asset/svg/garudav2/badan.svg";
 imgBadan.style.zIndex = "1";
 imgBadan.style.scale = "1.7";
 // sayap kiri
 const imgSayapKiri = document.createElement("img");
 conGaruda.appendChild(imgSayapKiri);
+imgSayapKiri.classList.add("sayapKiri");
 imgSayapKiri.src = "./asset/svg/garudav2/sayapKiri.svg";
 imgSayapKiri.style.scale = "1.6";
 imgSayapKiri.classList.add("sayapKiri");
 // saap kanan
 const imgSayapKanan = document.createElement("img");
 conGaruda.appendChild(imgSayapKanan);
+imgSayapKanan.classList.add(".sayapKanan");
 imgSayapKanan.src = "./asset/svg/garudav2/sayapKanan.svg";
 imgSayapKanan.style.scale = "1.6";
 imgSayapKanan.classList.add("sayapKanan");
 
 [imgBadan, imgSayapKiri, imgSayapKanan].forEach((el) => {
+  el.classList.add("burungGaruda");
   Object.assign(el.style, {
     position: "absolute",
     height: "100%",
@@ -95,6 +99,7 @@ imgSayapKanan.classList.add("sayapKanan");
 
 // teks start
 const conTeks = document.createElement("section");
+conTeks.classList.add("teksSkills");
 conSkills.appendChild(conTeks);
 Object.assign(conTeks.style, {
   display: "flex",

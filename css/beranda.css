@@ -5,4 +5,7 @@
   .conImgMobile {
     scale: 0.9 !important;
   }
+  .teksNamaMobile {
+    top: 6rem !important;
+  }
 }
