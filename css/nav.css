@@ -23,11 +23,12 @@
   width: 4.2rem;
   background-color: var(--white);
   border-radius: 50% 2px;
+  margin: 0.5rem;
 }
 .hamburger-menu {
   position: relative;
   z-index: 1;
-
+  margin: 0.5rem;
   height: 3rem;
   width: 3rem;
   background-color: var(--white);

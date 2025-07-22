@@ -22,6 +22,10 @@ teksNama.textContent = "HI, I'M WIDY";
 conTeksIllustrator.textContent = "Illustrator";
 conTeksFrontend.textContent = "Front End";
 
+[conTeksIllustrator, conTeksFrontend].forEach((el) => {
+  el.classList.add("teksSampingImgThum");
+});
+
 imgFace.setAttribute("src", "./asset/svg/myface.svg");
 
 containerBeranda.appendChild(conNama);
