@@ -52,47 +52,43 @@ conSkills.appendChild(possitionGaruda);
 possitionGaruda.classList.add("possitionGaruda");
 Object.assign(possitionGaruda.style, {
   position: "relative",
+  aspectRatio: "16/9",
   width: "60rem",
-  height: "20rem",
   // backgroundColor: "cyan",
 });
 const conGaruda = document.createElement("section");
 possitionGaruda.appendChild(conGaruda);
-conGaruda.classList.add("flexCenter", "animasiBadan");
+conGaruda.classList.add("flexCenter", "objek-random");
 Object.assign(conGaruda.style, {
   position: "absolute",
   height: "100%",
   width: "100%",
   // backgroundColor: "green",
 });
-// badan
-const imgBadan = document.createElement("img");
-conGaruda.appendChild(imgBadan);
-imgBadan.classList.add("badan");
-imgBadan.src = "./asset/svg/garudav2/badan.svg";
-imgBadan.style.zIndex = "1";
-imgBadan.style.scale = "1.7";
-// sayap kiri
-const imgSayapKiri = document.createElement("img");
-conGaruda.appendChild(imgSayapKiri);
-imgSayapKiri.classList.add("sayapKiri");
-imgSayapKiri.src = "./asset/svg/garudav2/sayapKiri.svg";
-imgSayapKiri.style.scale = "1.6";
-imgSayapKiri.classList.add("sayapKiri");
-// saap kanan
-const imgSayapKanan = document.createElement("img");
-conGaruda.appendChild(imgSayapKanan);
-imgSayapKanan.classList.add(".sayapKanan");
-imgSayapKanan.src = "./asset/svg/garudav2/sayapKanan.svg";
-imgSayapKanan.style.scale = "1.6";
-imgSayapKanan.classList.add("sayapKanan");
 
-[imgBadan, imgSayapKiri, imgSayapKanan].forEach((el) => {
-  el.classList.add("burungGaruda");
+const sayapKanan = document.createElement("img");
+sayapKanan.classList.add("sayap-kanan");
+conGaruda.appendChild(sayapKanan);
+sayapKanan.setAttribute("src", "./asset/svg/garudav2/garudasayapkanan.svg");
+
+const sayapKiri = document.createElement("img");
+sayapKiri.classList.add("sayap-kiri");
+conGaruda.appendChild(sayapKiri);
+sayapKiri.setAttribute("src", "./asset/svg/garudav2/garudasayapkiri.svg");
+
+const ekor = document.createElement("img");
+ekor.classList.add("ekor");
+conGaruda.appendChild(ekor);
+ekor.setAttribute("src", "./asset/svg/garudav2/garudaekor.svg");
+
+const badanGaruda = document.createElement("img");
+conGaruda.appendChild(badanGaruda);
+badanGaruda.setAttribute("src", "./asset/svg/garudav2/garudabadan.svg");
+
+[badanGaruda, sayapKanan, sayapKiri, ekor].forEach((el) => {
   Object.assign(el.style, {
     position: "absolute",
-    height: "100%",
-    width: "max-content",
+    scale: "1.5",
   });
 });
 // garuda end
