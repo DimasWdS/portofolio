@@ -5,35 +5,6 @@ Object.assign(container.style, {
   // margin: "0 0 5rem 0",
 });
 
-// element trigger untuk memunculkan gallery start
-const blok = document.createElement("section");
-document.body.appendChild(blok);
-blok.classList.add("blok");
-const conBlok = document.querySelector(".blok");
-Object.assign(blok.style, {
-  height: "4rem",
-  width: "100%",
-});
-// element trigger untuk memunculkan gallery end
-
-// element blur start
-const pageBlur = document.createElement("div");
-container.appendChild(pageBlur);
-Object.assign(pageBlur.style, {
-  position: "absolute",
-  top: "0",
-  left: "0", // ✅ disarankan untuk posisi absolut
-  zIndex: "2",
-  height: "100%",
-  width: "100%",
-  backdropFilter: "blur(5px)",
-  backgroundColor: "rgba(255, 255, 255, 0.08)", // ✅ agar blur kelihatan
-  transformOrigin: "top",
-  // transition: "all 0.2s ease-in-out",
-});
-pageBlur.classList.add("scale0");
-// element blur end
-
 //container start
 const pageOne = document.createElement("section");
 container.appendChild(pageOne);
@@ -44,9 +15,9 @@ Object.assign(pageOne.style, {
 //container end
 
 // container foto pajangan start
-
 {
   const conImg = document.createElement("div");
+  conImg.classList.add("containerFotoPajangan");
   pageOne.appendChild(conImg);
   Object.assign(conImg.style, {
     overflow: "hidden",
@@ -83,8 +54,10 @@ Object.assign(pageOne.style, {
   div2.appendChild(img2);
   img2.src = "./asset/webp/moonknight.webp";
   img2.classList.add("animationKanan");
+
+  gsap.from(".containerFotoPajangan", { duration: 0.5, y: -100, opacity: 0 });
 }
-//container foro pajangan end
+//container foto pajangan end
 
 // container teks baha foto pajangan start
 {
@@ -117,6 +90,10 @@ Object.assign(pageOne.style, {
       height: "3rem",
       // backgroundColor: "blue",
     });
+  });
+
+  [div, div2, div3].forEach((el) => {
+    gsap.from(el, { scale: 0, opacity: 0, duration: 0.3, delay: 0.3 });
   });
 
   const span = document.createElement("span");
@@ -240,6 +217,13 @@ Object.assign(pageOne.style, {
     backgroundColor: "var(--third-color)",
     borderRadius: "5px",
     margin: "0.2rem 0 0 0",
+  });
+  [btnBack, span, mouse].forEach((el, dex) => {
+    gsap.from(el, {
+      scale: 0,
+      opacity: 0,
+      delay: 0.4 + dex * 0.1,
+    });
   });
 }
 //bawah teks foto pajangan start

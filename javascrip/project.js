@@ -144,26 +144,21 @@ Object.assign(container.style, {
     });
     Object.assign(backgroundImage.style, {
       width: "90%",
-      height: "90%",
+      aspectRatio: "1/1",
       backgroundImage: `url(./asset/project/illustrator/${bgImage})`,
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     });
   }
-
-  illustratorCard(
-    "banner-tambalban.svg",
-    "BANNER DESIGN",
-    "banner-tambalbanBG.svg",
-    "Proyek ini dibuat menggunakan Adobe Illustrator dengan tujuan untuk membuat desain illustrasi bengkel tambal ban. Desain ini menekankan pada efek semangat untuk menciptakan kesan mekanik yang professional."
-  );
-  illustratorCard(
-    "banner-warkop.svg",
-    "BANNER DESIGN",
-    "banner-warkopBG.svg",
-    "Proyek ini dibuat menggunakan Adobe Illustrator dengan tujuan untuk membuat desain illustrasi bengkel tambal ban. Desain ini menekankan pada efek semangat untuk menciptakan kesan mekanik yang professional."
-  );
+  for (let i = 0; i < 2; i++) {
+    illustratorCard(
+      undefined,
+      "Illustrator Garuda",
+      "garuda.png",
+      "Lorem ipsum"
+    );
+  }
 }
 //
 {
