@@ -1,3 +1,5 @@
+// import { sum, createSosmed } from "./../module/aggregate.mjs";
+
 const containerBeranda = document.getElementById("beranda");
 
 Object.assign(containerBeranda.style, {
@@ -17,6 +19,9 @@ const conTeksIllustrator = document.createElement("div");
 const conTeksFrontend = document.createElement("div");
 const imgFace = document.createElement("img");
 const teksNama = document.createElement("p");
+const conSosmed = document.createElement("sections");
+
+const conIconSosmed = document.createElement("section");
 
 teksNama.textContent = "HI, I'M WIDY";
 conTeksIllustrator.textContent = "Illustrator";
@@ -30,11 +35,14 @@ imgFace.setAttribute("src", "./asset/svg/myface.svg");
 
 containerBeranda.appendChild(conNama);
 containerBeranda.appendChild(conKonten);
+containerBeranda.appendChild(conSosmed);
 conNama.appendChild(teksNama);
 conKonten.appendChild(conTeksIllustrator);
 conKonten.appendChild(conImg);
 conKonten.appendChild(conTeksFrontend);
 conImg.appendChild(imgFace);
+
+conSosmed.appendChild(conIconSosmed);
 
 Object.assign(conNama.style, {
   position: "relative",
@@ -60,7 +68,6 @@ Object.assign(conKonten.style, {
   width: "100%",
   display: "flex",
   justifyContent: "center",
-
   // backgroundColor: "yellow",
 });
 
@@ -86,4 +93,74 @@ Object.assign(imgFace.style, {
     fontSize: "1.5em",
     color: "var(--main-font)",
   });
+});
+
+Object.assign(conSosmed.style, {
+  margin: "4rem 0 0 0",
+  width: "100%",
+  height: "20px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "1rem",
+});
+
+Object.assign(conIconSosmed.style, {
+  display: "flex",
+  gap: "1rem",
+});
+
+function createIcon(href, logoSrc) {
+  const div = document.createElement("div");
+  div.classList.add("iconSosmedBeranda");
+  conIconSosmed.appendChild(div);
+  Object.assign(div.style, {
+    height: "2.5rem",
+    width: "2.5rem",
+    backgroundColor: "var(--white)",
+    borderRadius: "50%",
+    cursor: "pointer",
+    overflow: "hidden",
+  });
+  const a = document.createElement("a");
+  div.appendChild(a);
+  a.classList.add("flexCenter");
+  Object.assign(a.style, {
+    display: "inline-flex",
+    height: "100%",
+    width: "100%",
+  });
+  a.setAttribute("href", `${href}`);
+  a.setAttribute("target", "_blanks");
+  const logo = document.createElement("img");
+  a.appendChild(logo);
+  Object.assign(logo.style, {
+    height: "100%",
+    width: "100%",
+    transform: "scale(0.7)",
+  });
+  logo.setAttribute("src", `${logoSrc}`);
+  logo.setAttribute("alt", "instagram");
+  // logo.src = `${logoSrc}`;
+}
+
+createIcon("#", "./asset/icon/inkedin.svg");
+createIcon(
+  "https://www.instagram.com/dimaswidysaputraa/",
+  "./asset/icon/instagram-color.svg"
+);
+createIcon(
+  "https://www.instagram.com/dimaswidysaputraa/",
+  "./asset/icon/tiktok-color.svg"
+);
+createIcon(
+  "https://www.instagram.com/dimaswidysaputraa/",
+  "./asset/icon/facebook-color.svg"
+);
+
+const iconSosmedBeranda = document.querySelectorAll(".iconSosmedBeranda");
+// console.log(iconSosmedBeranda);
+
+[...iconSosmedBeranda].forEach((el) => {
+  gsap.from(el, { y: 100, opacity: 0 });
 });

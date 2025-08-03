@@ -11,6 +11,8 @@ container.appendChild(pageOne);
 Object.assign(pageOne.style, {
   height: "100dvh",
   // backgroundColor: "yellow",
+  display: "flex",
+  flexDirection: "column",
 });
 //container end
 
@@ -155,7 +157,8 @@ Object.assign(pageOne.style, {
     display: "flex",
     justifyContent: "center",
     width: "100%",
-
+    flex: "1",
+    alignItems: "center",
     // backgroundColor: "yellow",
     margin: "1rem 0 0 0",
   });

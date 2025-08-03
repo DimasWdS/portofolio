@@ -10,6 +10,7 @@ function cloneBgV2(oriElement, inElement) {
   oriElement.appendChild(clone);
 }
 
+// membuat card pengalaman
 function cardPengalaman(header, date, deskripsi) {
   const conCard = document.createElement("div");
   const containerCard = document.querySelector(".container-card");
