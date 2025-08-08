@@ -1,83 +1,24 @@
-img {
-  max-width: 100%;
-}
+@media (max-width: 1023px) {
+  .a1 {
+    flex-direction: column;
+    gap: 2rem;
+    /* background-color: aqua; */
+  }
 
-/* style tentang saya start */
-
-.container-tentang-saya {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-direction: column;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
+  .bagian-kiri-aboutme,
+  .bagian-kanan-aboutme {
+    width: 100% !important;
+  }
 }
-/* container */
-.penjelasan-saya {
-  margin-top: 70px;
-  width: 90%;
-}
-
-.penjelasan-saya div {
-  width: 90%;
-  max-width: 40rem;
-  margin: auto;
-  margin-bottom: 4rem;
-}
-.penjelasan-saya div p {
-  font-family: "Inconsolata", monospace;
-  color: var(--main-font);
-  font-size: 1.5em;
-  text-align: justify;
-  text-align-last: left;
-}
-.penjelasan-saya h1 {
-  margin-bottom: 0.5rem;
-  margin: auto;
-}
-.penjelasan-saya h2 {
-  margin: auto;
-}
-.penjelasan-saya h2,
-.penjelasan-saya h1 {
-  margin-bottom: 1rem;
-  width: max-content;
-  position: relative;
-  color: var(--main-font);
-  font-size: 1.8em;
-}
-
-.penjelasan-saya h1::before,
-.penjelasan-saya h2::before {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  background-color: var(--third-color);
-  height: 0.2rem;
-  width: 100%;
-  border-radius: 20px;
-}
-
-/* pengalaman end */
-/* breakpoint start */
 @media (max-width: 640px) {
-  .penjelasan-saya h2,
-  .penjelasan-saya h1 {
-    font-size: 1.5em;
+  .containerFotoMobile {
+    width: 80% !important;
+    aspect-ratio: 1/1;
   }
-
-  .penjelasan-saya div p {
-    text-align: start;
+  .container-biodata {
+    flex-direction: column;
   }
-  .penj .container-tentang-saya .penjelasan-saya div:nth-child(2) {
-    font-size: 0.8em;
-  }
-  .container-pengalaman {
-    display: flex;
-    justify-content: center;
+  .biodata-card {
+    width: 100% !important;
   }
 }
-
-/* breakpoint end */

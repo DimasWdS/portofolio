@@ -1,8 +1,17 @@
-//teks tentang saya
-const penjelasanSaya = document.querySelector(".penjelasan-saya");
+// teks about me
+const teksAboutMe = document.querySelector(".headerAboutMe");
+teksAboutMe.setAttribute("data-aos", "fade-up");
 
-penjelasanSaya.setAttribute("data-aos", "fade-up");
-penjelasanSaya.setAttribute("data-aos-offset", "300");
+// foto ditentang saya
+const fotoTentangSaya = document.querySelector(".containerFotoMobile");
+fotoTentangSaya.setAttribute("data-aos", "fade-right");
+fotoTentangSaya.setAttribute("data-aos-offset", "300");
+
+// container sebelah foto
+
+const conSebelahFoto = document.querySelector(".bagian-kanan-aboutme");
+conSebelahFoto.setAttribute("data-aos", "fade-left");
+conSebelahFoto.setAttribute("data-aos-offset", "300");
 
 //pengalaman scroll card
 
