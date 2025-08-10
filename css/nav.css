@@ -1,132 +1,102 @@
-.menu-active {
-  border-radius: 0 !important;
-  transform: translateY(0) !important;
-}
-.scale0 {
-  transform: scale(0);
-}
-#nav {
+.nav {
   position: fixed;
-  width: 100%;
   z-index: 999;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .container-nav {
-  height: 0.5rem;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-.container-nav .logo {
-  height: 4.2rem;
-  width: 4.2rem;
-  background-color: var(--white);
-  border-radius: 50% 2px;
-  margin: 0.5rem;
-}
-.hamburger-menu {
   position: relative;
-  z-index: 1;
-  margin: 0.5rem;
-  height: 3rem;
-  width: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 0 2rem;
+  width: 90%;
+  max-width: 70rem;
+  height: 4rem;
+  margin: 0.5rem 0 0 0;
+  border-radius: 10px;
   background-color: var(--white);
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.hamburger-menu button {
-  display: inline-flex;
+.container-logo {
   height: 100%;
-  width: 100%;
+  aspect-ratio: 1/1;
+  background-image: url(./../asset/svg/LOGOSAYA2024-01.svg);
 }
-.hamburger {
+#ham-btn {
   display: none;
-  position: absolute;
-  height: 100%;
-  width: 100%;
+}
+.container-list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  gap: 1.5rem;
+}
+.container-list li {
+  list-style-type: none;
+}
+.container-list li a {
+  display: inline-flex;
   align-items: center;
-  gap: 5px;
-}
-.hamburger span {
-  display: inline-block;
-  border-radius: 10px;
-  height: 5px;
-  width: 60%;
-  background-color: var(--background);
-}
-
-.xIcon {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-.xIcon span {
-  position: absolute;
-  display: inline-block;
-  border-radius: 10px;
-  height: 5px;
-  width: 60%;
-  background-color: var(--background);
-}
-.xIcon span:nth-child(1) {
-  transform: rotate(45deg);
-}
-.xIcon span:nth-child(2) {
-  transform: rotate(-45deg);
+  padding: 2px 3px;
+  /* background-color: tomato; */
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
 }
 
-.animationMenu {
-  animation: menu 1s ease-in-out;
+.container-list li a:hover {
+  background-color: var(--third-color);
+}
+.container-list li a div {
+  height: 20px;
+  width: 20px;
+  background-position: center;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  margin: 0 0.2rem 0 0;
+  /* background-color: aqua; */
 }
 
-@keyframes menu {
-  0% {
-    transform: translateY(-90rem);
-  }
-  60% {
-    transform: translateY(0);
-  }
-  65% {
-    transform: translateY(1rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@media (min-width: 640px) {
-  .widthMenu {
-    width: 30rem !important;
-  }
+.container-list li a p {
+  font-size: 0.9em;
 }
 
-.animationHedNav {
-  animation: headerNav 1s ease-in-out;
+.container-list li:nth-child(1) div {
+  background-image: url(./../asset/icon/home.svg);
+  background-size: 85%;
 }
-@keyframes headerNav {
-  0% {
-    transform: translateX(100%);
+.container-list li:nth-child(2) div {
+  background-image: url(./../asset/icon/idcard.svg);
+}
+.container-list li:nth-child(3) div {
+  background-image: url(./../asset/icon/code.svg);
+}
+.container-list li:nth-child(4) div {
+  background-image: url(./../asset/icon/folderopen.svg);
+}
+.container-list li:nth-child(5) div {
+  background-image: url(./../asset/icon/mail.svg);
+}
+
+.menu-active {
+  transform: translateX(0) !important;
+}
+@media (max-width: 640px) {
+  #ham-btn {
+    display: flex;
   }
-  80% {
-    transform: translateX(100%);
+  .container-list {
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    top: 100%;
+    gap: 0.5rem;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    margin-top: 0.1rem;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: translateX(100rem);
+    transition: all 0.2s ease-in-out;
   }
-  100% {
-    transform: translateX(0);
-  }
-  /* 0% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  } */
 }

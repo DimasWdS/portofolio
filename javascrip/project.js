@@ -2,7 +2,8 @@ const conProject = document.querySelector(".project");
 conProject.classList.add("flexCenter");
 Object.assign(conProject.style, {
   width: "100%",
-  margin: "1rem 0 1rem 0",
+  padding: "5.5rem 0 0 0",
+  // backgroundColor: "yellow",
 });
 
 const container = document.createElement("section");

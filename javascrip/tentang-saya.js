@@ -25,7 +25,7 @@ Object.assign(conTentangSaya.style, {
 
   Object.assign(header.style, {
     // backgroundColor: "green",
-    margin: "4rem 0 0 0",
+    padding: "6rem 0 0 0",
     width: "100%",
     display: "flex",
     flexDirection: "column",

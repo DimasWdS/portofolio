@@ -5,38 +5,36 @@ skills.style.flexDirection = "column";
 Object.assign(skills.style, {
   position: "relative",
   overflow: "hidden",
-  margin: "5rem 0 5rem 0",
-  padding: "10rem 0 5rem 0",
   width: "100%",
   // backgroundColor: "yellow",
   // height: "100dvh",
 });
+// /header
 {
-  const div = document.createElement("div");
-  const div2 = document.createElement("div");
-  [div, div2].forEach((el) => {
-    skills.appendChild(el);
-    Object.assign(el.style, {
-      position: "absolute",
-      height: "0.5rem",
-      width: "100%",
-      backgroundColor: "var(--white)",
-      filter: "blur(1px)",
-    });
+  const header = document.createElement("header");
+  const p = document.createElement("p");
+
+  p.textContent = "My Skills";
+
+  skills.appendChild(header);
+  header.appendChild(p);
+
+  Object.assign(header.style, {
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    // backgroundColor: "green",
+    margin: "0 0 5rem 0",
+    padding: "6rem 0 5rem 0",
   });
-  Object.assign(div.style, {
-    // backgroundColor: "blue",
-    top: "0",
-    transform: "rotate(-1deg)",
-    transformOrigin: "right",
-  });
-  Object.assign(div2.style, {
-    // backgroundColor: "blue",
-    bottom: "0",
-    transform: "rotate(-1deg)",
-    transformOrigin: "left",
+  Object.assign(p.style, {
+    fontSize: "3em",
+    fontWeight: "700",
+    color: "var(--white)",
   });
 }
+
 const conSkills = document.createElement("section");
 skills.appendChild(conSkills);
 Object.assign(conSkills.style, {

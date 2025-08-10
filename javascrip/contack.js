@@ -15,7 +15,8 @@ Object.assign(contack.style, {
 [containerForm, containerMaskot].forEach((el) => {
   Object.assign(el.style, {
     width: "50%",
-    height: "50rem",
+    padding: "5rem 0 5rem 0",
+    // height: "50rem",
     // backgroundColor: "yellow",
   });
 });
