@@ -9,3 +9,15 @@ document.addEventListener("click", function (e) {
     menu.classList.remove("menu-active");
   }
 });
+
+//
+const btn = document.getElementById("ham-btn");
+const blokAtas = document.querySelector(".blokAtas");
+const blokTengan = document.querySelector(".blokTengah");
+const blokBawah = document.querySelector(".blokBawah");
+
+btn.addEventListener("click", function () {
+  blokAtas.classList.toggle("atas");
+  blokTengan.classList.toggle("tengah");
+  blokBawah.classList.toggle("bawah");
+});

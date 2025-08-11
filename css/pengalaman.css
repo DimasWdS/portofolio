@@ -27,7 +27,7 @@
   }
 }
 
-#pengalaman header {
+#pengalaman .headerPengalaman {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -35,6 +35,7 @@
   font-size: 1.2em;
   color: var(--main-font);
   /* background-color: aqua; */
+  padding: 5rem 0 0 0;
 }
 .container-pengalaman {
   position: relative;

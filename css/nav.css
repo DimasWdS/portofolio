@@ -16,8 +16,9 @@
   height: 4rem;
   margin: 0.5rem 0 0 0;
   border-radius: 10px;
-  background-color: var(--white);
+  background-color: rgb(255, 255, 255, 0.2);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  backdrop-filter: blur(10px);
 }
 .container-logo {
   height: 100%;
@@ -45,7 +46,8 @@
 }
 
 .container-list li a:hover {
-  background-color: var(--third-color);
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .container-list li a div {
   height: 20px;
@@ -59,6 +61,8 @@
 
 .container-list li a p {
   font-size: 0.9em;
+  font-weight: 800;
+  color: var(--tes);
 }
 
 .container-list li:nth-child(1) div {
@@ -69,25 +73,64 @@
   background-image: url(./../asset/icon/idcard.svg);
 }
 .container-list li:nth-child(3) div {
-  background-image: url(./../asset/icon/code.svg);
+  background-image: url(./../asset/icon/work.svg);
 }
 .container-list li:nth-child(4) div {
-  background-image: url(./../asset/icon/folderopen.svg);
+  background-image: url(./../asset/icon/code.svg);
 }
 .container-list li:nth-child(5) div {
+  background-image: url(./../asset/icon/folderopen.svg);
+}
+.container-list li:nth-child(6) div {
   background-image: url(./../asset/icon/mail.svg);
 }
 
+/* style hamburger */
+
+.box-ham {
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  aspect-ratio: 1/1;
+  /* background-color: aqua; */
+}
+
+.box-ham .blok {
+  border-radius: 10px;
+  width: 41px;
+  height: 5px;
+  background-color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.atas {
+  transform: rotate(45deg);
+  transform-origin: left bottom;
+}
+.tengah {
+  scale: 0;
+}
+.bawah {
+  transform: rotate(-45deg);
+  transform-origin: left top;
+}
 .menu-active {
   transform: translateX(0) !important;
 }
 @media (max-width: 640px) {
+  .container-nav {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
   #ham-btn {
     display: flex;
   }
   .container-list {
     position: absolute;
     flex-direction: column;
+    height: 100vh;
     right: 0;
     top: 100%;
     gap: 0.5rem;
