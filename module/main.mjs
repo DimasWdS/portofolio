@@ -26,7 +26,7 @@ function cardPengalaman(header, date, deskripsi) {
     padding: "0.1rem",
     borderRadius: "10px",
     backgroundColor: "var(--background)",
-    boxShadow: "rgb(42, 42, 42) 0px 1px 4px",
+    boxShadow: "rgba(0, 0, 0, 0.71) 0px 1px 4px",
   });
   containerCard.appendChild(conCard);
 
