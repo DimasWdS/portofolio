@@ -163,4 +163,10 @@ const iconSosmedBeranda = document.querySelectorAll(".iconSosmedBeranda");
 
 [...iconSosmedBeranda].forEach((el) => {
   gsap.from(el, { y: 100, opacity: 0 });
+  el.addEventListener("mouseenter", function () {
+    el.style.transform = "translateY(-5px)";
+  });
+  el.addEventListener("mouseleave", function () {
+    el.style.transform = "translateY(0)";
+  });
 });

@@ -12,16 +12,16 @@ Object.assign(conTentangSaya.style, {
 {
   const header = document.createElement("header");
   const h1 = document.createElement("span");
-  const h7 = document.createElement("h7");
+  const span = document.createElement("span");
 
   header.classList.add("headerAboutMe");
 
   conTentangSaya.appendChild(header);
   header.appendChild(h1);
-  header.appendChild(h7);
+  header.appendChild(span);
 
   h1.textContent = "About Me";
-  h7.textContent = "Passionate about creating something cool";
+  span.textContent = "Passionate about creating something cool";
 
   Object.assign(header.style, {
     // backgroundColor: "green",
@@ -36,7 +36,7 @@ Object.assign(conTentangSaya.style, {
     color: "var(--white)",
     fontWeight: "700",
   });
-  Object.assign(h7.style, {
+  Object.assign(span.style, {
     color: "var(--white)",
     fontSize: "clamp(0.9em,2vh,2em)",
   });

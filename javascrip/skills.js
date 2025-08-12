@@ -13,11 +13,14 @@ Object.assign(skills.style, {
 {
   const header = document.createElement("header");
   const span = document.createElement("span");
+  const span2 = document.createElement("span");
 
   span.textContent = "My Skills";
+  span2.textContent = "Things i can do for you";
 
   skills.appendChild(header);
   header.appendChild(span);
+  header.appendChild(span2);
 
   Object.assign(header.style, {
     width: "100%",
@@ -25,6 +28,7 @@ Object.assign(skills.style, {
     alignItems: "center",
     justifyContent: "center",
     // backgroundColor: "green",
+    flexDirection: "column",
     margin: "0 0 5rem 0",
     padding: "6rem 0 5rem 0",
   });
@@ -32,6 +36,10 @@ Object.assign(skills.style, {
     fontSize: "3em",
     fontWeight: "700",
     color: "var(--white)",
+  });
+  Object.assign(span2.style, {
+    color: "var(--white)",
+    fontSize: "clamp(0.9em, 2vh, 2em)",
   });
 }
 
