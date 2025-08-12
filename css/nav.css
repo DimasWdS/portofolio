@@ -62,7 +62,7 @@
 .container-list li a p {
   font-size: 0.9em;
   font-weight: 800;
-  color: var(--tes);
+  color: var(--background);
 }
 
 .container-list li:nth-child(1) div {

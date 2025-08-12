@@ -7,6 +7,9 @@ hamburgerBtn.addEventListener("click", function () {
 document.addEventListener("click", function (e) {
   if (!hamburgerBtn.contains(e.target) && !menu.contains(e.target)) {
     menu.classList.remove("menu-active");
+    blokAtas.classList.remove("atas");
+    blokTengan.classList.remove("tengah");
+    blokBawah.classList.remove("bawah");
   }
 });
 
