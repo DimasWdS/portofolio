@@ -39,8 +39,8 @@ Object.assign(container.style, {
   });
 
   Object.assign(hedTeks.style, {
-    fontSize: "clamp(1.5rem, 5vw, 2.5rem)",
-    fontWeight: "600",
+    fontSize: "3em",
+    fontWeight: "700",
     color: "var(--white)",
   });
 
@@ -286,8 +286,8 @@ Object.assign(container.style, {
   });
 
   Object.assign(headerTeks.style, {
-    fontSize: "clamp(1.5rem, 5vw, 2.5rem)",
-    fontWeight: "600",
+    fontSize: "3em",
+    fontWeight: "700",
     color: "var(--white)",
     margin: "0 0 0 1rem",
   });

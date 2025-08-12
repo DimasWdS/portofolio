@@ -12,12 +12,12 @@ Object.assign(skills.style, {
 // /header
 {
   const header = document.createElement("header");
-  const p = document.createElement("p");
+  const span = document.createElement("span");
 
-  p.textContent = "My Skills";
+  span.textContent = "My Skills";
 
   skills.appendChild(header);
-  header.appendChild(p);
+  header.appendChild(span);
 
   Object.assign(header.style, {
     width: "100%",
@@ -28,7 +28,7 @@ Object.assign(skills.style, {
     margin: "0 0 5rem 0",
     padding: "6rem 0 5rem 0",
   });
-  Object.assign(p.style, {
+  Object.assign(span.style, {
     fontSize: "3em",
     fontWeight: "700",
     color: "var(--white)",

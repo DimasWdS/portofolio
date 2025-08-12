@@ -102,6 +102,7 @@
   height: 5px;
   background-color: var(--white);
   transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.623) 0px 3px 8px;
 }
 
 .atas {

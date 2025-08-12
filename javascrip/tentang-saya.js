@@ -11,7 +11,7 @@ Object.assign(conTentangSaya.style, {
 // header
 {
   const header = document.createElement("header");
-  const h1 = document.createElement("h1");
+  const h1 = document.createElement("span");
   const h7 = document.createElement("h7");
 
   header.classList.add("headerAboutMe");
@@ -32,8 +32,9 @@ Object.assign(conTentangSaya.style, {
     alignItems: "center",
   });
   Object.assign(h1.style, {
-    fontSize: "clamp(1em,6vh,7em)",
+    fontSize: "3em",
     color: "var(--white)",
+    fontWeight: "700",
   });
   Object.assign(h7.style, {
     color: "var(--white)",
@@ -64,7 +65,7 @@ Object.assign(pembungkus.style, {
     height: "30rem",
     display: "flex",
     justifyContent: "center",
-    // alignItems: "center",
+    alignItems: "center",
     // backgroundColor: "yellow",
   });
   Object.assign(conImg.style, {
