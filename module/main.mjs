@@ -11,7 +11,7 @@ function cloneBgV2(oriElement, inElement) {
 }
 
 // membuat card pengalaman
-function cardPengalaman(header, date, deskripsi) {
+function cardPengalaman(jobIcon, jobTitle, duration, deskripsi) {
   const conCard = document.createElement("div");
   const containerCard = document.querySelector(".container-card");
   containerCard.classList.add("con-pause");
@@ -34,13 +34,14 @@ function cardPengalaman(header, date, deskripsi) {
   Object.assign(divDalam.style, {
     display: "flex",
     flexDirection: "column",
-    padding: "2rem 0 2rem 0",
+    justifyContent: "center",
+    // padding: "2rem 0 2rem 0",
     position: "relative",
     zIndex: "2",
     borderRadius: "10px",
     width: "100%",
     height: "100%",
-    backgroundColor: "var(--background)",
+    backgroundColor: "var(--tes)",
   });
   conCard.appendChild(divDalam);
 
@@ -72,42 +73,80 @@ function cardPengalaman(header, date, deskripsi) {
   divSpin.classList.add("spin", "shadow-spin");
   divSpin2.classList.add("spin", "shadow-spin2");
 
-  const headerCard = document.createElement("header");
-  Object.assign(headerCard.style, {
-    width: "100%",
-    alignItems: "start",
-    padding: "0 1rem 0 1rem",
-    // backgroundColor: "blue",
-    // height: "1rem",
-  });
-  divDalam.appendChild(headerCard);
-  const p = document.createElement("p");
-  headerCard.appendChild(p);
-  p.textContent = header;
-  Object.assign(p.style, {
-    fontSize: "0.8em",
-    color: "var(--white)",
-  });
-  const dateCard = document.createElement("span");
-  Object.assign(dateCard.style, {
-    margin: "2rem 0 0 0",
-    width: "100%",
-    padding: "0 1rem 0 1rem",
-    fontSize: "0.7em",
-    color: "var(--main-font)",
-  });
-  dateCard.textContent = date;
-  divDalam.appendChild(dateCard);
-
-  const deskripsiCard = document.createElement("spam");
-  deskripsiCard.textContent = deskripsi;
-  divDalam.appendChild(deskripsiCard);
-  Object.assign(deskripsiCard.style, {
-    padding: "0 1rem 0 1rem",
-    fontSize: "0.7em",
-    color: "var(--main-font)",
-  });
+  // class untuk menghentikan card scroll ketika dihover
   conCard.classList.add("card");
+  // isi konten card
+  {
+    const header = document.createElement("header");
+    const logoJob = document.createElement("div");
+    const nameJob = document.createElement("p");
+    const longTime = document.createElement("section");
+    const logoTime = document.createElement("div");
+    const workContent = document.createElement("p");
+    const conDeskripsi = document.createElement("section");
+
+    divDalam.appendChild(header);
+    header.appendChild(logoJob);
+    header.appendChild(nameJob);
+    divDalam.appendChild(longTime);
+    longTime.appendChild(logoTime);
+    longTime.appendChild(workContent);
+    divDalam.appendChild(conDeskripsi);
+
+    nameJob.textContent = jobTitle;
+    workContent.textContent = duration;
+    conDeskripsi.textContent = deskripsi;
+
+    Object.assign(header.style, {
+      width: "100%",
+      display: "flex",
+      alignItems: "center",
+      gap: "0.5rem",
+      padding: "0 1rem 0 1rem",
+      // backgroundColor: "yellow",
+    });
+    Object.assign(logoJob.style, {
+      height: "2rem",
+      aspectRatio: "1/1",
+      // backgroundColor: "green",
+      backgroundImage: `url(./asset/icon/${jobIcon})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeate: "no-repeate",
+    });
+    Object.assign(nameJob.style, {
+      color: "var(--white)",
+      fontWeight: "700",
+      fontSize: "0.9em",
+    });
+    Object.assign(longTime.style, {
+      width: "100%",
+      padding: "0 1rem 0 1rem",
+      display: "flex",
+      alignItems: "center",
+      gap: "0.5rem",
+    });
+    Object.assign(logoTime.style, {
+      height: "1.5rem",
+      aspectRatio: "1/1",
+      // backgroundColor: "yellow",
+      backgroundImage: "url(./asset/icon/time.svg)",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeate: "no-repeate",
+    });
+    Object.assign(workContent.style, {
+      color: "var(--white)",
+      fontWeight: "700",
+      fontSize: "0.7em",
+    });
+    Object.assign(conDeskripsi.style, {
+      padding: "0 1rem 0 1rem",
+      color: "var(--white)",
+      fontWeight: "700",
+      fontSize: "0.7em",
+    });
+  }
 }
 
 export { sum, cloneBg, cloneBgV2, cardPengalaman };
