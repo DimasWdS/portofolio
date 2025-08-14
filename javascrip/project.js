@@ -405,12 +405,18 @@ Object.assign(container.style, {
         height: "3.5rem",
         width: "3.5rem",
         borderRadius: "50%",
-        outline: "0.1rem solid var(--white)",
         outlineOffset: "5px",
+        transition: "all 0.2s ease-in-out",
       });
       if (dex === 0) {
         Object.assign(el.style, {});
       }
+      el.addEventListener("mouseenter", function () {
+        el.style.opacity = "50%";
+      });
+      el.addEventListener("mouseleave", function () {
+        el.style.opacity = "100%";
+      });
     });
 
     [gLink, wLink].forEach((el, dex) => {
@@ -420,7 +426,7 @@ Object.assign(container.style, {
         backgroundColor: "var(--white)",
         borderRadius: "50%",
         backgroundPosition: "center",
-        backgroundSize: "cover",
+        backgroundSize: "80%",
         backgroundRepeat: "no-repeat",
       });
       if (dex === 1) {
@@ -429,7 +435,7 @@ Object.assign(container.style, {
         });
       } else {
         Object.assign(el.style, {
-          backgroundImage: `url(./asset/icon/github.svg)`,
+          backgroundImage: `url(./asset/icon/github.png)`,
         });
       }
     });
