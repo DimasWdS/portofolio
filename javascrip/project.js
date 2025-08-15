@@ -443,7 +443,7 @@ Object.assign(container.style, {
   for (let i = 0; i < 2; i++) {
     CardWeb(
       "Web TODOLIST",
-      "ANTI KINGDOM, ANTI RRQ, ANTI BAPER, ANTI PAK AP,(CINCIN SANZ ADA 6)",
+      "Memudahkan anda",
       "Javascrip Css Html",
       "https://github.com/DimasWdS/TODOLIST",
       "https://dimaswds.github.io/TODOLIST/",
