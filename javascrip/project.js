@@ -153,7 +153,7 @@ Object.assign(container.style, {
     });
   }
   for (let i = 0; i < 2; i++) {
-    illustratorCard(null, "Illustrator Garuda", "garuda.png", "Lorem ipsum");
+    illustratorCard(null, "Illustrator Garuda", "garuda-01.png", "Lorem ipsum");
   }
 }
 //
