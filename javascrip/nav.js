@@ -41,66 +41,23 @@ const liContack = document.querySelector(".a-contack");
 
 liBeranda.classList.add("page-on");
 
+const sections = [
+  { el: navBeranda, nav: liBeranda },
+  { el: navAboutme, nav: liAboutme },
+  { el: navExperince, nav: liExperince },
+  { el: navSkill, nav: liSkills },
+  { el: navProject, nav: liProject },
+  { el: navContack, nav: liContack },
+];
+
 window.addEventListener("scroll", () => {
-  [
-    navBeranda,
-    navAboutme,
-    navExperince,
-    navSkill,
-    navProject,
-    navContack,
-  ].forEach((el) => {
-    let rec = el.getBoundingClientRect();
+  sections.forEach(({ el, nav }) => {
+    const rec = el.getBoundingClientRect();
     if (rec.top <= 100 && rec.bottom >= 50) {
-      // console.log("sekarang berada dibagina ", el.id);
-      // tentang saya
-      if (el.id === "tentang-saya") {
-        liAboutme.classList.add("page-on");
-        liBeranda.classList.remove("page-on");
-        liExperince.classList.remove("page-on");
-        liSkills.classList.remove("page-on");
-        liProject.classList.remove("page-on");
-        liContack.classList.remove("page-on");
-      } //pengalaman
-      else if (el.id === "pengalaman") {
-        liExperince.classList.add("page-on");
-        liBeranda.classList.remove("page-on");
-        liAboutme.classList.remove("page-on");
-        liSkills.classList.remove("page-on");
-        liProject.classList.remove("page-on");
-        liContack.classList.remove("page-on");
-      } //skills
-      else if (el.id === "skills") {
-        liSkills.classList.add("page-on");
-        liBeranda.classList.remove("page-on");
-        liAboutme.classList.remove("page-on");
-        liExperince.classList.remove("page-on");
-        liProject.classList.remove("page-on");
-        liContack.classList.remove("page-on");
-      } //project
-      else if (el.id === "project") {
-        liProject.classList.add("page-on");
-        liAboutme.classList.remove("page-on");
-        liExperince.classList.remove("page-on");
-        liSkills.classList.remove("page-on");
-        liContack.classList.remove("page-on");
-      } //contack
-      else if (el.id === "contack") {
-        liContack.classList.add("page-on");
-        liBeranda.classList.remove("page-on");
-        liAboutme.classList.remove("page-on");
-        liExperince.classList.remove("page-on");
-        liSkills.classList.remove("page-on");
-        liProject.classList.remove("page-on");
-      }
-      // reset
-      else {
-        liBeranda.classList.add("page-on");
-        liAboutme.classList.remove("page-on");
-        liExperince.classList.remove("page-on");
-        liSkills.classList.remove("page-on");
-        liContack.classList.remove("page-on");
-      }
+      // reset semua
+      sections.forEach(({ nav }) => nav.classList.remove("page-on"));
+      // aktifkan yang sekarang
+      nav.classList.add("page-on");
     }
   });
 });

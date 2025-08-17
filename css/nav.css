@@ -16,7 +16,7 @@
   height: 4rem;
   margin: 0.5rem 0 0 0;
   border-radius: 10px;
-  background-color: rgb(255, 255, 255, 0.2);
+  background-color: var(--main-font);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   backdrop-filter: blur(10px);
 }
@@ -43,6 +43,11 @@
   /* background-color: tomato; */
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
+}
+
+.container-list li a:hover {
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .page-on {
@@ -100,7 +105,7 @@
   border-radius: 10px;
   width: 41px;
   height: 5px;
-  background-color: var(--white);
+  background-color: var(--background);
   transition: all 0.3s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.623) 0px 3px 8px;
 }
