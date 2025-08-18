@@ -22,13 +22,13 @@ Object.assign(containerPencapaian.style, {
   btnEducation.textContent = "Education";
   btnAchievement.textContent = "Achievement";
 
+  container.classList.add("container-nav-pencapaian");
   btnEducation.classList.add("btn-education");
   btnAchievement.classList.add("btn-achievement");
 
   Object.assign(container.style, {
     width: "100%",
     backgroundColor: "var(--tes)",
-
     display: "flex",
   });
   [conEducation, conAchievement].forEach((el, dex) => {
@@ -59,23 +59,12 @@ Object.assign(containerPencapaian.style, {
       el.style.backgroundColor = "var(--white)";
     }
   });
-
-  const buttonEdc = document.querySelector(".btn-education");
-  const buttonAch = document.querySelector(".btn-achievement");
-
-  buttonAch.addEventListener("click", function () {
-    buttonAch.classList.add("btn-active");
-    buttonEdc.classList.add("btn-deactivate");
-  });
-  buttonEdc.addEventListener("click", function () {
-    buttonAch.classList.remove("btn-active");
-    buttonEdc.classList.remove("btn-deactivate");
-  });
 }
-// container section
 
+// container section
 const conSection = document.createElement("section");
 containerPencapaian.appendChild(conSection);
+conSection.classList.add("container-section-pencapaian");
 Object.assign(conSection.style, {
   width: "100%",
   maxWidth: "80rem",
@@ -150,6 +139,7 @@ Object.assign(conSection.style, {
     containerCard.appendChild(skillSection);
 
     header.classList.add("con-header");
+    containerCard.classList.add("card-education");
 
     Object.assign(containerCard.style, {
       // width: "100%",
@@ -159,6 +149,8 @@ Object.assign(conSection.style, {
       borderRadius: "10px",
       // boxShadow: "rgba(0, 0, 0, 0.18) 5px 5px 2.6px",
       padding: "0.5rem",
+      boShadow: "0 4px 0 rgba(0, 0, 0, 0.5)",
+      transition: "transform 0.3s ease, box-shadow 0.3s ease",
       // outline: "2px solid var(--background)",
     });
     Object.assign(header.style, {
@@ -260,6 +252,7 @@ Object.assign(conSection.style, {
 
   const container = document.createElement("section");
   conSection.appendChild(container);
+  container.classList.add("container-education");
   Object.assign(container.style, {
     display: "flex",
     flexDirection: "column",
@@ -288,4 +281,55 @@ Object.assign(conSection.style, {
     "Graduated with a major in computer network engineering. Interested in internet networking and drawing.",
     ["FFTH instalation"]
   );
+}
+
+// section achievement
+{
+  const container = document.createElement("section");
+  const teks = document.createElement("p");
+
+  conSection.appendChild(container);
+  container.appendChild(teks);
+
+  teks.textContent = "There isn't any yet";
+
+  container.classList.add("container-achievement");
+
+  Object.assign(container.style, {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    height: "10rem",
+    // backgroundColor: "yellow",
+  });
+
+  Object.assign(teks.style, {
+    color: "var(--white)",
+    fontWeight: "800",
+    fontSize: "3em",
+  });
+}
+
+// code untuk navigasi pencapaian
+{
+  const buttonEdc = document.querySelector(".btn-education");
+  const buttonAch = document.querySelector(".btn-achievement");
+  const containerEducation = document.querySelector(".container-education");
+  const containerAchievement = document.querySelector(".container-achievement");
+
+  containerAchievement.classList.add("pencapaian-gone");
+
+  buttonAch.addEventListener("click", function () {
+    buttonAch.classList.add("btn-active");
+    buttonEdc.classList.add("btn-deactivate");
+    containerAchievement.classList.remove("pencapaian-gone");
+    containerEducation.classList.add("pencapaian-gone");
+  });
+  buttonEdc.addEventListener("click", function () {
+    buttonAch.classList.remove("btn-active");
+    buttonEdc.classList.remove("btn-deactivate");
+    containerAchievement.classList.add("pencapaian-gone");
+    containerEducation.classList.remove("pencapaian-gone");
+  });
 }

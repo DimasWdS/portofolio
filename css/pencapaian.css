@@ -19,3 +19,12 @@
     align-items: start !important;
   }
 }
+
+.pencapaian-gone {
+  display: none !important;
+}
+
+.card-education:hover {
+  transform: translateY(-8px); /* Naik ke atas */
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.6); /* Bayangan lebih besar */
+}
