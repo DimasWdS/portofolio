@@ -1,0 +1,21 @@
+.btn-active {
+  background-color: var(--white);
+  color: var(--tes) !important;
+}
+.btn-deactivate {
+  background-color: var(--tes) !important;
+  color: var(--white) !important;
+}
+
+@media (max-width: 640px) {
+  .con-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .card-header-con {
+    width: 100% !important;
+  }
+  .card-header-con:nth-child(2) {
+    align-items: start !important;
+  }
+}

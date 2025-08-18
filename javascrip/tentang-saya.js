@@ -1,6 +1,7 @@
 const conTentangSaya = document.querySelector(".container-tentang-saya");
 Object.assign(conTentangSaya.style, {
   width: "100%",
+  maxWidth: "80rem",
   display: "felx",
   // maxWidth: "80rem",
   // backgroundColor: "yellow",
