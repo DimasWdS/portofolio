@@ -160,6 +160,7 @@ Object.assign(pageOne.style, {
     flex: "1",
     alignItems: "center",
     // backgroundColor: "yellow",
+    maxHeight: "40rem",
     margin: "1rem 0 0 0",
   });
   const div = document.createElement("div");

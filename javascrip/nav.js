@@ -44,8 +44,8 @@ liBeranda.classList.add("page-on");
 const sections = [
   { el: navBeranda, nav: liBeranda },
   { el: navAboutme, nav: liAboutme },
-  { el: navExperince, nav: liExperince },
-  { el: navSkill, nav: liSkills },
+  { el: navExperince, nav: liAboutme },
+  { el: navSkill, nav: liAboutme },
   { el: navProject, nav: liProject },
   { el: navContack, nav: liContack },
 ];
